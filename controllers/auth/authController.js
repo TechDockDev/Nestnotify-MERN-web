@@ -61,7 +61,7 @@ export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
 
     // 2) Checking if user exist
     userCheck  = await User.findOne({email}).select("+password");
-    console.log(userCheck.email)
+    // console.log(userCheck.email)
 
     // 3) Checking password are same or not
     if(!userCheck || !await userCheck.correctPassword(password, userCheck.password)){

@@ -28,10 +28,12 @@ app.use(cors({credentials: true, origin:`http://localhost:3000`}));
 // -----| Application Route Imports
 import userAuthRoute from './routes/userAuthRoute.js';
 import adminRoute from './routes/adminRoute.js';
+import sellerRoute from './routes/sellerRoute.js';
 
 // -----| APP ROUTES |-----
 app.use('/api/v1/user', userAuthRoute);
-app.use('/api/v1/admin', adminRoute)
+app.use('/api/v1/admin', adminRoute);
+app.use('/api/v1/seller', sellerRoute)
 
 app.all('*', (req, res)=>{
     return res.status(404).json({
