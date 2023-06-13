@@ -58,7 +58,7 @@ const authToken = {
     authorizedRoles: function(...roles){
         return (req, res, next) => {
             if (!roles.includes(req.user.role)) {
-                return next(new ErrorHandler(`Role: ${req.user.role} is not allowed`, 403));
+                return next(new ErrorHandler(`Unauthorizes access, your current role doesn't allow you to access this resource.`, 403));
             }
             next();
         }

@@ -27,9 +27,11 @@ app.use(cors({credentials: true, origin:`http://localhost:3000`}));
 
 // -----| Application Route Imports
 import userAuthRoute from './routes/userAuthRoute.js';
+import adminRoute from './routes/adminRoute.js';
 
 // -----| APP ROUTES |-----
-app.use('/api/v1/user', userAuthRoute)
+app.use('/api/v1/user', userAuthRoute);
+app.use('/api/v1/admin', adminRoute)
 
 app.all('*', (req, res)=>{
     return res.status(404).json({
