@@ -7,7 +7,7 @@ const DataContext = createContext();
 const AppContext = ({ children }) => {
    const [severity, setSeverity] = useState("success");
    const [message, setMessage] = useState("");
-   const [openSnackbar, setOpenSnackbar] = useState(false);
+   const [openSnackbar, setOpenSnackbar] = useState(true);
 //    const [adminAuthData, setAdminAuthData] = useState("");
 //    const [isLoggedIn, setIsLoggedIn] = useState(false);
    // =======👇 function to open snackbar👇====
