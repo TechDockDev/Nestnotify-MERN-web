@@ -1,0 +1,1588 @@
+[
+    {
+        "quesIndex": 0,
+        "extraInformation": "",
+        "question": "Is your home:",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "Condo",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "b": "Co-Op",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "c": "Home Owner’s Association",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 1,
+        "extraInformation": "",
+        "question": "What is your type of home?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Garden Apartment",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Midrise Building",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "c": "Hi Rise Building",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "Detached/Standalone",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "e": "Side-by-Side",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "f": "Townhouse",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 2,
+        "extraInformation": "",
+        "question": "Would you say your home’s condition is…",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Brand New (this includes a new foundation and even studs within the wall)",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Updated within (20/10/5/past year)",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "c": "Original",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "In Very Poor Condition; it might be best for a builder or contractor to purchase",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 3,
+        "extraInformation": "",
+        "question": "Number of Bedrooms",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 4,
+        "extraInformation": "",
+        "question": "Number of Bathrooms",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "Full",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "a": "Half",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 5,
+        "extraInformation": "",
+        "question": "In-Unit Laundry",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": true,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "No",
+                "conditionalQues": false,
+                "multiAns": true,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 6,
+        "extraInformation": "",
+        "question": "Square Footage of Property",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 7,
+        "extraInformation": "",
+        "question": "Lot Size (if applicable)",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 8,
+        "extraInformation": "",
+        "question": "Lot Dimension (if applicable)",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 9,
+        "extraInformation": "",
+        "question": "Number of Garages",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "No",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 10,
+        "extraInformation": "",
+        "question": "Number of Garages",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "0",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "1",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "2",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "d": "3",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "e": "4",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "f": "5",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "g": "6",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "h": "7",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "i": "8",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "j": "9",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "k": "10",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "l": "11",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "m": "12",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "n": "13",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "o": "14",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "p": "15",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "q": "16",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "r": "17",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "s": "18",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "t": "19",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "u": "20",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "a": "Attached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "b": "Detached",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 11,
+        "extraInformation": "",
+        "question": "Amenities:",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Inground Pool",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": null,
+                    "subQuesType": "multiOption",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "Chlorine",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "radio",
+                            "b": "Salt Water",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "radio",
+                            "c": "Unknown",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "select",
+                            "d": "Heated?",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+
+            },
+            {
+                "optType": "radio",
+                "b": "Above Ground",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "Please Select",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "Chlorine",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "radio",
+                            "b": "Salt Water",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "radio",
+                            "c": "Unknown",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "checkbox",
+                            "d": "Heated?",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Gym",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "Tennis Court",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "e": "Basketball",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "f": "Playground",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "g": "Dog Park",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "h": "Doorperson",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "i": "Golf Course",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "j": "Maid Service",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "k": "Community Laundry Facilities",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "l": "Clubhouse",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 12,
+        "extraInformation": "",
+        "question": "Air Conditioning?",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Central AC",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "b": "Ductless AC",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones/units?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Wall Units",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many units?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "d": "None",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 13,
+        "extraInformation": "",
+        "question": "Heating Type:",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Forced Hot Air",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "b": "Hotwater Baseboard",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Radiant",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Steam Radiator",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Electric",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "How many zones?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 14,
+        "extraInformation": "",
+        "question": "Heating Fuel:",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Gas",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Oil",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subQuesType": "multiOption",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "While your heating fuel may not be natural gas, do you have natural gaswithin your home for other uses such as for cooking?",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "c": "Electric",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subQuesType": "multiOption",
+                    "subQuesOption": false,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "While your heating fuel may not be natural gas, do you have natural gas within your home for other uses such as for cooking?",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 15,
+        "extraInformation": "",
+        "question": "Current Property Taxes",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 16,
+        "extraInformation": "",
+        "question": "Do you have an additional village tax?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 17,
+        "extraInformation": "",
+        "question": "Do you belong to an HOA and if so, what are the yearly fees?",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "What does it include?",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 18,
+        "extraInformation": "",
+        "question": "Does your home belong to a specific section or development?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "What is it’s name?",
+                    "subQuesType": "inputText",
+                    "subQuesOption": false
+                }
+            },
+            {
+                "optType": "radio",
+                "b": "No",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 19,
+        "extraInformation": "",
+        "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 20,
+        "extraInformation": "",
+        "question": "Do you owe anything on your current property?",
+        "quesType": "dropDown",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "What do you currently owe?",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Are you current on payments?",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subQuesType": "multiOption",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "Yes",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        },
+                        {
+                            "optType": "radio",
+                            "a": "No",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 21,
+        "extraInformation": "",
+        "question": "Do you already have another property you will be moving to or will you need help in locating one?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 22,
+        "extraInformation": "",
+        "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "%",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": true
+                        },
+                        {
+                            "optType": "radio",
+                            "b": "$/Flat fee",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": true
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "b": "No",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 23,
+        "extraInformation": "",
+        "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 24,
+        "extraInformation": "",
+        "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
+        "quesType": "inputTextObject",
+        "quesOption": false,
+        "textObject": {
+            "First Name": "",
+            "Last Name": "",
+            "Mobile Phone": "",
+            "Additional Phone": "",
+            "Email Address": "",
+            "Confirm Email": "",
+            "Create a Password":"",
+            "Confirm Password": ""
+        },
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 25,
+        "extraInformation": "",
+        "question": "Agree to Terms/Conditions Checkbox",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "",
+                "conditionalQues": false,
+                "multiAns": false,
+                "isDate": false,
+                "inputBox": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object",
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 26,
+        "extraInformation": "",
+        "question": "Are you a human?",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }
+]

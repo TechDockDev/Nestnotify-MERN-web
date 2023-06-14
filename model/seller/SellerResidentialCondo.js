@@ -5,10 +5,10 @@ const SellerFormModel = mongoose.Schema({
     extraInformation: String,
     question: String,
     quesType: String,
-    options: Boolean,
-    mOptions: Array,
+    quesOption: Boolean,
+    quesAnsOption: Array,
     answerVal: Object
 }, {timestamps: true});
  
-const SellerForm = mongoose.model('SellerForm', SellerFormModel);
-export default SellerForm;
+const SellerResidentialCondoForm = mongoose.model('SellerResidentialCondoForm', SellerFormModel);
+export default SellerResidentialCondoForm;

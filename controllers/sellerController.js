@@ -1,5 +1,5 @@
 import CatchAsync from '../middleware/catchAsync.js';
-import SellerForm from '../model/SellerForm.js';
+import SellerForm from '../model/seller/SellerForm.js';
 
 // 1) -----| SELLER: SUFFLE FORM QUESTIONS |-----
 export const nestNotify_Seller_Get_Property_Form = CatchAsync( async(req, res, next)=>{

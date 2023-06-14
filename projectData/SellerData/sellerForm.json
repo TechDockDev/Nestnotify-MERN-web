@@ -1,0 +1,237 @@
+[
+    {
+        "quesIndex": 0,
+        "extraInformation": "",
+        "question": "Is your property currently listed on the market or are you contacted with an agency and will be listed at some time in future?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Not on the market and not contracted for a listing",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Contracted to list but not on the market yet",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "c": "Contracted to list and currently on the market",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "Contracted to list and currently on the market…but expiring soon!",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": true,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 1,
+        "extraInformation": "",
+        "question": "Are you the current owner of the property?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "No, I am submitting this for someone else.",
+                "conditionalQues": true,
+                "multiAns": true,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false,
+                "textObject" :{
+                    "firstName": "",
+                    "lastName": "",
+                    "telephone": "",
+                    "contactNumber": "",
+                    "email": "",
+                    "relationToOwner": ""
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 2,
+        "extraInformation": "",
+        "question": "Property Address",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 3,
+        "extraInformation": "Let’s Get Some Details About Your Property",
+        "question": "What Type of Property are Your Submitting:",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Residential Home",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "Residential Home",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "c": "Commercial/Industrial",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "Land",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "e": "Rental - Residential",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "f": "Rental - Commercial",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "quesIndex": 4,
+        "extraInformation": "",
+        "question": "When are you looking to close (or have the property rented by? If rental option was chosen)?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Asap",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "b": "1-3 months",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "c": "4-6 months",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "d": "7-9 months",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "e": "9-12 months",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "radio",
+                "f": "More than year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }
+
+]
