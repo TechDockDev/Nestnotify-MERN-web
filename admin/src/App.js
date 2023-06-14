@@ -1,35 +1,46 @@
-import { useContext } from "react";
-import { DataContext } from "./AppContext";
+// import { useContext } from "react";
+// import { DataContext } from "./AppContext";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./components/Root/Root";
 import SignUp from "./components/AuthComponents/SignUp";
 import Login from "./components/AuthComponents/Login";
+import DashboardRoot from "./components/DashboardRoot/DashboardRoot";
+import AdminAccounts from "./components/AdminAccounts/AdminAccounts";
+
 function App() {
-   const {
-      // snackbar,
-      // adminAuthData,
-      // setAdminAuthData,
-      // isLoggedIn,
-      // setIsLoggedIn,
-   } = useContext(DataContext);
+   // const {
+   //    snackbar,
+   //    adminAuthData,
+   //    setAdminAuthData,
+   //    isLoggedIn,
+   //    setIsLoggedIn,
+   // } = useContext(DataContext);
 
    // <======👇 Routes👇  ======>
    const router = createBrowserRouter([
       {
          path: "/",
          element: <Root />,
-         loader: "",
          children: [
             {
-               path: "",
+               index: true,
                element: <Login />,
-               loader: "",
             },
             {
-               path: "signup",
+               path: "/signup",
                element: <SignUp />,
-               loader: "",
             },
+         ],
+      },
+      {
+         path: "/dashboard",
+         element: <DashboardRoot />,
+         children: [
+            {
+               path: "admin-accounts",
+               element: <AdminAccounts />,
+            },
+            
          ],
       },
    ]);

@@ -12,7 +12,7 @@ const MuiTheme = createTheme({
    },
    typography: {
       htmlFontSize: 16,
-      fontFamily: ["Montserrat","Roboto" ].join(","),
+      fontFamily: ["Montserrat","Poppins","Roboto" ].join(","),
    },
 });
 export default MuiTheme;

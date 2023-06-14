@@ -2,14 +2,14 @@ import { Grid, IconButton } from "@mui/material";
 import React, { useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandler, labelInputId, requiredTrue, placeholderText, }) => {
+const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandler, labelInputId, requiredTrue, placeholderText, width ="100%" }) => {
    const [showPassword, setShowPassword] = useState(false);
    const handleClickShowPassword = () => setShowPassword((show) => !show);
 
    return (
       <>
          {inputType !== "password" ? (
-            <Grid container mt={3}>
+            <Grid container mt={3} width={width}>
                <Grid
                   component={"label"}
                   htmlFor={labelInputId}
@@ -51,7 +51,7 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                   }}></Grid>
             </Grid>
          ) : (
-            <Grid container mt={3} position={"relative"}>
+            <Grid container mt={3} position={"relative"} width={width}>
                <Grid
                   component={"label"}
                   htmlFor={labelInputId}

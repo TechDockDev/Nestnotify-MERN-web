@@ -29,10 +29,10 @@ const Login = () => {
             boxSizing: "border-box",
             borderRadius: "20px",
          }}>
-         <Heading>Sign in</Heading>
+         <Heading>Sign In</Heading>
          <Typography mt={2} fontWeight={500} sx={{ "& a": { color: "#0D507D", textDecoration: "none", "&:hover": { textDecoration: "underline" } } }}>
             New User?
-            <NavLink to="signup"> Create an account</NavLink> {/* == 👇 email 👇  ==*/}
+            <NavLink to="/signup"> Create an account</NavLink> {/* == 👇 email 👇  ==*/}
          </Typography>
          <Stack component={"form"}>
             <AuthInputs labelText={"Email"} inputType={"email"} inputName={"email"} inputValue={formData.email} onChangeHandler={handleChange} labelInputId={"email"} requiredTrue={true} placeholderText={"Enter your email"} />
@@ -60,7 +60,7 @@ const Login = () => {
                      scale: "0.99",
                   },
                }}>
-               Login
+               Sign In
             </Button>
             <Typography mt={2} fontWeight={500} sx={{ color: "#4A4A4A", fontSize: "14px", cursor: "pointer", width: "100%", textAlign: "center" }}>
                or continue with
