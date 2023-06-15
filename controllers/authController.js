@@ -1,9 +1,11 @@
-import CatchAsync from '../../middleware/catchAsync.js';
-import ErrorHandler from '../../utils/errorHandler.js';
-import authToken from '../../utils/authToken.js';
+import CatchAsync from '../middleware/catchAsync.js';
+import ErrorHandler from '../utils/errorHandler.js';
+import authToken from '../utils/authToken.js';
 import crypto from 'crypto';
-import sendEmail from '../../utils/sendEmail.js';
-import User from '../../model/user/user.js';
+
+
+import sendEmail from '../utils/sendEmail.js';
+import Auth from '../model/auth/Auth.js';
 
 
 // -----| USER REGISTRATION |-----
@@ -20,8 +22,8 @@ export const nestNotify_User_Registration = CatchAsync( async(req, res, next)=>{
     }
 
     // 2) Checking if user exist with same email address
-    const userExistanceCheck = await User.findOne({email: email});
-    const contactExistanceCheck = await User.findOne({contactNumber: contactNumber})
+    const userExistanceCheck = await Auth.findOne({email: email});
+    const contactExistanceCheck = await Auth.findOne({contactNumber: contactNumber})
 
     if(userExistanceCheck){
         return next(new ErrorHandler(`User Already exist with same email address. Please, try with new one.`), 400)
@@ -32,20 +34,21 @@ export const nestNotify_User_Registration = CatchAsync( async(req, res, next)=>{
     }
 
     // 3) User registration in database
-    const userCreate = await User.create({
+    const userCreate = await Auth.create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         contactNumber: req.body.contactNumber,
         password: req.body.password,
-        role: req.body.role
+        role: req.body.role.toLowerCase(),
+        master: null
     })
 
     // 4) Fetching User Data
-    const user= await User.findById({_id: userCreate._id})
+    const auth = await Auth.findById({_id: userCreate._id})
 
     // 5) Setting cookie and sending response
-    authToken.sendToken(user, 200, res);
+    authToken.sendToken(auth, 200, res);
 })
 
 // -----| USER SIGNIN |-----
@@ -60,7 +63,7 @@ export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
     }
 
     // 2) Checking if user exist
-    userCheck  = await User.findOne({email}).select("+password");
+    userCheck  = await Auth.findOne({email}).select("+password");
     // console.log(userCheck.email)
 
     // 3) Checking password are same or not
@@ -69,10 +72,10 @@ export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
     }
 
     // 4) Fetching User data
-    const user= await User.findById({_id: userCheck._id})
+    const auth= await Auth.findById({_id: userCheck._id})
 
     // 5) Setting cookie and sending reponse
-    authToken.sendToken(user, 200, res)
+    authToken.sendToken(auth, 200, res)
 })
 
 // -----| USER LOGOUT |-----
@@ -96,10 +99,10 @@ export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
 export const nestNotify_User_Password_Update = CatchAsync(async(req, res, next) => {
 
     // 1) Fetching user
-    const user = await User.findById(req.user.id).select('+password');
+    const auth = await Auth.findById(req.auth.id).select('+password');
     
     // 2) Checking saved and provided password are save or not 
-    const ispasswordMatch = await user.correctPassword(req.body.oldPassword, user.password);
+    const ispasswordMatch = await auth.correctPassword(req.body.oldPassword, auth.password);
     
     if(!ispasswordMatch){
         return next(new ErrorHandler('Old password is incorrect', 400))
@@ -111,44 +114,44 @@ export const nestNotify_User_Password_Update = CatchAsync(async(req, res, next) 
     if(req.body.newPassword !== req.body.confirmPassword){
         return next(new ErrorHandler('Password not matched.', 400))
     }
-    user.password = req.body.newPassword;
-    await user.save();
+    auth.password = req.body.newPassword;
+    await auth.save();
 
     // Sending cookie and response
-    authToken.sendToken(user, 200, res)
+    authToken.sendToken(auth, 200, res)
 })
 
 
 // -----| USER PASSWORD FORGOT |-----
 export const nestNotify_User_Password_Forgot = CatchAsync(async(req, res, next)=>{
     // 1) Fetching user
-    const user = await User.findOne({email: req.body.email})
+    const auth = await Auth.findOne({email: req.body.email})
     // console.log(user)
 
-    if(!user){
+    if(!auth){
         return next(new ErrorHandler("User not found", 404));
     }
 
     // 2) Get ResetPasswordToken
-    const resetToken = await user.getResetPasswordToken();
-    await user.save({validateBeforeSave: false});
+    const resetToken = await auth.getResetPasswordToken();
+    await auth.save({validateBeforeSave: false});
     const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/user/password/reset/${resetToken}`;
     const message = `Your password reset token is:- \n\n ${resetPasswordUrl}, \n\n If you have not request this email then please ignore it.`;
 
     try{
         await sendEmail({
-            email: user.email,
+            email: auth.email,
             subject: 'NestNotify Account Password Reset',
             message,
         })
         res.status(200).json({
             success: true,
-            message: `Email sent to ${user.email} successfully`
+            message: `Email sent to ${auth.email} successfully`
         })
     } catch(err){
-        user.resetPasswordToken = undefined;
-        user.resetPasswordExpire = undefined;
-        await user.save({validateBeforeSave: false});
+        auth.resetPasswordToken = undefined;
+        auth.resetPasswordExpire = undefined;
+        await auth.save({validateBeforeSave: false});
         return next(new ErrorHandler(err.message, 500))
     }
 })
@@ -159,12 +162,12 @@ export const nestNotify_User_Password_Reset = CatchAsync(async(req, res, next)=>
     // Creating token hash
     const resetPasswordToken = crypto.createHash("sha256").update(req.params.token).digest("hex");
 
-    const user = await User.findOne({
+    const auth = await Auth.findOne({
         resetPasswordToken,
         resetPasswordExpire: {$gt: Date.now()}
     })
 
-    if(!user){
+    if(!auth){
         return next(new ErrorHandler("Reset password token is invalid or has been expired", 404));
     }
 
@@ -172,12 +175,12 @@ export const nestNotify_User_Password_Reset = CatchAsync(async(req, res, next)=>
         return next(new ErrorHandler("Password doesn't matched.", 404));
     }
 
-    user.password = req.body.password;
-    user.resetPasswordToken = undefined;
-    user.resetPasswordExpire = undefined;
+    auth.password = req.body.password;
+    auth.resetPasswordToken = undefined;
+    auth.resetPasswordExpire = undefined;
 
-    await user.save()
-    authToken.sendToken(user, 200, res)
+    await auth.save()
+    authToken.sendToken(auth, 200, res)
 })
 
 // -----| USER ROLE CHANGE BY ADMIN |-----

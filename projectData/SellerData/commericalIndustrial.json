@@ -1,0 +1,694 @@
+[
+    {
+        "conditionToShow": null,
+        "permaIndex": 0,
+        "quesIndex": 0,
+        "extraInformation": null,
+        "question": "Do you want to sell or rent you property?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optExtraInfo": null,
+                "optType": "radio",
+                "a": "Sell",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "radio",
+                "b": "Rent",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "radio",
+                "c": "Either",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "conditionValToShow": null,
+        "permaIndex": 1,
+        "quesIndex": 1,
+        "extraInformation": null,
+        "question": "What type of commercial or industrial property are you looking for?",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "a": "Mult-Family Dwelling",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "b": "Apartment Bulding",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "c": "Farm/Agricultural",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "d": "Office",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "e": "Small Stores",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "f": "Large Store",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "g": "Free Standing Building",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "h": "Office Building",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "i": "Industrial Building",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "j": "Warehouse",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "k": "Recreational",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "l": "Commercial/Industrial",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "m": "Mixed Use (Residential and Commercial)",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "n": "Restaurant",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "o": "Equestrian",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "p": "Multiple Lots/Subdivision",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "select",
+                "q": "Shopping Center",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "conditionToShow": null,
+        "permaIndex": 2,
+        "quesIndex": 2,
+        "conditionValToShow": null,
+        "extraInformation": "",
+        "question": "What are the yearly taxes on your property?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }, 
+
+    {
+        "conditionToShow": null,
+        "permaIndex": 3,
+        "quesIndex": 3,
+        "conditionValToShow": "sell",
+        "extraInformation": "",
+        "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "conditionToShow": null,
+        "permaIndex": 4,
+        "quesIndex": 4,
+        "conditionValToShow": "sell",
+        "extraInformation": "",
+        "question": "Do you owe anything on your current property?",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optExtraInfo": null,
+                "optType": "inputText",
+                "a": "What do you currently owe?",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optExtraInfo": null,
+                "optType": "multiOption",
+                "b": "Are you current on payments? ",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesToSHow": null,
+                    "subQuesType": "multiOption",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "subOptType": "radio",
+                            "a": "Yes",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false,
+                            "subIsDate": false
+                        },
+                        {
+                            "subOptType": "radio",
+                            "b": "No",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": false,
+                            "subIsDate": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "conditionToShow": null,
+        "permaIndex": 5,
+        "quesIndex": 5,
+        "conditionValToShow": "rent",
+        "extraInformation": "",
+        "question": "What would be the monthly or annual rent you would like to charge?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "permaIndex": 6,
+        "quesIndex": 6,
+        "conditionValToShow": "rent",
+        "extraInformation": "",
+        "question": "What would be the monthly or annual rent you would like to charge?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 7,
+        "quesIndex": 7,
+        "conditionValToShow": "rent",
+        "extraInformation": "",
+        "question": "What type of lease will your offer?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "multiOption",
+                "a": "Single Net",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "multiOption",
+                "b": "Double Net ",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "multiOption",
+                "c": "Triple Net",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "multiOption",
+                "d": "Absolute Triple Net",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 8,
+        "quesIndex": 8,
+        "conditionValToShow": "rent",
+        "extraInformation": "",
+        "question": "What type of Lease Term Do you Offer?",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "1 Year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "b": "2 Year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "c": "3 Year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "d": "4 Year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "e": "5 Year",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "f": "Greater than 5 Years",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "g": "Month-to-Month",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "select",
+                "h": "Seasonal",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 9,
+        "quesIndex": 9,
+        "conditionValToShow": null,
+        "extraInformation": "",
+        "question": "Do you want to locate another property for yourself?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "multiOption",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "multiOption",
+                "b": "Not at this time, but eventually",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optType": "multiOption",
+                "c": "No",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 10,
+        "quesIndex": 10,
+        "conditionValToShow": "sell",
+        "extraInformation": "",
+        "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
+        "quesType": "multiOption",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subQuesType": "dropDown",
+                    "subQuesOption": true,
+                    "subOptions": [
+                        {
+                            "optType": "radio",
+                            "a": "%",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": true
+                        },
+                        {
+                            "optType": "radio",
+                            "b": "$/Flat fee",
+                            "subConditionalQues": false,
+                            "subMultiAns": false,
+                            "subInputBox": true
+                        }
+                    ]
+                }
+            },
+            {
+                "optType": "radio",
+                "b": "No",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 11,
+        "quesIndex": 11,
+        "extraInformation": "",
+        "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
+        "quesType": "inputText",
+        "quesOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 12,
+        "quesIndex": 12,
+        "extraInformation": "",
+        "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
+        "quesType": "inputTextObject",
+        "quesOption": false,
+        "textObject": {
+            "First Name": "",
+            "Last Name": "",
+            "Mobile Phone": "",
+            "Additional Phone": "",
+            "Email Address": "",
+            "Confirm Email": "",
+            "Create a Password":"",
+            "Confirm Password": ""
+        },
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 13,
+        "quesIndex": 13,
+        "extraInformation": "",
+        "question": "Agree to Terms/Conditions Checkbox",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "",
+                "conditionalQues": false,
+                "multiAns": false,
+                "isDate": false,
+                "inputBox": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object",
+            "data": {}
+        }
+    },
+
+    {
+        "permaIndex": 14,
+        "quesIndex": 14,
+        "extraInformation": "",
+        "question": "Are you a human?",
+        "quesType": "checkbox",
+        "quesOption": true,
+        "quesAnsOption": [
+            {
+                "optType": "select",
+                "a": "",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }
+    
+]

@@ -30,6 +30,10 @@ const userSchema = new mongoose.Schema(
             type: String,
             default: 'user'
         },
+        master: {
+            type: String,
+            select: false
+        },
         profilePicture: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'imageModel'

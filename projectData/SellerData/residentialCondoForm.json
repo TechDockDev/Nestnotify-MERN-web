@@ -1,12 +1,15 @@
 [
     {
+        "conditionToShow": null,
+        "permaIndex": 0,
         "quesIndex": 0,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Is your home:",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Condo",
                 "conditionalQues": false,
@@ -16,6 +19,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "b": "Co-Op",
                 "conditionalQues": false,
@@ -25,6 +29,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "c": "Home Owner’s Association",
                 "conditionalQues": false,
@@ -41,13 +46,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 1,
         "quesIndex": 1,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "What is your type of home?",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Garden Apartment",
                 "conditionalQues": false,
@@ -57,6 +65,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "Midrise Building",
                 "conditionalQues": false,
@@ -66,6 +75,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "c": "Hi Rise Building",
                 "conditionalQues": false,
@@ -75,6 +85,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "d": "Detached/Standalone",
                 "conditionalQues": false,
@@ -84,6 +95,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "e": "Side-by-Side",
                 "conditionalQues": false,
@@ -93,6 +105,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "f": "Townhouse",
                 "conditionalQues": false,
@@ -109,13 +122,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 2,
         "quesIndex": 2,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Would you say your home’s condition is…",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Brand New (this includes a new foundation and even studs within the wall)",
                 "conditionalQues": false,
@@ -125,6 +141,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "Updated within (20/10/5/past year)",
                 "conditionalQues": false,
@@ -134,6 +151,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "c": "Original",
                 "conditionalQues": false,
@@ -143,6 +161,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "d": "In Very Poor Condition; it might be best for a builder or contractor to purchase",
                 "conditionalQues": false,
@@ -159,8 +178,10 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 3,
         "quesIndex": 3,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Number of Bedrooms",
         "quesType": "inputText",
         "quesOption": false,
@@ -171,13 +192,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 4,
         "quesIndex": 4,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Number of Bathrooms",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Full",
                 "conditionalQues": true,
@@ -187,6 +211,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Half",
                 "conditionalQues": true,
@@ -203,13 +228,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 5,
         "quesIndex": 5,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "In-Unit Laundry",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Yes",
                 "conditionalQues": false,
@@ -219,6 +247,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "No",
                 "conditionalQues": false,
@@ -234,7 +263,27 @@
         }
     },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
+        "permaIndex": 6,
         "quesIndex": 6,
         "extraInformation": "",
         "question": "Square Footage of Property",
@@ -247,6 +296,7 @@
     },
 
     {
+        "permaIndex": 7,
         "quesIndex": 7,
         "extraInformation": "",
         "question": "Lot Size (if applicable)",
@@ -259,6 +309,7 @@
     },
 
     {
+        "permaIndex": 8,
         "quesIndex": 8,
         "extraInformation": "",
         "question": "Lot Dimension (if applicable)",
@@ -271,6 +322,7 @@
     },
 
     {
+        "permaIndex": 9,
         "quesIndex": 9,
         "extraInformation": "",
         "question": "Number of Garages",
@@ -303,6 +355,7 @@
     },
 
     {
+        "permaIndex": 10,
         "quesIndex": 10,
         "extraInformation": "",
         "question": "Number of Garages",
@@ -886,6 +939,7 @@
     },
 
     {
+        "permaIndex": 11,
         "quesIndex": 11,
         "extraInformation": "",
         "question": "Amenities:",
@@ -1079,6 +1133,7 @@
     },
 
     {
+        "permaIndex": 12,
         "quesIndex": 12,
         "extraInformation": "",
         "question": "Air Conditioning?",
@@ -1140,6 +1195,7 @@
     },
 
     {
+        "permaIndex": 13,
         "quesIndex": 13,
         "extraInformation": "",
         "question": "Heating Type:",
@@ -1224,6 +1280,7 @@
     },
 
     {
+        "permaIndex": 14,
         "quesIndex": 14,
         "extraInformation": "",
         "question": "Heating Fuel:",
@@ -1293,6 +1350,7 @@
     },
 
     {
+        "permaIndex": 15,
         "quesIndex": 15,
         "extraInformation": "",
         "question": "Current Property Taxes",
@@ -1305,6 +1363,7 @@
     },
 
     {
+        "permaIndex": 16,
         "quesIndex": 16,
         "extraInformation": "",
         "question": "Do you have an additional village tax?",
@@ -1317,6 +1376,7 @@
     },
 
     {
+        "permaIndex": 17,
         "quesIndex": 17,
         "extraInformation": "",
         "question": "Do you belong to an HOA and if so, what are the yearly fees?",
@@ -1340,6 +1400,7 @@
     },
 
     {
+        "permaIndex": 18,
         "quesIndex": 18,
         "extraInformation": "",
         "question": "Does your home belong to a specific section or development?",
@@ -1377,6 +1438,7 @@
     },
 
     {
+        "permaIndex": 19,
         "quesIndex": 19,
         "extraInformation": "",
         "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
@@ -1389,6 +1451,7 @@
     },
 
     {
+        "permaIndex": 20,
         "quesIndex": 20,
         "extraInformation": "",
         "question": "Do you owe anything on your current property?",
@@ -1442,6 +1505,7 @@
     },
 
     {
+        "permaIndex": 21,
         "quesIndex": 21,
         "extraInformation": "",
         "question": "Do you already have another property you will be moving to or will you need help in locating one?",
@@ -1454,6 +1518,7 @@
     },
 
     {
+        "permaIndex": 22,
         "quesIndex": 22,
         "extraInformation": "",
         "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
@@ -1507,6 +1572,7 @@
     },
 
     {
+        "permaIndex": 23,
         "quesIndex": 23,
         "extraInformation": "",
         "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
@@ -1519,6 +1585,7 @@
     },
 
     {
+        "permaIndex": 24,
         "quesIndex": 24,
         "extraInformation": "",
         "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
@@ -1541,6 +1608,7 @@
     },
 
     {
+        "permaIndex": 25,
         "quesIndex": 25,
         "extraInformation": "",
         "question": "Agree to Terms/Conditions Checkbox",
@@ -1564,6 +1632,7 @@
     },
 
     {
+        "permaIndex": 26,
         "quesIndex": 26,
         "extraInformation": "",
         "question": "Are you a human?",

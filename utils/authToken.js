@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import User from '../model/user/user.js';
+import Auth from '../model/auth/Auth.js';
 import ErrorHandler from './errorHandler.js';
 
 const authToken = {
@@ -12,10 +12,10 @@ const authToken = {
     },
 
     // -------| COOKIE SETUP AND RESPONSE RETURN |-------
-    sendToken: function(user, statusCode, res){
+    sendToken: function(auth, statusCode, res){
 
         // 1) Token Generation
-        const token = this.signToken(user._id);
+        const token = this.signToken(auth._id);
 
         // 2) Options for cookie
         const options = {
@@ -26,12 +26,18 @@ const authToken = {
         // 3) Cookie seting in header
         res.cookie('token', token, options);
 
+        let master;
+        if(!auth.master){
+            master = null
+        } else {
+            master = auth.master
+        }
         // 4) Sending response
         return res.status(statusCode).json({
             success: true,
             token,
-            user,
-            role: user.role
+            auth,
+            role: auth.role,
         }) 
     },
 
@@ -48,16 +54,27 @@ const authToken = {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         // 3) Setting Authenicated User
-        req.user = await User.findById(decoded.id);
-
+        req.auth = await Auth.findById(decoded.id).select("+master");
         // 5) Calling next function
         next();
+    },
+
+    // -------| SUPER ROLE CHECKING |-------
+    authorizedSuperRoles: function(...masters){
+        return (req, res, next) => {
+            // console.log(req.user.master)
+            // console.log(masters)
+            if (!masters.includes(req.auth.master)) {
+                return next(new ErrorHandler(`Unauthorizes access.`, 403));
+            }
+            next();
+        }
     },
 
     // -------| ROLE CHECKING |-------
     authorizedRoles: function(...roles){
         return (req, res, next) => {
-            if (!roles.includes(req.user.role)) {
+            if (!roles.includes(req.auth.role)) {
                 return next(new ErrorHandler(`Unauthorizes access, your current role doesn't allow you to access this resource.`, 403));
             }
             next();

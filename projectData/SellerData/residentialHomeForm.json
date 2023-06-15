@@ -1,12 +1,15 @@
 [
     {
+        "conditionToShow": null,
+        "permaIndex": 0,
         "quesIndex": 0,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Is your home:",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Detached/Standalone",
                 "conditionalQues": false,
@@ -16,6 +19,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "b": "Attached to Others (such as a townhouse)",
                 "conditionalQues": false,
@@ -32,13 +36,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 1,
         "quesIndex": 1,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "What would you classify the style of your home to be?",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Colonial",
                 "conditionalQues": false,
@@ -48,6 +55,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "b": "Hi Ranch",
                 "conditionalQues": false,
@@ -57,6 +65,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "c": "Ranch",
                 "conditionalQues": false,
@@ -66,6 +75,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "d": "Split Level",
                 "conditionalQues": false,
@@ -75,6 +85,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "e": "Split Ranch/Splanch",
                 "conditionalQues": false,
@@ -84,6 +95,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "f": "Cape",
                 "conditionalQues": false,
@@ -93,6 +105,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "g": "Expanded Cape",
                 "conditionalQues": false,
@@ -102,6 +115,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "h": "Modern/Contemporary",
                 "conditionalQues": false,
@@ -111,6 +125,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "i": "Other",
                 "conditionalQues": false,
@@ -127,13 +142,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 2,
         "quesIndex": 2,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Would you say your home's condition is…",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Brand New (this includes a new foundation and even studs within the wall)",
                 "conditionalQues": false,
@@ -143,6 +161,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "b": "Updated within (20/10/5/past year)",
                 "conditionalQues": false,
@@ -152,6 +171,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "c": "Original",
                 "conditionalQues": false,
@@ -161,6 +181,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "d": "In Very Poor Condition; it might be best for a builder or contractor to purchase",
                 "conditionalQues": false,
@@ -177,8 +198,10 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 3,
         "quesIndex": 3,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Number of Bedrooms",
         "quesType": "inputText",
         "quesOption": false,
@@ -189,13 +212,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 4,
         "quesIndex": 4,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Number of Bathrooms",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Full",
                 "conditionalQues": true,
@@ -205,6 +231,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Half",
                 "conditionalQues": true,
@@ -221,13 +248,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 5,
         "quesIndex": 5,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Basement? Check all that apply",
         "quesType": "checkbox",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "a": "Full",
                 "conditionalQues": false,
@@ -237,6 +267,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "b": "Partial",
                 "conditionalQues": false,
@@ -246,6 +277,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "c": "Finished",
                 "conditionalQues": false,
@@ -255,6 +287,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "d": "Unfinished",
                 "conditionalQues": false,
@@ -264,6 +297,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "e": "Something that has an entrance to outside",
                 "conditionalQues": false,
@@ -273,6 +307,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "f": "Slab (none)",
                 "conditionalQues": false,
@@ -282,6 +317,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "select",
                 "g": "Crawl Space",
                 "conditionalQues": false,
@@ -297,7 +333,34 @@
         }
     },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
     {
+        "permaIndex": 6,
         "quesIndex": 6,
         "extraInformation": "",
         "question": "Square Footage of Property",
@@ -310,6 +373,7 @@
     },
 
     {
+        "permaIndex": 7,
         "quesIndex": 7,
         "extraInformation": "",
         "question": "Lot Size",
@@ -322,6 +386,7 @@
     },
 
     {
+        "permaIndex": 8,
         "quesIndex": 8,
         "extraInformation": "",
         "question": "Lot Dimension",
@@ -334,6 +399,7 @@
     },
 
     {
+        "permaIndex": 9,
         "quesIndex": 9,
         "extraInformation": "",
         "question": "Number of Garages",
@@ -957,6 +1023,7 @@
     },
 
     {
+        "permaIndex": 10,
         "quesIndex": 10,
         "extraInformation": "",
         "question": "Pool",
@@ -1031,6 +1098,7 @@
     },
 
     {
+        "permaIndex": 11,
         "quesIndex": 11,
         "extraInformation": "",
         "question": "Air Conditioning?",
@@ -1092,6 +1160,7 @@
     },
 
     {
+        "permaIndex": 12,
         "quesIndex": 12,
         "extraInformation": "",
         "question": "Heating Type:",
@@ -1176,6 +1245,7 @@
     },
 
     {
+        "permaIndex": 13,
         "quesIndex": 13,
         "extraInformation": "",
         "question": "Heating Fuel:",
@@ -1245,6 +1315,7 @@
     },
 
     {
+        "permaIndex": 14,
         "quesIndex": 14,
         "extraInformation": "",
         "question": "Current Property Taxes",
@@ -1257,6 +1328,7 @@
     },
 
     {
+        "permaIndex": 15,
         "quesIndex": 15,
         "extraInformation": "",
         "question": "Do you have an additional village tax?",
@@ -1269,6 +1341,7 @@
     },
 
     {
+        "permaIndex": 16,
         "quesIndex": 16,
         "extraInformation": "",
         "question": "Do you belong to an HOA and if so, what are the yearly fees?",
@@ -1292,6 +1365,7 @@
     },
 
     {
+        "permaIndex": 17,
         "quesIndex": 17,
         "extraInformation": "",
         "question": "Does your home belong to a specific section or development?",
@@ -1329,6 +1403,7 @@
     },
 
     {
+        "permaIndex": 18,
         "quesIndex": 18,
         "extraInformation": "",
         "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
@@ -1341,6 +1416,7 @@
     },
 
     {
+        "permaIndex": 19,
         "quesIndex": 19,
         "extraInformation": "",
         "question": "Do you owe anything on your current property?",
@@ -1394,6 +1470,7 @@
     },
 
     {
+        "permaIndex": 20,
         "quesIndex": 20,
         "extraInformation": "",
         "question": "Do you already have another property you will be moving to or will you need help in locating one?",
@@ -1406,6 +1483,7 @@
     },
 
     {
+        "permaIndex": 21,
         "quesIndex": 21,
         "extraInformation": "",
         "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
@@ -1458,6 +1536,7 @@
     },
 
     {
+        "permaIndex": 22,
         "quesIndex": 22,
         "extraInformation": "",
         "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
@@ -1470,6 +1549,7 @@
     },
 
     {
+        "permaIndex": 23,
         "quesIndex": 23,
         "extraInformation": "",
         "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
@@ -1492,6 +1572,7 @@
     },
 
     {
+        "permaIndex": 24,
         "quesIndex": 24,
         "extraInformation": "",
         "question": "Agree to Terms/Conditions Checkbox",
@@ -1515,6 +1596,7 @@
     },
 
     {
+        "permaIndex": 25,
         "quesIndex": 25,
         "extraInformation": "",
         "question": "Are you a human?",

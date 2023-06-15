@@ -1,36 +1,45 @@
 [
     {
+        "conditionToShow": null,
+        "permaIndex": 0,
         "quesIndex": 0,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Is your property currently listed on the market or are you contacted with an agency and will be listed at some time in future?",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Not on the market and not contracted for a listing",
                 "conditionalQues": false,
                 "multiAns": false,
                 "inputBox": true,
+                "isDate": false,
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "Contracted to list but not on the market yet",
                 "conditionalQues": false,
                 "multiAns": false,
                 "inputBox": true,
+                "isDate": false,
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "c": "Contracted to list and currently on the market",
                 "conditionalQues": false,
                 "multiAns": false,
                 "inputBox": false,
+                "isDate": false,
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "d": "Contracted to list and currently on the market…but expiring soon!",
                 "conditionalQues": true,
@@ -47,13 +56,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 1,
         "quesIndex": 1,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Are you the current owner of the property?",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Yes",
                 "conditionalQues": false,
@@ -63,11 +75,12 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "No, I am submitting this for someone else.",
                 "conditionalQues": true,
-                "multiAns": true,
-                "inputBox": false,
+                "multiAns": false,
+                "inputBox": true,
                 "isDate": false,
                 "isSubQues": false,
                 "textObject" :{
@@ -87,8 +100,10 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 2,
         "quesIndex": 2,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "Property Address",
         "quesType": "inputText",
         "quesOption": false,
@@ -99,6 +114,8 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 3,
         "quesIndex": 3,
         "extraInformation": "Let’s Get Some Details About Your Property",
         "question": "What Type of Property are Your Submitting:",
@@ -106,6 +123,7 @@
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Residential Home",
                 "conditionalQues": false,
@@ -115,6 +133,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "Residential Home",
                 "conditionalQues": false,
@@ -124,6 +143,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "c": "Commercial/Industrial",
                 "conditionalQues": false,
@@ -133,6 +153,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "d": "Land",
                 "conditionalQues": false,
@@ -142,6 +163,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "e": "Rental - Residential",
                 "conditionalQues": false,
@@ -151,6 +173,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "f": "Rental - Commercial",
                 "conditionalQues": false,
@@ -167,13 +190,16 @@
     },
 
     {
+        "conditionToShow": null,
+        "permaIndex": 4,
         "quesIndex": 4,
-        "extraInformation": "",
+        "extraInformation": null,
         "question": "When are you looking to close (or have the property rented by? If rental option was chosen)?",
         "quesType": "multiOption",
         "quesOption": true,
         "quesAnsOption": [
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "a": "Asap",
                 "conditionalQues": false,
@@ -183,6 +209,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "b": "1-3 months",
                 "conditionalQues": false,
@@ -192,6 +219,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "c": "4-6 months",
                 "conditionalQues": false,
@@ -201,6 +229,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "d": "7-9 months",
                 "conditionalQues": false,
@@ -210,6 +239,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "e": "9-12 months",
                 "conditionalQues": false,
@@ -219,6 +249,7 @@
                 "isSubQues": false
             },
             {
+                "optExtraInfo": null,
                 "optType": "radio",
                 "f": "More than year",
                 "conditionalQues": false,
