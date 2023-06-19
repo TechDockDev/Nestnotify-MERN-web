@@ -4,92 +4,33 @@ import ErrorHandler from '../utils/errorHandler.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
-import Auth from '../model/auth/Auth.js';
+// import Auth from '../model/auth/Auth.js';
 import SellerForm from '../model/propertyQuesModels/SellerForm.js';
 import SellerResidentialForm from '../model/propertyQuesModels/SellerResidentialHomeForm.js';
 import SellerResidentialCondoForm from '../model/propertyQuesModels/SellerResidentialCondoForm.js';
 import SellerCommercialForm from '../model/propertyQuesModels/SellerCommercialForm.js';
 
-
-/*
-    SUPER ADMIN CONTROLLER
-*/
-
-// 1) Super Admin: User Role modification by Super Admin
-export const nestNotify_Super_Admin_User_Role_Change = CatchAsync( async(req, res, next)=>{
-    
-    const userRoleChangeID = req.params.id
-
-    const userToChangeExist = await Auth.findById({_id: userRoleChangeID})
-
-    if(!userToChangeExist){
-        return next(new ErrorHandler(`User doesn't exist`, 401))
-    }
-
-    const roleCheck = req.body.role
-
-    if(roleCheck==="admin" || roleCheck==="user"){
-        const modifiedUser = await Auth.findByIdAndUpdate(
-            {
-                _id: userToChangeExist._id
-            }, 
-            { 
-                role: req.body.role
-            },
-            {   new: true,
-                runValidators: true,
-                userFindAndModify: true}
-            )
-            return res.status(201).json({
-                success: true,
-                message: 'User role modified',
-                Name: modifiedUser.firstName+" "+modifiedUser.lastName,
-                modifiedUserRole: modifiedUser.role
-            })
-
-    } 
-    else{
-        return next(new ErrorHandler(`Role can't be modified`, 401))
-    }
-
-})
+import BuyerResidentialHomeForm from '../model/buyers/BuyerResidentialHomeForm.js';
+import BuyerResidentialCondoForm from '../model/buyers/BuyerResidentailCondoForm.js';
+import BuyerCommercialForm from '../model/buyers/BuyerCommercialForm.js';
 
 
-// 2) Super Admin: User Account Delete
-export const nestNotify_Super_Admin_User_Account_Delete = CatchAsync( async(req, res, next)=>{
-    
-    const userRoleChangeID = req.params.id
 
-    const userToChangeExist = await Auth.findById({_id: userRoleChangeID})
-
-    if(!userToChangeExist){
-        return next(new ErrorHandler(`User doesn't exist`, 401))
-    }
-
-    const accountDeleted = await Auth.findByIdAndDelete(req.params.id)
-
-    return res.status(201).json({
-        success: true,
-        message: `"${accountDeleted.firstName+" "+accountDeleted.lastName}" account deleted.`,
-    })
-
-})
+// ==============================================================================================
+// Questionnaire forms
+// ==============================================================================================
 
 
-/*
-    ADMIN CONTROLLER
-*/
-
-// 1) Admin: Seller property resgistration Form
+// Admin: Get Seller Property Registration Form
 export const nestNotify_Admin_Get_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
-    
-    // const sellerPropertyForm = await SellerForm.find().sort({quesIndex: 0});
 
-    const resultPerPage = 3;
-    const propertyQuesCount = await SellerForm.countDocuments()
+    const sellerPropertyForm = await SellerForm.find().sort({quesIndex: 0})
 
-    const apiFeature = new ApiFeatures(SellerForm.find(), req.query).pagination(resultPerPage)
-    const sellerPropertyForm = await apiFeature.query;
+    // const resultPerPage = 3;
+    // const propertyQuesCount = await SellerForm.countDocuments()
+
+    // const apiFeature = new ApiFeatures(SellerForm.find(), req.query).pagination(resultPerPage)
+    // const sellerPropertyForm = await apiFeature.query;
 
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
@@ -98,24 +39,25 @@ export const nestNotify_Admin_Get_Seller_Property_Form = CatchAsync( async(req, 
     res.status(200).json({
         success: true,
         message: "Seller New Property Form",
-        propertyQuesCount,
+        // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
 })
 
+// Admin: Seller Questionnaire Types
 
 
-// 2) Admin: Get Seller residetnial home Form
+// Admin: Get Seller Residetnial Home Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
     
-    // const sellerPropertyForm = await SellerResidentialForm.find().sort({quesIndex: 0});
+    const sellerPropertyForm = await SellerResidentialForm.find().sort({quesIndex: 0});
 
-    const resultPerPage = 3;
-    const propertyQuesCount = await SellerResidentialForm.countDocuments()
+    // const resultPerPage = 3;
+    // const propertyQuesCount = await SellerResidentialForm.countDocuments()
 
-    const apiFeature = new ApiFeatures(SellerResidentialForm.find(), req.query).pagination(resultPerPage)
-    const sellerPropertyForm = await apiFeature.query;
+    // const apiFeature = new ApiFeatures(SellerResidentialForm.find(), req.query).pagination(resultPerPage)
+    // const sellerPropertyForm = await apiFeature.query;
 
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
@@ -124,7 +66,7 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
     res.status(200).json({
         success: true,
         message: "Seller Form Data",
-        propertyQuesCount,
+        // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
@@ -132,16 +74,16 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
 
 
 
-// 3) Admin: Get Seller Residential Condo Form
+// Admin: Get Seller Residential Condo Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
-    // const sellerPropertyForm = await SellerResidentialCondoForm.find().sort({quesIndex: 0});
+    const sellerPropertyForm = await SellerResidentialCondoForm.find().sort({quesIndex: 0});
 
-    const resultPerPage = 3;
-    const propertyQuesCount = await SellerResidentialCondoForm.countDocuments()
+    // const resultPerPage = 3;
+    // const propertyQuesCount = await SellerResidentialCondoForm.countDocuments()
 
-    const apiFeature = new ApiFeatures(SellerResidentialCondoForm.find(), req.query).pagination(resultPerPage)
-    const sellerPropertyForm = await apiFeature.query;
+    // const apiFeature = new ApiFeatures(SellerResidentialCondoForm.find(), req.query).pagination(resultPerPage)
+    // const sellerPropertyForm = await apiFeature.query;
 
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
@@ -150,7 +92,7 @@ export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( as
     res.status(200).json({
         success: true,
         message: "Seller Form Data",
-        propertyQuesCount,
+        // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
@@ -158,16 +100,16 @@ export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( as
 
 
 
-// 4) Admin: Get Seller Commercial Form
+// Admin: Get Seller Commercial Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( async(req, res, next)=>{
    
-    // const sellerPropertyForm = await SellerCommercialForm.find().sort({quesIndex: 0});
+    const sellerPropertyForm = await SellerCommercialForm.find().sort({quesIndex: 0});
 
-    const resultPerPage = 3;
-    const propertyQuesCount = await SellerCommercialForm.countDocuments()
+    // const resultPerPage = 5;
+    // const propertyQuesCount = await SellerCommercialForm.countDocuments()
 
-    const apiFeature = new ApiFeatures(SellerCommercialForm.find(), req.query).pagination(resultPerPage)
-    const sellerPropertyForm = await apiFeature.query;
+    // const apiFeature = new ApiFeatures(SellerCommercialForm.find(), req.query).pagination(resultPerPage)
+    // const sellerPropertyForm = await apiFeature.query;
 
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
@@ -176,43 +118,237 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
     res.status(200).json({
         success: true,
         message: "Seller Form Data",
-        propertyQuesCount,
+        // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
 })
 
 
+// ==============================================================================================
+// Suffle Seller forms
+// ==============================================================================================
 
-// 5) -> Admin: Suffle form
-export const nestNotify_Admin_Suffle_Property_Form = CatchAsync( async(req, res, next)=>{
+// Admin: Suffle Seller Property Form
+export const nestNotify_Admin_Suffle_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
 
-    // (Left) Requires:- Form Id, [[Ques ID, Index Vale], [Ques ID, Index Vale], [Ques ID, Index Vale],.....] for suffling
+    const sCF = await SellerForm.countDocuments()
+    console.log(sCF)
+    console.log(req.body.length)
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await SellerForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    return res.status(200).json({
+        success: true,
+        message: `Seller Commercail Form Suffled`,
+    })
+})
+
+// Admin: Suffle Seller Form Residential Home
+export const nestNotify_Admin_Suffle_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await SellerResidentialForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await SellerResidentialForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
 
     res.status(200).json({
         success: true,
-        message: "Forms Questions Suffle"
+        message: `Seller Commercail Form Suffled`,
     })
 })
 
 
-// -----| Question Post |-----
-export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)=>{
+// Admin: Suffle Seller Residentail Condo Form 
+export const nestNotify_Admin_Suffle_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
-    if(!req.body){
-        return res.status(201).json({
-            success: false,
-            message: "Provide proper details"
-        })
+    const sCF = await SellerResidentialCondoForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
     }
-    // const sellerPropertyForm = await SellerForm.create(req.body)
-    // const sellerPropertyForm = await SellerResidentialForm.create(req.body)
-    // const sellerPropertyForm = await SellerResidentialCondoForm.create(req.body)
-    const sellerPropertyForm = await SellerCommercialForm.create(req.body)
 
-    res.status(201).json({
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await SellerResidentialCondoForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    res.status(200).json({
         success: true,
-        message: "Questions Post",
-        sellerPropertyForm
+        message: `Seller Commercail Form Suffled`,
     })
 })
+
+// Admin: Suffle Seller Residentail Condo Form 
+export const nestNotify_Admin_Suffle_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await SellerCommercialForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await SellerCommercialForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    res.status(200).json({
+        success: true,
+        message: `Seller Commercail Form Suffled`,
+    })
+})
+
+
+
+// ==============================================================================================
+// Suffle Buyer Forms
+// ==============================================================================================
+
+// Admin: Suffle Buyer Residential Home Form
+export const nestNotify_Admin_Suffle_Buyer_Residentail_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerResidentialHomeForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await BuyerResidentialHomeForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    res.status(200).json({
+        success: true,
+        message: `Seller Commercail Form Suffled`,
+    })
+})
+
+// Admin: Suffle Buyer Residential Condo
+export const nestNotify_Admin_Suffle_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerResidentialCondoForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await BuyerResidentialCondoForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    res.status(200).json({
+        success: true,
+        message: `Seller Commercail Form Suffled`,
+    })
+})
+
+// Admin: Suffle Seller Commercail Form
+export const nestNotify_Admin_Suffle_Buyer_Commercail_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerCommercialForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    Object.entries(req.body).forEach(async (data)=>{
+        const qID = data[1].quesID
+        await BuyerCommercialForm.findByIdAndUpdate({_id: qID}, 
+                    {quesIndex: data[1].quesIndex},
+                    {
+                        new: true,
+                        runValidators: true,
+                        userFindAndModify: true
+                    })
+    })
+
+    res.status(200).json({
+        success: true,
+        message: `Seller Commercail Form Suffled`,
+    })
+})
+
+
+// // -----| Question Post |-----
+// export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)=>{
+
+//     if(!req.body){
+//         return res.status(201).json({
+//             success: false,
+//             message: "Provide proper details"
+//         })
+//     }
+//     const sellerPropertyForm = await SellerForm.create(req.body)
+//     // const sellerPropertyForm = await SellerResidentialForm.create(req.body)
+//     // const sellerPropertyForm = await SellerResidentialCondoForm.create(req.body)
+//     // const sellerPropertyForm = await SellerCommercialForm.create(req.body)
+
+//     res.status(201).json({
+//         success: true,
+//         message: "Questions Post",
+//         sellerPropertyForm
+//     })
+// })
+
+
+
+
+
+
+// =============================================================================================
+
+// Admin: All Properties added
+
+// Admin: All New Properties added
+
+// Admin: All Tour Requests by Users
+
+// Admin: All new Tour Request by Users
+
+
+// 

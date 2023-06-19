@@ -23,7 +23,7 @@ app.use(mogran("common"));
 app.use(helmet())
 app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
 app.use(cors({credentials: true, origin:`http://localhost:3000`}));
-
+// app.use(cors())
 
 // -----| Application Route Imports
 import userAuthRoute from './routes/userAuthRoute.js';
@@ -36,12 +36,12 @@ app.use('/api/v1/admin', adminRoute);
 app.use('/api/v1/user', userAuthRoute);
 app.use('/api/v1/seller', sellerRoute)
 
-// app.all('*', (req, res)=>{
-//     return res.status(404).json({
-//         success: false,
-//         message: `OPs something went wrong ${404}`
-//     });
-// })
+app.all('*', (req, res)=>{
+    return res.status(404).json({
+        success: false,
+        message: `OPs something went wrong ${404}`
+    });
+})
 
 // -----| ERROR MIDDLEWARE |-----
 app.use(errorMiddleware)

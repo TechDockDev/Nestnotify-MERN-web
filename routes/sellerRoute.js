@@ -3,6 +3,7 @@ import authToken from '../utils/authToken.js';
 import 
 { 
     nestNotify_Seller_Fill_New_Property_Form,
+    nestNotify_Seller_Get_Filled_New_Property_Form,
     nestNotify_Seller_Get_Property_Form,
     nestNotify_Seller_Fill_New_Residential_Home_Form,
     nestNotify_Seller_Get_Residential_Home_Form,
@@ -17,6 +18,7 @@ const router = express.Router()
 
 // New property form
 router.route('/new/property/form').post(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Fill_New_Property_Form)
+router.route('/get/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Filled_New_Property_Form)
 router.route('/get/property/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Property_Form)
 
 // New residential home form

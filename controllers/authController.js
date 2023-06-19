@@ -182,5 +182,3 @@ export const nestNotify_User_Password_Reset = CatchAsync(async(req, res, next)=>
     await auth.save()
     authToken.sendToken(auth, 200, res)
 })
-
-// -----| USER ROLE CHANGE BY ADMIN |-----

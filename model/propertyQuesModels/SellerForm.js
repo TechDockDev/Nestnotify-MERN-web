@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
 
 const SellerFormModel = mongoose.Schema({
+    questionCondition: String,
     quesIndex: Number,
     extraInformation: String,
     question: String,
-    quesType: String,
-    quesOption: Boolean,
+    questionType: String,
+    questionOption: Boolean,
     quesAnsOption: Array,
     answerVal: Object
 }, {timestamps: true});

@@ -9,17 +9,45 @@ import SellerResidentialForm from '../model/propertyQuesModels/SellerResidential
 import SellerResidentialCondoForm from '../model/propertyQuesModels/SellerResidentialCondoForm.js';
 import SellerCommercialForm from '../model/propertyQuesModels/SellerCommercialForm.js';
 
+import SellerPropertyForm from '../model/seller/SellerPropertyForm.js';
+
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 // 1) SELLER: FILL NEW PROPERTY FORM 
 export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, res, next)=>{
 
+    console.log(req.body.length)
+
+    if(!req.body){
+        return next(new ErrorHandler('Please enter details', 401))
+    }
+
+    const answerFill = await SellerPropertyForm.create({
+        auth: req.auth.id,
+        sellerForm: req.body._id,
+        formAnswers: req.body
+    })
+
     res.status(200).json({
         success: true,
         message: "New Property form filled",
+        // answerFill
     })
 })
+
+export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(req, res, next)=>{
+
+    const answerFill = await SellerPropertyForm.find().populate('auth').populate('sellerForm')
+
+    res.status(200).json({
+        success: true,
+        message: "New Property form filled",
+        length: answerFill.length,
+        answerFill
+    })
+})
+
 // 2) SELLER: GET NEW PROPERTY FORM 
 export const nestNotify_Seller_Get_Property_Form = CatchAsync( async(req, res, next)=>{
 

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const SellerFormModel = new mongoose.Schema({
+const BuyerCommercailModel = new mongoose.Schema({
     quesIndex: Number,
     extraInformation: String,
     question: String,
@@ -10,5 +10,5 @@ const SellerFormModel = new mongoose.Schema({
     answerVal: Object
 }, {timestamps: true});
  
-const SellerCommercialForm = mongoose.model('SellerCommercialForm', SellerFormModel);
-export default SellerCommercialForm;
+const BuyerCommercailForm = mongoose.model('BuyerCommercailForm', BuyerCommercailModel);
+export default BuyerCommercailForm;

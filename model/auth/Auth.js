@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 
-const userSchema = new mongoose.Schema(
+const authSchema = new mongoose.Schema(
     {
         firstName: {
             type: String,
@@ -46,17 +46,17 @@ const userSchema = new mongoose.Schema(
     }
 )
 
-userSchema.pre('save', async function(next){
+authSchema.pre('save', async function(next){
     if(!this.isModified('password')) return next()
     this.password = await bcrypt.hash(this.password, 12)
     next()
 });
 
-userSchema.methods.correctPassword = async function(candidatePassword, userPassword){
+authSchema.methods.correctPassword = async function(candidatePassword, userPassword){
     return await bcrypt.compare(candidatePassword, userPassword)
 };
 
-userSchema.methods.getResetPasswordToken = async function () {
+authSchema.methods.getResetPasswordToken = async function () {
     // generate token
     const resetToken = crypto.randomBytes(20).toString("hex");
     // generate hash token and add to db
@@ -65,6 +65,6 @@ userSchema.methods.getResetPasswordToken = async function () {
     return resetToken;
 }
 
-const User = mongoose.model("User", userSchema);
+const Auth = mongoose.model("Auth", authSchema);
 
-export default User;
+export default Auth;
