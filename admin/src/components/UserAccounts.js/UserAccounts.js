@@ -2,7 +2,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import React from "react";
 import { FormControlLabel, Switch, Button, Grid, Typography, } from "@mui/material";
 import { GridToolbarQuickFilter } from "@mui/x-data-grid";
-const AdminAccounts = () => {
+const UserAccounts = () => {
 
    // *************************************************
    const CustomeToolBar = () => {
@@ -26,7 +26,7 @@ const AdminAccounts = () => {
                      borderLeft: "4px solid #2298BC",
                      padding: "10px",
                   }}>
-                  Admin Accounts
+                  User Accounts
                </Typography>
             </Grid>
             {/* <======👆 Table heading (left corner)👆  ======> */}
@@ -207,4 +207,4 @@ const AdminAccounts = () => {
    );
 };
 
-export default AdminAccounts;
+export default UserAccounts;

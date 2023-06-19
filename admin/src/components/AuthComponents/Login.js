@@ -1,20 +1,35 @@
 import { Button, Paper, Stack, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Heading from "./Heading";
 import { NavLink } from "react-router-dom";
 import AuthInputs from "./AuthInputs";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
+import axios from "axios";
+import { DataContext } from "../../AppContext";
 
 const Login = () => {
    const [formData, setFormData] = useState({
       email: "",
       password: "",
    });
+   const {snackbar} = useContext(DataContext)
 
    // <======🍀👇 Handle Change👇 🍀======>
    const handleChange = (e, index) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
+   };
+   // <======🍀👆 Handle Change👆 🍀======>
+   // <======🍀👇 Handle Change👇 🍀======>
+   const loginHandler = async(e) => {
+      e.preventDefault()
+      try {
+         const res = await axios.post("/api/v1/user/signin", formData)
+         console.log(res);
+         
+      } catch (error) {
+         snackbar("error", error.message)
+      }
    };
    // <======🍀👆 Handle Change👆 🍀======>
 
@@ -34,7 +49,7 @@ const Login = () => {
             New User?
             <NavLink to="/signup"> Create an account</NavLink> {/* == 👇 email 👇  ==*/}
          </Typography>
-         <Stack component={"form"}>
+         <Stack component={"form"} onSubmit={loginHandler}>
             <AuthInputs labelText={"Email"} inputType={"email"} inputName={"email"} inputValue={formData.email} onChangeHandler={handleChange} labelInputId={"email"} requiredTrue={true} placeholderText={"Enter your email"} />
             {/* == 👆 email   ==*/}
             {/* == 👇 password 👇  ==*/}
