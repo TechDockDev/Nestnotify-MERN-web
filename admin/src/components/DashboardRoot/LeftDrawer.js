@@ -11,12 +11,18 @@ import Toolbar from "@mui/material/Toolbar";
 import DrawerContent from "./DrawerContent";
 import { Button, Stack } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { DataContext } from "../../AppContext";
+import axios from "axios";
+import NotificationSnackbar from "../CommonComponents/NotificationSnackbar";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 250;
 
 function LeftDrawer(props) {
    const { window } = props;
    const [mobileOpen, setMobileOpen] = React.useState(false);
+   const { snackbar, setAdminAuthData, setIsLoggedIn } = React.useContext(DataContext);
+   const navigate  = useNavigate()
 
    const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);
@@ -24,8 +30,25 @@ function LeftDrawer(props) {
 
    const container = window !== undefined ? () => window().document.body : undefined;
 
+   const handleLogout = async () => {
+      try {
+         const { data } = await axios.get("/api/v1/user/signout");
+         console.log(data);
+         snackbar(data.status, data.message);
+         setAdminAuthData({});
+         setIsLoggedIn(false)
+         navigate('/')
+
+      } catch (error) {
+         console.log(error);
+
+         snackbar("error", error?.response?.data?.message);
+      }
+   };
+
    return (
       <Box sx={{ display: "flex" }}>
+         <NotificationSnackbar />
          <CssBaseline />
          <AppBar
             position="fixed"
@@ -36,7 +59,7 @@ function LeftDrawer(props) {
             <Toolbar
                sx={{
                   width: "100%",
-                  maxWidth: {md:`calc(1440px - 250px)`},
+                  maxWidth: { md: `calc(1440px - 250px)` },
                   marginX: "auto",
                   minHeight: { xs: "48px", sm: "60px" },
                }}>
@@ -47,7 +70,7 @@ function LeftDrawer(props) {
                   <Stack>
                      <Box component={"img"} alt="" src="/assets/nestnotifyLogoWhite.svg" />
                   </Stack>
-                  <Button variant="outlined" endIcon={<LogoutIcon />} sx={{ color: "white", textTransform: "none" }}>
+                  <Button onClick={handleLogout} variant="outlined" endIcon={<LogoutIcon />} sx={{ color: "white", textTransform: "none" }}>
                      Log out
                   </Button>
                </Stack>
@@ -76,7 +99,7 @@ function LeftDrawer(props) {
                   "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
                }}
                open>
-               <DrawerContent />
+               <DrawerContent handleDrawerToggle={handleDrawerToggle}/>
             </Drawer>
          </Box>
       </Box>

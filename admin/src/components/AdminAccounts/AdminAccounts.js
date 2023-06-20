@@ -1,9 +1,16 @@
 import { DataGrid } from "@mui/x-data-grid";
-import React from "react";
-import { FormControlLabel, Switch, Button, Grid, Typography, } from "@mui/material";
+import React, { useContext, useEffect } from "react";
+import { FormControlLabel, Switch, Button, Grid, Typography } from "@mui/material";
 import { GridToolbarQuickFilter } from "@mui/x-data-grid";
+import axios from "axios";
+import { DataContext } from "../../AppContext";
+
+
+
+
 const AdminAccounts = () => {
 
+   const { snackbar } = useContext(DataContext)
    // *************************************************
    const CustomeToolBar = () => {
       return (
@@ -87,8 +94,6 @@ const AdminAccounts = () => {
          headerName: "Image",
          width: 150,
          renderCell: (params) => {
-            console.log(params);
-
             return <img src={params.row.image} alt="" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />;
          },
       },
@@ -176,6 +181,19 @@ const AdminAccounts = () => {
          action: "pending",
       },
    ];
+   // <======👇 Get All Admins👇  ======>
+   const getAllAdmins = async () => {
+      try {
+         const { data } = await axios.get("/super/admin/all/admins");
+         console.log(data);
+      } catch (error) {
+         snackbar("error", error?.response?.data);
+      }
+   };
+   // <======👆 Get All Admins👆  ======>
+   useEffect(() => {
+      getAllAdmins();
+   }, []);
 
    return (
       <>

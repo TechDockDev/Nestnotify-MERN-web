@@ -7,9 +7,9 @@ const DataContext = createContext();
 const AppContext = ({ children }) => {
    const [severity, setSeverity] = useState("success");
    const [message, setMessage] = useState("");
-   const [openSnackbar, setOpenSnackbar] = useState(true);
-//    const [adminAuthData, setAdminAuthData] = useState("");
-//    const [isLoggedIn, setIsLoggedIn] = useState(false);
+   const [openSnackbar, setOpenSnackbar] = useState(false);
+   const [adminAuthData, setAdminAuthData] = useState("");
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
    // =======👇 function to open snackbar👇====
    const snackbar = (severity, message) => {
       setSeverity(severity);
@@ -27,10 +27,10 @@ const AppContext = ({ children }) => {
             snackbar,
             openSnackbar,
             setOpenSnackbar,
-            // adminAuthData,
-            // setAdminAuthData,
-            // isLoggedIn,
-            // setIsLoggedIn,
+            adminAuthData,
+            setAdminAuthData,
+            isLoggedIn,
+            setIsLoggedIn,
          }}>
          {children}
       </DataContext.Provider>

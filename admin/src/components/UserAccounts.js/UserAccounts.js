@@ -87,8 +87,6 @@ const UserAccounts = () => {
          headerName: "Image",
          width: 150,
          renderCell: (params) => {
-            console.log(params);
-
             return <img src={params.row.image} alt="" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />;
          },
       },

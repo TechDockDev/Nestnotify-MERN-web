@@ -1,7 +1,7 @@
 import { Button, Paper, Stack, Typography } from "@mui/material";
 import React, { useContext, useState } from "react";
 import Heading from "./Heading";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import AuthInputs from "./AuthInputs";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
@@ -13,25 +13,28 @@ const Login = () => {
       email: "",
       password: "",
    });
-   const {snackbar} = useContext(DataContext)
-
+   const { snackbar, setAdminAuthData , setIsLoggedIn} = useContext(DataContext);
+   const navigate  = useNavigate()
    // <======🍀👇 Handle Change👇 🍀======>
    const handleChange = (e, index) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
    };
    // <======🍀👆 Handle Change👆 🍀======>
-   // <======🍀👇 Handle Change👇 🍀======>
-   const loginHandler = async(e) => {
-      e.preventDefault()
+   // <======🍀👇 Login handler👇 🍀======>
+   const loginHandler = async (e) => {
+      e.preventDefault();
       try {
-         const res = await axios.post("/api/v1/user/signin", formData)
-         console.log(res);
-         
+         const { data } = await axios.post("api/v1/user/signin", formData);
+         snackbar(data.status, data.message);
+         console.log(data?.auth);
+         setAdminAuthData(data?.auth);
+         setIsLoggedIn(true)
+         navigate('dashboard')
       } catch (error) {
-         snackbar("error", error.message)
+         snackbar("error", error.response.data.message);
       }
    };
-   // <======🍀👆 Handle Change👆 🍀======>
+   // <======🍀👆 Login handler👆 🍀======>
 
    return (
       <Paper
@@ -53,7 +56,7 @@ const Login = () => {
             <AuthInputs labelText={"Email"} inputType={"email"} inputName={"email"} inputValue={formData.email} onChangeHandler={handleChange} labelInputId={"email"} requiredTrue={true} placeholderText={"Enter your email"} />
             {/* == 👆 email   ==*/}
             {/* == 👇 password 👇  ==*/}
-            <AuthInputs labelText={"Password"} inputType={"password"} inputName={"password"} inputValue={formData.password} onChangeHandler={handleChange} labelInputId={"password"} requiredTrue={true} placeholderText={"Set Password"} />
+            <AuthInputs labelText={"Password"} inputType={"password"} inputName={"password"} inputValue={formData.password} onChangeHandler={handleChange} labelInputId={"password"} requiredTrue={true} placeholderText={"Set Password"} minLength={8} />
             {/* == 👆 password   ==*/}
 
             <Typography mt={2} fontWeight={500} sx={{ color: "#0D507D", fontSize: "14px", cursor: "pointer", width: "100%", textAlign: "right" }}>
