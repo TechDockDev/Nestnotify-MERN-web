@@ -12,7 +12,7 @@ const authToken = {
     },
 
     // -------| COOKIE SETUP AND RESPONSE RETURN |-------
-    sendToken: function(auth, statusCode, res){
+    sendToken: function(auth, statusCode, res, oper){
 
         // 1) Token Generation
         const token = this.signToken(auth._id);
@@ -32,10 +32,25 @@ const authToken = {
         } else {
             master = auth.master
         }
+
+        let message;
+        if(oper.toLowerCase()==='login'){
+            message='You are logged successfully.'
+        } 
+        else if(oper.toLowerCase()==='register'){
+            message = 'User Registration Successful.'
+        }
+        else if(oper.toLowerCase()==='passwordchange'){
+            message= 'Password reset successful'
+        }
+        else if(oper.toLowerCase()==='reset'){
+            message= 'Password reset successful'
+        }
         // 4) Sending response
         return res.status(statusCode).json({
             success: true,
-            token,
+            status: "success",
+            message,
             auth,
             role: auth.role,
         }) 

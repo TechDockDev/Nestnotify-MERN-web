@@ -18,6 +18,7 @@ export const nestNotify_Super_Admin_Search_Feature = CatchAsync( async(req, res,
     
     return res.status(200).json({
         success: true,
+        status: "success",
         message: "Search result",
         searchResult
     })
@@ -53,6 +54,7 @@ export const nestNotify_Super_Admin_Create_Admin_Account = CatchAsync( async(req
 
     return res.status(201).json({
         success: true,
+        status: "success",
         message: "Admin registered",
         adminUser
     })
@@ -86,6 +88,7 @@ export const nestNotify_Super_Admin_User_Role_Change = CatchAsync( async(req, re
             )
             return res.status(201).json({
                 success: true,
+                status: "success",
                 message: 'User role modified',
                 Name: modifiedUser.firstName+" "+modifiedUser.lastName,
                 modifiedUserRole: modifiedUser.role
@@ -129,6 +132,7 @@ export const nestNotify_Super_Admin_Get_All_Users = CatchAsync( async(req, res, 
     }
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Users List`,
         length: allUsers.length,
         allUsers
@@ -147,6 +151,7 @@ export const nestNotify_Super_Admin_Get_All_Admins = CatchAsync( async(req, res,
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Admins`,
         length: allAdmins.length,
         allAdmins
@@ -164,6 +169,7 @@ export const nestNotify_Super_Admin_Get_All_Sellers = CatchAsync( async(req, res
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Sellers`,
         length: allSellers.length,
         allSellers
@@ -182,6 +188,7 @@ export const nestNotify_Super_Admin_Get_All_Buyers = CatchAsync( async(req, res,
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Buyers`,
         length: allBuyers.length,
         allBuyers
@@ -198,6 +205,7 @@ export const nestNotify_Super_Admin_Get_All_Renters = CatchAsync( async(req, res
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Renters`,
         length: allRenters.length,
         allRenters
@@ -216,6 +224,7 @@ export const nestNotify_Super_Admin_Get_All_LandLords = CatchAsync( async(req, r
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All Landlords`,
         length: allLandLords.length,
         allLandLords
@@ -234,6 +243,7 @@ export const nestNotify_Super_Admin_Get_All_Invetors = CatchAsync( async(req, re
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `All investers`,
         length: allInvestors.length,
         allInvestors
@@ -256,6 +266,7 @@ export const nestNotify_Super_Admin_Single_User_Profile = CatchAsync( async(req,
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: `User List`,
         userProfile
     })

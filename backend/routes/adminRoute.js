@@ -5,13 +5,13 @@ import {
     nestNotify_Admin_Get_Seller_Residential_Home_Form, 
     nestNotify_Admin_Get_Seller_Residential_Condo_Form,
     nestNotify_Admin_Get_Seller_Commercial_Property_Form,
-    nestNotify_Admin_Suffle_Seller_Property_Form,
-    nestNotify_Admin_Suffle_Seller_Residential_Home_Form,
-    nestNotify_Admin_Suffle_Seller_Residential_Condo_Form,
-    nestNotify_Admin_Suffle_Seller_Commercail_Form,
-    nestNotify_Admin_Suffle_Buyer_Residentail_Home_Form,
-    nestNotify_Admin_Suffle_Buyer_Residential_Condo_Form,
-    nestNotify_Admin_Suffle_Buyer_Commercail_Form
+    nestNotify_Admin_Shuffle_Seller_Property_Form,
+    nestNotify_Admin_Shuffle_Seller_Residential_Home_Form,
+    nestNotify_Admin_Shuffle_Seller_Residential_Condo_Form,
+    nestNotify_Admin_Shuffle_Seller_Commercail_Form,
+    nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form,
+    nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form,
+    nestNotify_Admin_Shuffle_Buyer_Commercail_Form
     // nestNotify_Admin_Post_Questions 
 } from "../controllers/adminController.js";
 
@@ -57,18 +57,18 @@ router.route('/seller/residential/home/form').get(authToken.isUserAuthenticated,
 router.route('/seller/residential/condo/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Get_Seller_Residential_Condo_Form);
 router.route('/seller/commercial/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Get_Seller_Commercial_Property_Form);
 
-// Admin: Form Question Suffle
+// Admin: Form Question shuffle
 
 // Seller
-router.route('/suffle/seller/property/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Seller_Property_Form);
-router.route('/suffle/seller/resihome/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Seller_Residential_Home_Form);
-router.route('/suffle/seller/resicondo/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Seller_Residential_Condo_Form);
-router.route('/suffle/seller/commercail/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Seller_Commercail_Form);
+router.route('/shuffle/seller/property/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Seller_Property_Form);
+router.route('/shuffle/seller/resihome/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Seller_Residential_Home_Form);
+router.route('/shuffle/seller/resicondo/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Seller_Residential_Condo_Form);
+router.route('/shuffle/seller/commercail/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Seller_Commercail_Form);
 
 // Buyer
-router.route('/suffle/buyer/resihome/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Buyer_Residentail_Home_Form);
-router.route('/suffle/buyer/resicondo/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Buyer_Residential_Condo_Form);
-router.route('/suffle/buyer/commercail/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Suffle_Buyer_Commercail_Form);
+router.route('/shuffle/buyer/resihome/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form);
+router.route('/shuffle/buyer/resicondo/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form);
+router.route('/shuffle/buyer/commercail/form').put(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Shuffle_Buyer_Commercail_Form);
 
 
 //////////////////////////////////////

@@ -48,7 +48,7 @@ export const nestNotify_User_Registration = CatchAsync( async(req, res, next)=>{
     const auth = await Auth.findById({_id: userCreate._id})
 
     // 5) Setting cookie and sending response
-    authToken.sendToken(auth, 200, res);
+    authToken.sendToken(auth, 200, res, 'register');
 })
 
 // -----| USER SIGNIN |-----
@@ -68,15 +68,16 @@ export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
 
     // 3) Checking password are same or not
     if(!userCheck || !await userCheck.correctPassword(password, userCheck.password)){
-        return next(new ErrorHandler('Invalid email and password', 401))
+        return next(new ErrorHandler('Invalid Credential', 401))
     }
 
     // 4) Fetching User data
     const auth= await Auth.findById({_id: userCheck._id})
 
     // 5) Setting cookie and sending reponse
-    authToken.sendToken(auth, 200, res)
+    authToken.sendToken(auth, 200, res, 'login')
 })
+
 
 // -----| USER LOGOUT |-----
 export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
@@ -90,7 +91,8 @@ export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
     // 2) Sending response
     res.status(200).json({
         success: true,
-        message: 'Logged Out.'
+        status: "success",
+        message: 'You are logged out.'
     })
 })
 
@@ -118,7 +120,7 @@ export const nestNotify_User_Password_Update = CatchAsync(async(req, res, next) 
     await auth.save();
 
     // Sending cookie and response
-    authToken.sendToken(auth, 200, res)
+    authToken.sendToken(auth, 200, res, 'passwordchange')
 })
 
 
@@ -180,5 +182,5 @@ export const nestNotify_User_Password_Reset = CatchAsync(async(req, res, next)=>
     auth.resetPasswordExpire = undefined;
 
     await auth.save()
-    authToken.sendToken(auth, 200, res)
+    authToken.sendToken(auth, 200, res, 'reset')
 })

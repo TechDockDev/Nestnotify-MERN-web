@@ -20,6 +20,9 @@ const authSchema = new mongoose.Schema(
             type: String,
             require: true
         },
+        secondaryContact: {
+            type: String,
+        },
         password: {
             type: String,
             minLength: [8, 'Please enter minimum 8 characters.'],
@@ -29,6 +32,10 @@ const authSchema = new mongoose.Schema(
         role: {
             type: String,
             default: 'user'
+        },
+        userActive: {
+            type: Boolean,
+            default: true,
         },
         master: {
             type: String,

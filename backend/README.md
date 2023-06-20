@@ -18,6 +18,7 @@
 |  01 | Super Admin: Search Feature        | GET    | http://localhost:5000/super/admin/user/role/change/:id             |   
 |  02 | Super Admin: Role Modification     | PUT    | http://localhost:5000/super/admin/user/role/change/:id             | 
 |  03 | Super Admin: User Account Delete   | DELETE | http://localhost:5000/super/admin/user/account/delete/:id          |
+|  03 | Super Admin: Admin Account Creation| POST   | http://localhost:5000/super/admin/new/admin/create                 |
 |  04 | Super Admin: Get All Users         | GET    | http://localhost:5000/super/admin/all/users                        | 
 |  05 | Super Admin: Get All Admins        | GET    | http://localhost:5000/super/admin/all/admins                       |
 |  06 | Super Admin: Get All Sellers       | GET    | http://localhost:5000/super/admin/all/sellers                      | 
@@ -30,14 +31,14 @@
 #### Admin Endpoints Table
 | No. | API Route                          | Method | EndPoints                                                          | 
 | --- | ---------------------------------- | ------ | ------------------------------------------------------------------ | 
-|  04 | Super Admin: Get All Users         | GET    | http://localhost:5000/api/v1/admin/all/users                       | 
-|  05 | Super Admin: Get All Admins        | GET    | http://localhost:5000/api/v1/admin/all/admins                      |
-|  06 | Super Admin: Get All Sellers       | GET    | http://localhost:5000/api/v1/admin/all/sellers                     | 
-|  07 | Super Admin: Get All Buyers        | GET    | http://localhost:5000/api/v1/admin/all/buyers                      |
-|  08 | Super Admin: Get All Renters       | GET    | http://localhost:5000/api/v1/admin/all/renters                     | 
-|  09 | Super Admin: Get All Landlords     | GET    | http://localhost:5000/api/v1/admin/all/landlords                   |
-|  10 | Super Admin: Get All Investers     | GET    | http://localhost:5000/api/v1/admin/all/invertors                   |
-|  11 | Super Admin: Get Single User       | GET    | http://localhost:5000/api/v1/admin/get/user/profile/:id            |
+|  04 | Admin: Get All Users               | GET    | http://localhost:5000/api/v1/admin/all/users                       | 
+|  05 | Admin: Get All Admins              | GET    | http://localhost:5000/api/v1/admin/all/admins                      |
+|  06 | Admin: Get All Sellers             | GET    | http://localhost:5000/api/v1/admin/all/sellers                     | 
+|  07 | Admin: Get All Buyers              | GET    | http://localhost:5000/api/v1/admin/all/buyers                      |
+|  08 | Admin: Get All Renters             | GET    | http://localhost:5000/api/v1/admin/all/renters                     | 
+|  09 | Admin: Get All Landlords           | GET    | http://localhost:5000/api/v1/admin/all/landlords                   |
+|  10 | Admin: Get All Investers           | GET    | http://localhost:5000/api/v1/admin/all/invertors                   |
+|  11 | Admin: Get Single User             | GET    | http://localhost:5000/api/v1/admin/get/user/profile/:id            |
 |  09 | Admin: Seller Property Form        | GET    | http://localhost:5000/api/v1/admin/seller/property/form            | 
 |  10 | Admin: Seller Residential Home     | GET    | http://localhost:5000/api/v1/admin//seller/residential/home/form   | 
 |  11 | Admin: Seller Residential Condo    | GET    | http://localhost:5000/api/v1/admin/seller/residential/condo/form   | 

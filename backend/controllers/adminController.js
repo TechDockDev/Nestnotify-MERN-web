@@ -38,6 +38,7 @@ export const nestNotify_Admin_Get_Seller_Property_Form = CatchAsync( async(req, 
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller New Property Form",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -65,6 +66,7 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Form Data",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -91,6 +93,7 @@ export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( as
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Form Data",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -117,6 +120,7 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Form Data",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -126,11 +130,11 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
 
 
 // ==============================================================================================
-// Suffle Seller forms
+// shuffle Seller forms
 // ==============================================================================================
 
-// Admin: Suffle Seller Property Form
-export const nestNotify_Admin_Suffle_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Seller Property Form
+export const nestNotify_Admin_Shuffle_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerForm.countDocuments()
     console.log(sCF)
@@ -152,12 +156,13 @@ export const nestNotify_Admin_Suffle_Seller_Property_Form = CatchAsync( async(re
 
     return res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
-// Admin: Suffle Seller Form Residential Home
-export const nestNotify_Admin_Suffle_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Seller Form Residential Home
+export const nestNotify_Admin_Shuffle_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerResidentialForm.countDocuments()
     if(req.body.length!==sCF){
@@ -177,13 +182,14 @@ export const nestNotify_Admin_Suffle_Seller_Residential_Home_Form = CatchAsync( 
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
 
-// Admin: Suffle Seller Residentail Condo Form 
-export const nestNotify_Admin_Suffle_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Seller Residentail Condo Form 
+export const nestNotify_Admin_Shuffle_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerResidentialCondoForm.countDocuments()
     if(req.body.length!==sCF){
@@ -203,12 +209,13 @@ export const nestNotify_Admin_Suffle_Seller_Residential_Condo_Form = CatchAsync(
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
-// Admin: Suffle Seller Residentail Condo Form 
-export const nestNotify_Admin_Suffle_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Seller Residentail Condo Form 
+export const nestNotify_Admin_Shuffle_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerCommercialForm.countDocuments()
     if(req.body.length!==sCF){
@@ -228,18 +235,19 @@ export const nestNotify_Admin_Suffle_Seller_Commercail_Form = CatchAsync( async(
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
 
 
 // ==============================================================================================
-// Suffle Buyer Forms
+// shuffle Buyer Forms
 // ==============================================================================================
 
-// Admin: Suffle Buyer Residential Home Form
-export const nestNotify_Admin_Suffle_Buyer_Residentail_Home_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Buyer Residential Home Form
+export const nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await BuyerResidentialHomeForm.countDocuments()
     if(req.body.length!==sCF){
@@ -259,12 +267,13 @@ export const nestNotify_Admin_Suffle_Buyer_Residentail_Home_Form = CatchAsync( a
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
-// Admin: Suffle Buyer Residential Condo
-export const nestNotify_Admin_Suffle_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Buyer Residential Condo
+export const nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await BuyerResidentialCondoForm.countDocuments()
     if(req.body.length!==sCF){
@@ -284,12 +293,13 @@ export const nestNotify_Admin_Suffle_Buyer_Residential_Condo_Form = CatchAsync( 
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
-// Admin: Suffle Seller Commercail Form
-export const nestNotify_Admin_Suffle_Buyer_Commercail_Form = CatchAsync( async(req, res, next)=>{
+// Admin: shuffle Seller Commercail Form
+export const nestNotify_Admin_Shuffle_Buyer_Commercail_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await BuyerCommercialForm.countDocuments()
     if(req.body.length!==sCF){
@@ -309,7 +319,8 @@ export const nestNotify_Admin_Suffle_Buyer_Commercail_Form = CatchAsync( async(r
 
     res.status(200).json({
         success: true,
-        message: `Seller Commercail Form Suffled`,
+        status: "success",
+        message: `Seller Commercail Form shuffled`,
     })
 })
 
@@ -349,6 +360,3 @@ export const nestNotify_Admin_Suffle_Buyer_Commercail_Form = CatchAsync( async(r
 // Admin: All Tour Requests by Users
 
 // Admin: All new Tour Request by Users
-
-
-// 
