@@ -1,0 +1,56 @@
+[
+    {
+        "questionCondition": null,
+        "quesIndex": 0,
+        "extraInformation": null,
+        "question": "Is your property currently listed on the market or are you contacted with an agency and will be listed at some time in future?",
+        "questionType": "optional",
+        "questionOption": true,
+        "quesAnsOption": [
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "a": "Not on the market and not contracted for a listing",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "b": "Contracted to list but not on the market yet",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "c": "Contracted to list and currently on the market",
+                "conditionalQues": false,
+                "multiAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "d": "Contracted to list and currently on the market…but expiring soon!",
+                "conditionalQues": true,
+                "multiAns": false,
+                "inputBox": true,
+                "isDate": true,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }
+]
