@@ -82,9 +82,11 @@ export const nestNotify_Super_Admin_User_Role_Change = CatchAsync( async(req, re
             { 
                 role: req.body.role
             },
-            {   new: true,
+            {  
+                new: true,
                 runValidators: true,
-                userFindAndModify: true}
+                userFindAndModify: true
+            }
             )
             return res.status(201).json({
                 success: true,

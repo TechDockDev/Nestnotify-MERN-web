@@ -5,14 +5,14 @@ import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
 // import Auth from '../model/auth/Auth.js';
-import SellerForm from '../model/propertyQuesModels/SellerForm.js';
-import SellerResidentialForm from '../model/propertyQuesModels/SellerResidentialHomeForm.js';
-import SellerResidentialCondoForm from '../model/propertyQuesModels/SellerResidentialCondoForm.js';
-import SellerCommercialForm from '../model/propertyQuesModels/SellerCommercialForm.js';
+import SellerForm from '../model/questionnaires/SellerForm.js';
+import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeForm.js';
+import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoForm.js';
+import SellerCommercialForm from '../model/questionnaires/SellerCommercialForm.js';
 
-import BuyerResidentialHomeForm from '../model/buyers/BuyerResidentialHomeForm.js';
-import BuyerResidentialCondoForm from '../model/buyers/BuyerResidentailCondoForm.js';
-import BuyerCommercialForm from '../model/buyers/BuyerCommercialForm.js';
+import BuyerResidentialHomeForm from '../model/questionnaires/BuyerResidentialHomeForm.js';
+import BuyerResidentialCondoForm from '../model/questionnaires/BuyerResidentailCondoForm.js';
+import BuyerCommercialForm from '../model/questionnaires/BuyerCommercialForm.js';
 
 
 
@@ -325,6 +325,32 @@ export const nestNotify_Admin_Shuffle_Buyer_Commercail_Form = CatchAsync( async(
 })
 
 
+
+
+// Admin: User Account Disable
+export const nestNotify_Admin_Users_Account_Disable = CatchAsync( async(req, res, next)=>{
+    
+    const userExist = await Auth.findById({ _id: req.params.id})
+
+    if(!userExist){
+        return next(new ErrorHandler(`User doesn't exist`, 404))
+    }
+
+    if(userExist.userActive === true){
+        userExist.userActive = false
+        await userExist.save()
+    } else if( userExist.userActive ===false){
+        userExist.userActive = true
+        await userExist.save()
+    }
+
+    res.status(200).json({
+        success: true, 
+        status: "success",
+    })
+})
+
+
 // // -----| Question Post |-----
 // export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)=>{
 
@@ -345,18 +371,3 @@ export const nestNotify_Admin_Shuffle_Buyer_Commercail_Form = CatchAsync( async(
 //         sellerPropertyForm
 //     })
 // })
-
-
-
-
-
-
-// =============================================================================================
-
-// Admin: All Properties added
-
-// Admin: All New Properties added
-
-// Admin: All Tour Requests by Users
-
-// Admin: All new Tour Request by Users

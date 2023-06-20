@@ -11,7 +11,8 @@ import {
     nestNotify_Admin_Shuffle_Seller_Commercail_Form,
     nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form,
     nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form,
-    nestNotify_Admin_Shuffle_Buyer_Commercail_Form
+    nestNotify_Admin_Shuffle_Buyer_Commercail_Form,
+    nestNotify_Admin_Users_Account_Disable,
     // nestNotify_Admin_Post_Questions 
 } from "../controllers/adminController.js";
 
@@ -50,6 +51,7 @@ router.route('/all/renters').get(authToken.isUserAuthenticated, authToken.author
 router.route('/all/landlords').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Super_Admin_Get_All_LandLords);
 router.route('/all/investors').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Super_Admin_Get_All_Invetors);
 router.route('/get/user/profile/:id').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Super_Admin_Single_User_Profile);
+router.route('/modify/user/account/:id').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Users_Account_Disable);
 
 // Admin: Seller Property Form route
 router.route('/seller/property/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('admin'), nestNotify_Admin_Get_Seller_Property_Form);

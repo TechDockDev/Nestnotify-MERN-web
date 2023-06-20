@@ -4,12 +4,11 @@ import ErrorHandler from '../utils/errorHandler.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
-import SellerForm from '../model/propertyQuesModels/SellerForm.js';
-import SellerResidentialForm from '../model/propertyQuesModels/SellerResidentialHomeForm.js';
-import SellerResidentialCondoForm from '../model/propertyQuesModels/SellerResidentialCondoForm.js';
-import SellerCommercialForm from '../model/propertyQuesModels/SellerCommercialForm.js';
+import SellerForm from '../model/questionnaires/SellerForm.js';
+import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeForm.js';
+import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoForm.js';
+import SellerCommercialForm from '../model/questionnaires/SellerCommercialForm.js';
 
-import SellerPropertyForm from '../model/seller/SellerPropertyForm.js';
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------//

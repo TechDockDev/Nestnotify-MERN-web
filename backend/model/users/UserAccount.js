@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
-const UserAccountSchema = new mongoose.model({
+const UserAccountSchema = new mongoose.Schema({
+    auth: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'auth'
+    },
     city: {
         type: String,
     },

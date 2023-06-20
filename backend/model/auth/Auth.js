@@ -37,6 +37,9 @@ const authSchema = new mongoose.Schema(
             type: Boolean,
             default: true,
         },
+        dateOfBirth: {
+            type: Date,
+        },
         master: {
             type: String,
             select: false
@@ -44,6 +47,10 @@ const authSchema = new mongoose.Schema(
         profilePicture: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'imageModel'
+        },
+        userAccount: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'userAccount'
         },
         resetPasswordToken: String,
         resetPasswordExpire: Date,
