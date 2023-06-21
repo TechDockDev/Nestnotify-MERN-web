@@ -12,7 +12,7 @@ const SignUp = () => {
    const smallDevice = useMediaQuery("(max-width:600px)");
 
    const [formData, setFormData] = useState({
-      firtsName: "",
+      firstName: "",
       lastName: "",
       email: "",
       mobileNumber: "",
@@ -59,7 +59,7 @@ const SignUp = () => {
             {/* <======👇 Form  👇  ======> */}
             <Stack component={"form"} direction={{ xs: "col", sm: "row" }} flexWrap={"wrap"} justifyContent={"space-between"}>
                {/* == 👇 First Name 👇  ==*/}
-               <AuthInputs width={smallDevice ? "100%" : "49%"} labelText={"First Name"} inputType={"text"} inputName={"firtsName"} inputValue={formData.firtsName} onChangeHandler={handleChange} labelInputId={"firtsName"} requiredTrue={true} placeholderText={"Enter your firts name"} />
+               <AuthInputs width={smallDevice ? "100%" : "49%"} labelText={"First Name"} inputType={"text"} inputName={"firstName"} inputValue={formData.firstName} onChangeHandler={handleChange} labelInputId={"firstName"} requiredTrue={true} placeholderText={"Enter your first name"} />
                {/* == 👆 First Name   ==*/}
                {/* == 👇 Last Name 👇  ==*/}
                <AuthInputs width={smallDevice ? "100%" : "49%"} labelText={"Last Name"} inputType={"text"} inputName={"lastName"} inputValue={formData.lastName} onChangeHandler={handleChange} labelInputId={"lastName"} requiredTrue={true} placeholderText={"Enter your last name"} />

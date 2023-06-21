@@ -15,13 +15,14 @@ import SellerResidentialHome from "./components/SellersQues/SellerResidentialHom
 import SellerResidentialCondo from "./components/SellersQues/SellerResidentialCondo";
 import SellerCommercial from "./components/SellersQues/SellerCommercial";
 import SellerLandLot from "./components/SellersQues/SellerLandLot";
+import AddNewAdmin from "./components/AdminAccounts/AddNewAdmin";
 
 function App() {
    const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
 
    const authHandler = async () => {
       try {
-         const { data } = await axios.get("api/v1/user/get/profile");
+         const { data } = await axios.get("/api/v1/user/get/profile");
          setAdminAuthData(data?.auth);
          setIsLoggedIn(true);
       } catch (error) {
@@ -43,6 +44,7 @@ function App() {
             </Route>
             <Route path="/dashboard" element={<DashboardRoot />}>
                <Route path="admin-accounts" element={<AdminAccounts />} />
+               <Route path="admin-accounts/add-new-admin" element={<AddNewAdmin />} />
                <Route path="users-accounts" element={<UserAccounts />} />
                <Route path="sellers-questionnaire/residential-home" element={<SellerResidentialHome />} />
                <Route path="sellers-questionnaire/residential-condo" element={<SellerResidentialCondo />} />
