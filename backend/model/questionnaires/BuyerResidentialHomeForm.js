@@ -10,5 +10,5 @@ const BuyerResidentialHomeModel = new mongoose.Schema({
     answerVal: Object
 }, {timestamps: true});
  
-const BuyerResidentialHomeForm = mongoose.model('Form', BuyerResidentialHomeModel);
+const BuyerResidentialHomeForm = mongoose.model('BuyerResidentialHomeForm', BuyerResidentialHomeModel);
 export default BuyerResidentialHomeForm;

@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-const SellerFormModel = mongoose.Schema({
+const SellerFormModel = mongoose.Schema(
+    {
     quesIndex: Number,
     extraInformation: String,
     question: String,
@@ -8,7 +9,11 @@ const SellerFormModel = mongoose.Schema({
     quesOption: Boolean,
     quesAnsOption: Array,
     answerVal: Object
-}, {timestamps: true});
+    }, 
+    {
+        timestamps: true
+    }
+);
  
 const SellerResidentialCondoForm = mongoose.model('SellerResidentialCondoForm', SellerFormModel);
 export default SellerResidentialCondoForm;

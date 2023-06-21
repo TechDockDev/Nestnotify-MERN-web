@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const SellerFormModel = mongoose.Schema(
+const RenterResidentialHomeModel = mongoose.Schema(
     {
         questionCondition: String,
         quesIndex: Number,
@@ -16,5 +16,5 @@ const SellerFormModel = mongoose.Schema(
     }
 );
  
-const SellerForm = mongoose.model('SellerForm', SellerFormModel);
-export default SellerForm;
+const RenterResidentialHomeForm = mongoose.model('RenterResidentialHomeForm', RenterResidentialHomeModel);
+export default RenterResidentialHomeForm;

@@ -1,10 +1,11 @@
 // Middlewares Import
 import CatchAsync from '../middleware/catchAsync.js';
 import ErrorHandler from '../utils/errorHandler.js';
-import ApiFeatures from '../utils/apiFeatures.js';
+// import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
-// import Auth from '../model/auth/Auth.js';
+import AdminAuth from '../model/admin/AdminAuth.js';
+import Auth from '../model/auth/Auth.js';
 import SellerForm from '../model/questionnaires/SellerForm.js';
 import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeForm.js';
 import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoForm.js';
@@ -13,6 +14,236 @@ import SellerCommercialForm from '../model/questionnaires/SellerCommercialForm.j
 import BuyerResidentialHomeForm from '../model/questionnaires/BuyerResidentialHomeForm.js';
 import BuyerResidentialCondoForm from '../model/questionnaires/BuyerResidentailCondoForm.js';
 import BuyerCommercialForm from '../model/questionnaires/BuyerCommercialForm.js';
+
+
+// ==============================================================================================
+// Users related routes
+// ==============================================================================================
+
+// Admin: Admin Account Disable Enable
+export const nestNotify_Admin_Account_Enable_Disable_Admin = CatchAsync( async(req, res, next)=>{
+    
+    const userExist = await AdminAuth.findById(req.params.id)
+    
+    if(!userExist){
+        return next(new ErrorHandler('Something went wrong', 404))
+    }
+
+    if(userExist.userActive === true){
+        userExist.userActive = false
+        await userExist.save()
+    } else if(userExist.userActive === false) {
+        userExist.userActive = true
+        await userExist.save()
+    }
+
+    res.status(201).json({
+        success: true,
+        status: "success",
+        message: "Permission modified",
+        name: userExist.firstName + " " + userExist.lastName,
+        accountStatus: userExist.userActive
+    })
+})
+
+// Admin: User Account Disable Enable
+export const nestNotify_Admin_Account_Enable_Disable_User = CatchAsync( async(req, res, next)=>{
+    
+    const userExist = await Auth.findById(req.params.id)
+
+    if(!userExist){
+        return next(new ErrorHandler(`User doesn't exist`))
+    }
+    
+    if(userExist.userActive === true){
+        userExist.userActive = false
+        await userExist.save()
+    } else if(userExist.userActive === false) {
+        userExist.userActive = true
+        await userExist.save()
+    }
+
+    res.status(201).json({
+        success: true,
+        status: "success",
+        message: "Permission modified",
+        name: userExist.firstName + " " + userExist.lastName,
+        accountStatus: userExist.userActive
+    })
+
+})
+
+
+
+// 1)Admin: Get All Admins account
+export const nestNotify_Admin_Get_All_Admins = CatchAsync( async(req, res, next) =>{
+    // const adminsData = await AdminAuth.find({role: "admin", master: null})
+    const adminsData = await AdminAuth.find({role: "admin"})
+    if(!adminsData){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    // filtering logged in data
+    const allAdmins = adminsData.filter((data)=>{
+        if(data._id.toString()===req.auth.id){
+            return
+        }
+
+        return data
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Admins`,
+        length: allAdmins.length,
+        allAdmins
+    })
+})
+
+// 2) Admin: Get Differernt Users
+export const nestNotify_Admin_Get_All_Users = CatchAsync( async(req, res, next) =>{
+
+    const allUsers = await Auth.find()
+
+    if(!allUsers){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Users List`,
+        length: allUsers.length,
+        allUsers
+    })
+})
+
+// 3) Admin: Get Sellers
+export const nestNotify_Admin_Get_All_Sellers = CatchAsync( async(req, res, next) =>{
+
+    const allSellers = await Auth.find({role: "seller", master: null})
+
+    if(!allSellers){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Sellers`,
+        length: allSellers.length,
+        allSellers
+    })
+})
+
+
+// 4) Admin: Get Buyers
+export const nestNotify_Admin_Get_All_Buyers = CatchAsync( async(req, res, next) =>{
+
+    const allBuyers = await Auth.find({role: "buyer", master: null})
+
+    if(!allBuyers){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Buyers`,
+        length: allBuyers.length,
+        allBuyers
+    })
+})
+
+// 5) Admin: Get Renters
+export const nestNotify_Admin_Get_All_Renters = CatchAsync( async(req, res, next) =>{
+    const allRenters = await Auth.find({role: "renter", master: null})
+
+    if(!allRenters){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Renters`,
+        length: allRenters.length,
+        allRenters
+    })
+})
+
+
+// 6) Admin: Get LandLords
+export const nestNotify_Admin_Get_All_LandLords = CatchAsync( async(req, res, next) =>{
+
+    const allLandLords = await Auth.find({role: "landlord", master: null})
+
+    if(!allLandLords){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All Landlords`,
+        length: allLandLords.length,
+        allLandLords
+    })
+})
+
+
+// 7) Admin: Investors
+export const nestNotify_Admin_Get_All_Invetors = CatchAsync( async(req, res, next) =>{
+
+    const allInvestors = await Auth.find({role: "invester", master: null})
+
+    if(!allInvestors){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `All investers`,
+        length: allInvestors.length,
+        allInvestors
+    })
+})
+
+
+// 8) Admin: Get Single User
+export const nestNotify_Admin_Single_User_Profile = CatchAsync( async(req, res, next) =>{
+
+    if(!req.params.id){
+        return next(new ErrorHandler(`Something wrong, Please try again.`, 404))
+    }
+
+    let userProfile;
+
+    const normalUser = await Auth.findById({_id: req.params.id})
+
+    const adminUser = await AdminAuth.findById({_id: req.params.id})
+
+    if(normalUser){
+        userProfile = normalUser
+    } else if(adminUser){
+        userProfile = adminUser
+    } else {
+        userProfile = null
+    }
+
+
+    if(!userProfile){
+        return next(new ErrorHandler(`Something went wrong.`, 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `User List`,
+        userProfile
+    })
+})
 
 
 
@@ -54,12 +285,6 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
     
     const sellerPropertyForm = await SellerResidentialForm.find().sort({quesIndex: 0});
 
-    // const resultPerPage = 3;
-    // const propertyQuesCount = await SellerResidentialForm.countDocuments()
-
-    // const apiFeature = new ApiFeatures(SellerResidentialForm.find(), req.query).pagination(resultPerPage)
-    // const sellerPropertyForm = await apiFeature.query;
-
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
     }
@@ -80,12 +305,6 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
 export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
     const sellerPropertyForm = await SellerResidentialCondoForm.find().sort({quesIndex: 0});
-
-    // const resultPerPage = 3;
-    // const propertyQuesCount = await SellerResidentialCondoForm.countDocuments()
-
-    // const apiFeature = new ApiFeatures(SellerResidentialCondoForm.find(), req.query).pagination(resultPerPage)
-    // const sellerPropertyForm = await apiFeature.query;
 
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
@@ -108,12 +327,6 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
    
     const sellerPropertyForm = await SellerCommercialForm.find().sort({quesIndex: 0});
 
-    // const resultPerPage = 5;
-    // const propertyQuesCount = await SellerCommercialForm.countDocuments()
-
-    // const apiFeature = new ApiFeatures(SellerCommercialForm.find(), req.query).pagination(resultPerPage)
-    // const sellerPropertyForm = await apiFeature.query;
-
     if(!sellerPropertyForm){
         return next(new ErrorHandler('Something went wrong', 404))
     }
@@ -125,6 +338,60 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
         // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
+    })
+})
+
+// Admin: Get Buyer Residential Home Form 
+export const nestNotify_Admin_Get_Buyer_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+   
+    const buyerPropertyForm = await BuyerResidentialHomeForm.find().sort({quesIndex: 0});
+
+    if(!buyerPropertyForm){
+        return next(new ErrorHandler('Something went wrong', 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "Buyer Residential Home Form",
+        length: buyerPropertyForm.length,
+        buyerPropertyForm
+    })
+})
+
+// Admin: Get Buyer Reseidential Condo
+export const nestNotify_Admin_Get_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+   
+    const buyerPropertyForm = await BuyerResidentialCondoForm.find().sort({quesIndex: 0});
+
+    if(!buyerPropertyForm){
+        return next(new ErrorHandler('Something went wrong', 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "Buyer Residential Condo Form",
+        length: buyerPropertyForm.length,
+        buyerPropertyForm
+    })
+})
+
+// Admin: Get Buyer Commercial Form
+export const nestNotify_Admin_Get_Buyer_Commercial_Form = CatchAsync( async(req, res, next)=>{
+   
+    const buyerPropertyForm = await BuyerCommercialForm.find().sort({quesIndex: 0});
+
+    if(!buyerPropertyForm){
+        return next(new ErrorHandler('Something went wrong', 404))
+    }
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "Buyer Commercial Questionnaire",
+        length: buyerPropertyForm.length,
+        buyerPropertyForm
     })
 })
 

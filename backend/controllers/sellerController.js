@@ -16,7 +16,7 @@ import SellerCommercialForm from '../model/questionnaires/SellerCommercialForm.j
 // 1) SELLER: FILL NEW PROPERTY FORM 
 export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, res, next)=>{
 
-    console.log(req.body.length)
+    // console.log(req.body.length)
 
     if(!req.body){
         return next(new ErrorHandler('Please enter details', 401))
