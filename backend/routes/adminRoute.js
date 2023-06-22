@@ -37,6 +37,10 @@ import {
     nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form,
     nestNotify_Admin_Shuffle_Buyer_Commercail_Form,
 
+    nestNotify_Admin_Reset_Seller_Property_Form,
+
+    nestNotify_Admin_Post_Questions
+
 } from '../controllers/adminController.js';
 
 
@@ -62,9 +66,9 @@ router.route('/all/landlords').get(authToken.isAdminAuthenticated, authToken.aut
 router.route('/all/investors').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_All_Invetors);
 router.route('/get/user/profile/:id').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Single_User_Profile);
 
-
+router.route('/seller/property/form').get( nestNotify_Admin_Get_Seller_Property_Form);
 // Admin: Seller Questionnaires
-router.route('/seller/property/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Property_Form);
+// router.route('/seller/property/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Property_Form);
 router.route('/seller/residential/home/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Residential_Home_Form);
 router.route('/seller/residential/condo/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Residential_Condo_Form);
 router.route('/seller/commercial/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Commercial_Property_Form);
@@ -88,9 +92,12 @@ router.route('/shuffle/buyer/resicondo/form').put(authToken.isAdminAuthenticated
 router.route('/shuffle/buyer/commercail/form').put(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Shuffle_Buyer_Commercail_Form);
 
 
+
+router.route('/reset/seller/property/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Reset_Seller_Property_Form);
+
 //////////////////////////////////////
 // nestNotify_Admin_Post_Questions
-// router.route('/question/post').post(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Post_Questions);
-//////////////////////////////////////
+router.route('/question/post').post(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Post_Questions);
+////////////////////////////////////
 
 export default router;

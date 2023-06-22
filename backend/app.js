@@ -37,12 +37,12 @@ app.use('/api/v1/admin', adminRoute);
 app.use('/api/v1/user', userAuthRoute);
 app.use('/api/v1/seller', sellerRoute)
 
-// app.all('*', (req, res)=>{
-//     return res.status(404).json({
-//         success: false,
-//         message: `OPs something went wrong ${404}`
-//     });
-// })
+app.all('*', (req, res)=>{
+    return res.status(404).json({
+        success: false,
+        message: `OPs Wrong URL '${req.url}' or Wrong REST API method, Try Correct one.`
+    });
+})
 
 // -----| ERROR MIDDLEWARE |-----
 app.use(errorMiddleware)

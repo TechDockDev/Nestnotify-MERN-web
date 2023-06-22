@@ -4,10 +4,10 @@ import ErrorHandler from '../utils/errorHandler.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
-import SellerForm from '../model/questionnaires/SellerForm.js';
-import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeForm.js';
-import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoForm.js';
-import SellerCommercialForm from '../model/questionnaires/SellerCommercialForm.js';
+import SellerPropertyQues from '../model/questionnaires/SellerPropertyQues.js';
+import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeQues.js';
+import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoQues.js';
+import SellerCommercialForm from '../model/questionnaires/SellerCommercialQues.js';
 
 
 
@@ -24,7 +24,7 @@ export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, r
 
     const answerFill = await SellerPropertyForm.create({
         auth: req.auth.id,
-        sellerForm: req.body._id,
+        SellerPropertyQues: req.body._id,
         formAnswers: req.body
     })
 
@@ -38,7 +38,7 @@ export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, r
 
 export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(req, res, next)=>{
 
-    const answerFill = await SellerPropertyForm.find().populate('auth').populate('sellerForm')
+    const answerFill = await SellerPropertyForm.find().populate('auth').populate('SellerPropertyQues')
 
     res.status(200).json({
         success: true,
@@ -53,9 +53,9 @@ export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(
 export const nestNotify_Seller_Get_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const resultPerPage = 3;
-    const propertyQuesCount = await SellerForm.countDocuments()
+    const propertyQuesCount = await SellerPropertyQues.countDocuments()
 
-    const apiFeature = new ApiFeatures(SellerForm.find(), req.query).pagination(resultPerPage)
+    const apiFeature = new ApiFeatures(SellerPropertyQues.find(), req.query).pagination(resultPerPage)
     const sellerPropertyForm = await apiFeature.query;
     
     if(!sellerPropertyForm){
