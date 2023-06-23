@@ -5,6 +5,7 @@ import SignUp from "./components/AuthComponents/SignUp";
 import Login from "./components/AuthComponents/Login";
 import axios from "axios";
 import TopNavBar from "./components/TopNavBar.js/TopNavBar";
+import QuestionComp from "./components/QuestionComp/QuestionComp";
 
 function App() {
    const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
@@ -28,7 +29,7 @@ function App() {
       <>
          <Routes>
             <Route path="/" element={<TopNavBar/>}>
-               
+               <Route index element={<QuestionComp/>}/>
             </Route>
          </Routes>
       </>
