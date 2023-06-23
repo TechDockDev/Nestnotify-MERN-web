@@ -661,7 +661,7 @@ export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)
     // const sellerPropertyForm = await SellerPropertyQues.create(req.body)
     // const sellerPropertyForm = await SellerResidentialHomeForm.create(req.body)
     // const sellerPropertyForm = await SellerResidentialCondoForm.create(req.body)
-    const sellerPropertyForm = await SellerCommercialForm.create(req.body)
+    // const sellerPropertyForm = await SellerCommercialForm.create(req.body)
 
     res.status(201).json({
         success: true,

@@ -1,0 +1,41 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": false,
+        "question": "What type of property are you looking for?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "00nnblolqqn001",
+                "optionType": "radio",
+                "label": "Residential Home",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnblolqqn002",
+                "optionType": "radio",
+                "label": "Condo or Co-Op",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnblolqqn003",
+                "optionType": "radio",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnblolqqn003",
+                "optionType": "radio",
+                "label": "Land/Open Lot",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnblolqqn003",
+                "optionType": "radio",
+                "label": "Rental - Residential",
+                "isSubQues": false
+            }
+        ]
+    }
+]

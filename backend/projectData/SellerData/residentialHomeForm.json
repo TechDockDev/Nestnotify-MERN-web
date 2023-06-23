@@ -1,0 +1,1105 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": false,
+        "question": "Is your home:",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "00nnsrhqn001",
+                "optionType": "radio",
+                "label": "Detached/Standalone",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnsrhqn002",
+                "optionType": "radio",
+                "label": "Attached to Others (such as a townhouse)",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What would you classify the style of your home to be?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "11nnsrhqn101",
+                "optionType": "checkbox",
+                "label": "Colonial",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn102",
+                "optionType": "checkbox",
+                "label": "Hi Ranch",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn103",
+                "optionType": "checkbox",
+                "label": "Ranch",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn104",
+                "optionType": "checkbox",
+                "label": "Split Level",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn105",
+                "optionType": "checkbox",
+                "label": "Split Ranch/Splanch",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn106",
+                "optionType": "checkbox",
+                "label": "Cape",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn107",
+                "optionType": "checkbox",
+                "label": "Expanded Cape",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn108",
+                "optionType": "checkbox",
+                "label": "Modern/Contemporary",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsrhqn109",
+                "optionType": "checkbox",
+                "label": "Other",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "11nnsrhqn109sub01",
+                        "label": "Enter Information",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "Would you say your home's condition is…",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "22nnsrhqn201",
+                "optionType": "checkbox",
+                "label": "Brand New (this includes a new foundation and even studs within the wall)",
+                "isSubQues": false
+            },
+            {
+                "spid": "22nnsrhqn202",
+                "optionType": "checkbox",
+                "label": "Updated within (20/10/5/past year)",
+                "isSubQues": false
+            },
+            {
+                "spid": "22nnsrhqn203",
+                "optionType": "checkbox",
+                "label": "Original",
+                "isSubQues": false
+            },
+            {
+                "spid": "22nnsrhqn204",
+                "optionType": "checkbox",
+                "label": "In Very Poor Condition; it might be best for a builder or contractor to purchase",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "quesIndex": 3,
+        "fixIndex": 3,
+        "questionCondition": false,
+        "question": "Number of Bedrooms",
+        "questionType": "text"
+    },
+
+    { 
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "Number of Bathrooms",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "44nnsrhqn401",
+                "optionType": "checkbox",
+                "label": "Full",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnsrhqn402",
+                "optionType": "checkbox",
+                "label": "Half",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 5,
+        "fixIndex": 5,
+        "questionCondition": false,
+        "question": "Basement? Check all that apply",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "55nnsrhqn501",
+                "optionType": "checkbox",
+                "label": "Full",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn502",
+                "optionType": "checkbox",
+                "label": "Partial",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn503",
+                "optionType": "checkbox",
+                "label": "Finished",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn504",
+                "optionType": "checkbox",
+                "label": "Unfinished",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn505",
+                "optionType": "checkbox",
+                "label": "Something that has an entrance to outside",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn506",
+                "optionType": "checkbox",
+                "label": "Slab (none)",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsrhqn507",
+                "optionType": "checkbox",
+                "label": "Crawl Space",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "quesIndex": 6,
+        "fixIndex": 6,
+        "questionCondition": false,
+        "question": "Square Footage of Property",
+        "questionType": "text"
+    },
+
+    { 
+        "quesIndex": 7,
+        "fixIndex": 7,
+        "questionCondition": false,
+        "question": "Lot Size",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 8,
+        "fixIndex": 8,
+        "questionCondition": false,
+        "question": "Lot Dimension",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 9,
+        "fixIndex": 9,
+        "questionCondition": false,
+        "question": "Number of Garages",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "99nnsrhqn901",
+                "optionType": "radio",
+                "label": "0",
+                "isSubQues": false
+            },
+            {
+                "spid": "99nnsrhqn902",
+                "optionType": "radio",
+                "label": "1",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn902sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn902sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn903",
+                "optionType": "radio",
+                "label": "2",
+                "isSubQues": true,
+                "subQuest": [
+                        {
+                            "spid": "99nnsrhqn903sub01",
+                            "optionType": "radio",
+                            "label": "Attached",
+                            "isSubQues": false
+                        },
+                        {
+                            "spid": "99nnsrhqn903sub02",
+                            "optionType": "radio",
+                            "label": "Detached",
+                            "isSubQues": false
+                        }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn904",
+                "optionType": "radio",
+                "label": "3",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn904sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn904sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn905",
+                "optionType": "radio",
+                "label": "4",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn905sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn905sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn906",
+                "optionType": "radio",
+                "label": "5",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn906sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn906sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn907",
+                "optionType": "radio",
+                "label": "6",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn907sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn907sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn908",
+                "optionType": "radio",
+                "label": "7",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn908sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn908sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn909",
+                "optionType": "radio",
+                "label": "8",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn909sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn909sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn910",
+                "optionType": "radio",
+                "label": "9",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn910sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn910sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn911",
+                "optionType": "radio",
+                "label": "10",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn911sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn911sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn912",
+                "optionType": "radio",
+                "label": "11",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn912sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn912sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn913",
+                "optionType": "radio",
+                "label": "12",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn913sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn913sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn914",
+                "optionType": "radio",
+                "label": "13",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn914sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn914sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn915",
+                "optionType": "radio",
+                "label": "14",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn915sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn915sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn916",
+                "optionType": "radio",
+                "label": "15",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn916sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn916sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn917",
+                "optionType": "radio",
+                "label": "16",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn917sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn917sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn918",
+                "optionType": "radio",
+                "label": "17",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn918sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn918sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn919",
+                "optionType": "radio",
+                "label": "18",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn919sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn919sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn920",
+                "optionType": "radio",
+                "label": "19",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn920sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn920sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "99nnsrhqn921",
+                "optionType": "radio",
+                "label": "20",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "99nnsrhqn921sub01",
+                        "optionType": "radio",
+                        "label": "Attached",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnsrhqn921sub02",
+                        "optionType": "radio",
+                        "label": "Detached",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 10,
+        "quesIndex": 10,
+        "questionCondition": false,
+        "question": "Pool",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "110nnsrhqn1001",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "110nnsrhqn1001sub01",
+                        "optionType": "radio",
+                        "label": "Inground - Chlorine",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "110nnsrhqn1001sub02",
+                        "optionType": "radio",
+                        "label": "Inground - Chlorine",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "110nnsrhqn1001sub03",
+                        "optionType": "radio",
+                        "label": "Inground - Salt Water",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "110nnsrhqn1001sub04",
+                        "optionType": "radio",
+                        "label": "Above Ground - Chlorine",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "110nnsrhqn1001sub05",
+                        "optionType": "radio",
+                        "label": "Above Ground - Saltwater",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "110nnsrhqn1001sub06",
+                        "optionType": "checkbox",
+                        "label": "Heated",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "110nnsrhqn1002",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 11,
+        "quesIndex": 11,
+        "question": "Air Conditioning?",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "111nnsrhqn1101",
+                "optionType": "radio",
+                "label": "Central AC",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "111nnsrhqn1101sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "111nnsrhqn1102",
+                "optionType": "radio",
+                "label": "Ductless AC",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "111nnsrhqn1102sub01",
+                        "label":"How many zones/units?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "111nnsrhqn1103",
+                "optionType": "radio",
+                "label": "Wall Units",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "111nnsrhqn1103sub01",
+                        "label":"How many units?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "111nnsrhqn1104",
+                "optionType": "radio",
+                "label": "None",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "fixIndex": 12,
+        "quesIndex": 12,
+        "questionCondition": false,
+        "question": "Heating Type:",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "112nnsrhqn1201",
+                "optionType": "radio",
+                "label": "Forced Hot Air",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "112nnsrhqn1201sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "112nnsrhqn1202",
+                "optionType": "radio",
+                "label": "Hotwater Baseboard",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "112nnsrhqn1202sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "112nnsrhqn1203",
+                "optionType": "radio",
+                "label": "Radiant",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "112nnsrhqn1203sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "112nnsrhqn1204",
+                "optionType": "radio",
+                "label": "Steam Radiator",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "112nnsrhqn1204sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "112nnsrhqn1205",
+                "optionType": "radio",
+                "label": "Electric",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "112nnsrhqn1205sub01",
+                        "label":"How many zones?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 13,
+        "quesIndex": 13,
+        "questionCondition": false,
+        "question": "Heating Fuel:",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "113nnsrhqn1301",
+                "optionType": "radio",
+                "label": "Gas",
+                "isSubQues": false
+            },
+            {
+                "spid": "113nnsrhqn1302",
+                "optionType": "select",
+                "label": "Oil",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "113nnsrhqn1302sub01",
+                        "label": "While your heating fuel may not be natural gas, do you have natural gaswithin your home for other uses such as for cooking?",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "113nnsrhqn1303",
+                "optionType": "select",
+                "label": "Electric",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "113nnsrhqn1303sub01",
+                        "label": "While your heating fuel may not be natural gas, do you have natural gas within your home for other uses such as for cooking?",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "fixIndex": 14,
+        "quesIndex": 14,
+        "questionCondition": false,
+        "question": "Current Property Taxes",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 15,
+        "quesIndex": 15,
+        "questionCondition": false,
+        "question": "Do you have an additional village tax?",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 16,
+        "quesIndex": 16,
+        "questionCondition": false,
+        "question": "Do you belong to an HOA and if so, what are the yearly fees?",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "116nnsrhqn1601",
+                "optionType": "radio",
+                "label": "What does it include?",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 17,
+        "quesIndex": 17,
+        "questionCondition": false,
+        "question": "Does your home belong to a specific section or development?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "117nnsrhqn1701",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "117nnsrhqn1701sub01",
+                        "label": "What is it's name?",
+                        "optionType": "text",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "117nnsrhqn1702",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 18,
+        "quesIndex": 18,
+        "questionCondition": false,
+        "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 19,
+        "quesIndex": 19,
+        "questionCondition": false,
+        "question": "Do you owe anything on your current property?",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "119nnsrhqn1901",
+                "optionType": "text",
+                "label": "What do you currently owe?",
+                "isSubQues": false
+            },
+            {
+                "spid": "119nnsrhqn1902",
+                "optionType": "radio",
+                "label": "Are you current on payments?",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "119nnsrhqn1902sub01",
+                        "optionType": "radio",
+                        "label": "Yes",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "119nnsrhqn1902sub02",
+                        "optionType": "radio",
+                        "label": "No",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "fixIndex": 20,
+        "quesIndex": 20,
+        "questionCondition": false,
+        "question": "Do you already have another property you will be moving to or will you need help in locating one?",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 21,
+        "quesIndex": 21,
+        "questionCondition": false,
+        "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "121nnsrhqn2101",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "121nnsrhqn2101sub01",
+                        "label": "%",
+                        "optionType": "text",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "121nnsrhqn2101sub02",
+                        "label": "$/Flat fee",
+                        "optionType": "text",
+                        "subInputBox": true
+                    }
+                ]
+            },
+            {
+                "spid": "121nnsrhqn2102",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+
+    },
+
+    {
+        "fixIndex": 22,
+        "quesIndex": 22,
+        "questionCondition": false,
+        "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 23,
+        "quesIndex": 23,
+        "questionCondition": false,
+        "question": "Now we just need your contact info so that we can reach out when we've located a buyer match",
+        "questionType": "text",
+        "quesAnsOption": [
+            {
+                "spid": "123nnsrhqn2301",
+                "optionType": "text",
+                "label": "First Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "123nnsrhqn2302",
+                "optionType": "text",
+                "label": "Last Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "123nnsrhqn2303",
+                "optionType": "text",
+                "label": "Mobile Number",
+                "isSubQues": false
+            },
+            {
+                "spid": "123nnsrhqn2304",
+                "optionType": "text",
+                "label": "Email Address",
+                "isSubQues": false
+            },
+            {
+                "spid": "123nnsrhqn2305",
+                "optionType": "text",
+                "label": "Confirm Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "123nnsrhqn2306",
+                "optionType": "text",
+                "label": "Confirm Email",
+                "isSubQues": false
+            }
+        ]
+    }
+]

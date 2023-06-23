@@ -1,0 +1,735 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": false,
+        "question": "What type of property are you looking for?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "11nnbrhqn101",
+                "optionType": "radio",
+                "label": "Residential Home",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnbrhqn102",
+                "optionType": "radio",
+                "label": "Condo or Co-Op",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnbrhqn103",
+                "optionType": "radio",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnbrhqn103",
+                "optionType": "radio",
+                "label": "Land/Open Lot",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnbrhqn103",
+                "optionType": "radio",
+                "label": "Rental - Residential",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What state would you like to look for a home?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "What towns/cities/areas or counties within that state would you like to look within?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 3,
+        "fixIndex": 3,
+        "questionCondition": false,
+        "question": "Are there any specific school districts that you would like to focus on?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "33nnbrhqn301",
+                "optionType": "text",
+                "label": "yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnbrhqn302",
+                "optionType": "text",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "How many bedrooms do you need at a minimum?",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "44nnbrhqn401",
+                "optionType": "select",
+                "label": "0",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn402",
+                "optionType": "select",
+                "label": "1",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn403",
+                "optionType": "select",
+                "label": "2",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn404",
+                "optionType": "select",
+                "label": "3",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn405",
+                "optionType": "select",
+                "label": "4",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn406",
+                "optionType": "select",
+                "label": "5",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn407",
+                "optionType": "select",
+                "label": "6",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn408",
+                "optionType": "select",
+                "label": "7",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn409",
+                "optionType": "select",
+                "label": "8",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn410",
+                "optionType": "select",
+                "label": "9",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn411",
+                "optionType": "select",
+                "label": "10",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn412",
+                "optionType": "select",
+                "label": "11",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn413",
+                "optionType": "select",
+                "label": "12",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn414",
+                "optionType": "select",
+                "label": "13",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn415",
+                "optionType": "select",
+                "label": "14",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn416",
+                "optionType": "select",
+                "label": "15",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn417",
+                "optionType": "select",
+                "label": "16",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn418",
+                "optionType": "select",
+                "label": "17",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn419",
+                "optionType": "select",
+                "label": "18",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn420",
+                "optionType": "select",
+                "label": "19",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbrhqn421",
+                "optionType": "select",
+                "label": "20",
+                "isSubQues": false
+            },            
+            {
+                "spid": "44nnbrhqn422",
+                "optionType": "select",
+                "label": "20+",
+                "isSubQues": false
+            }
+        ]
+    }, 
+
+    {
+        "quesIndex": 5,
+        "fixIndex": 5,
+        "questionCondition": false,
+        "question": "How many bathrooms do you need at a minimum?",
+        "questionType": "select",
+        "quesAnsOption": [
+            {
+                "spid": "55nnbrhqn500",
+                "optionType": "select",
+                "label": "0.5",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn501",
+                "optionType": "select",
+                "label": "1",
+                "isSubQues": false
+            },   
+            {
+                "spid": "55nnbrhqn502",
+                "optionType": "select",
+                "label": "1.5",
+                "isSubQues": false
+            },          
+            {
+                "spid": "55nnbrhqn503",
+                "optionType": "select",
+                "label": "2",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn504",
+                "optionType": "select",
+                "label": "3",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn505",
+                "optionType": "select",
+                "label": "4",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn506",
+                "optionType": "select",
+                "label": "5",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn507",
+                "optionType": "select",
+                "label": "6",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn508",
+                "optionType": "select",
+                "label": "7",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn509",
+                "optionType": "select",
+                "label": "8",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn510",
+                "optionType": "select",
+                "label": "9",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn511",
+                "optionType": "select",
+                "label": "10",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn512",
+                "optionType": "select",
+                "label": "11",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn513",
+                "optionType": "select",
+                "label": "12",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn514",
+                "optionType": "select",
+                "label": "13",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn515",
+                "optionType": "select",
+                "label": "14",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn516",
+                "optionType": "select",
+                "label": "15",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn517",
+                "optionType": "select",
+                "label": "16",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn518",
+                "optionType": "select",
+                "label": "17",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn519",
+                "optionType": "select",
+                "label": "18",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn520",
+                "optionType": "select",
+                "label": "19",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbrhqn521",
+                "optionType": "select",
+                "label": "20",
+                "isSubQues": false
+            },            
+            {
+                "spid": "55nnbrhqn522",
+                "optionType": "select",
+                "label": "20+",
+                "isSubQues": false
+            }
+        ]
+    }, 
+
+    {
+        "quesIndex": 6,
+        "fixIndex": 6,
+        "questionCondition": false,
+        "question": "How many bathrooms do you need at a minimum?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "66nnbrhqn600",
+                "optionType": "radio",
+                "label": "Select All",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn601",
+                "optionType": "checkbox",
+                "label": "Colonial",
+                "isSubQues": false
+            },   
+            {
+                "spid": "66nnbrhqn602",
+                "optionType": "checkbox",
+                "label": "Hi Ranch",
+                "isSubQues": false
+            },          
+            {
+                "spid": "66nnbrhqn603",
+                "optionType": "checkbox",
+                "label": "Ranch",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn604",
+                "optionType": "checkbox",
+                "label": "Split Level",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn605",
+                "optionType": "checkbox",
+                "label": "Split Ranch/Splanch",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn606",
+                "optionType": "checkbox",
+                "label": "Cape",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn607",
+                "optionType": "checkbox",
+                "label": "Expanded Cape",
+                "isSubQues": false
+            },            
+            {
+                "spid": "66nnbrhqn608",
+                "optionType": "checkbox",
+                "label": "Modern/Contemporary",
+                "isSubQues": false
+            },            {
+                "spid": "66nnbrhqn609",
+                "optionType": "checkbox",
+                "label": "Open to Anything",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 7,
+        "fixIndex": 7,
+        "questionCondition": false,
+        "question": "Basement?",
+        "questionType": "checkbox",
+        "quesAnsOption": [           
+            {
+                "spid": "77nnbrhqn701",
+                "optionType": "checkbox",
+                "label": "Full",
+                "isSubQues": false
+            },   
+            {
+                "spid": "77nnbrhqn702",
+                "optionType": "checkbox",
+                "label": "Partial",
+                "isSubQues": false
+            },          
+            {
+                "spid": "77nnbrhqn703",
+                "optionType": "checkbox",
+                "label": "Finished",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbrhqn704",
+                "optionType": "checkbox",
+                "label": "Unfinished",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbrhqn705",
+                "optionType": "checkbox",
+                "label": "Something that has an entrance to outside",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbrhqn706",
+                "optionType": "checkbox",
+                "label": "Slab (none)",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbrhqn707",
+                "optionType": "checkbox",
+                "label": "Crawl Space",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 8,
+        "fixIndex": 8,
+        "questionCondition": false,
+        "question": "What renovation classes are you open to?",
+        "questionType": "checkbox",
+        "quesAnsOption": [  
+            {
+                "spid": "88nnbrhqn800",
+                "optionType": "radio",
+                "label": "Select All",
+                "isSubQues": false
+            },         
+            {
+                "spid": "88nnbrhqn801",
+                "optionType": "checkbox",
+                "label": "New Construction",
+                "isSubQues": false
+            },   
+            {
+                "spid": "88nnbrhqn802",
+                "optionType": "checkbox",
+                "label": "Turn-key Renovated",
+                "isSubQues": false
+            },          
+            {
+                "spid": "88nnbrhqn803",
+                "optionType": "checkbox",
+                "label": "A renovation down within the past",
+                "isSubQues": true,
+                "subQuest": [
+
+                ]
+            },            
+            {
+                "spid": "88nnbrhqn804",
+                "optionType": "checkbox",
+                "label": "Original or Not Updated is Fine",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnbrhqn805",
+                "optionType": "checkbox",
+                "label": "Structurally Sound but may need cosmetic updating",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnbrhqn806",
+                "optionType": "checkbox",
+                "label": "I'm OK with a small project",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnbrhqn807",
+                "optionType": "checkbox",
+                "label": "I'm OK with a large project",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnbrhqn808",
+                "optionType": "checkbox",
+                "label": "I have no problem knocking it down and rebuilding",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 9,
+        "fixIndex": 9,
+        "questionCondition": false,
+        "question": "What are you must have’s/cannot live with-outs?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 10,
+        "fixIndex": 10,
+        "questionCondition": false,
+        "question": "What are you wish-list items?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 11,
+        "fixIndex": 11,
+        "questionCondition": false,
+        "question": "Do you have any firm no’s in regards to a home?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 12,
+        "fixIndex": 12,
+        "questionCondition": false,
+        "question": "Do you want waterfront or waterviews?",
+        "questionType": "checkbox",
+        "quesAnsOption": [           
+            {
+                "spid": "112nnbrhqn1201",
+                "optionType": "radio",
+                "label": "It doesn’t matter",
+                "isSubQues": false
+            },   
+            {
+                "spid": "112nnbrhqn1202",
+                "optionType": "radio",
+                "label": "Waterfront",
+                "isSubQues": false
+            },          
+            {
+                "spid": "112nnbrhqn1203",
+                "optionType": "radio",
+                "label": "Waterfront w/Dock Space",
+                "isSubQues": false
+            },            
+            {
+                "spid": "112nnbrhqn1204",
+                "optionType": "radio",
+                "label": "Waterviews",
+                "isSubQues": false
+            },            
+            {
+                "spid": "112nnbrhqn1205",
+                "optionType": "radio",
+                "label": "Keep me away from water!",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 13,
+        "fixIndex": 13,
+        "questionCondition": false,
+        "question": "What is your budget?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "113nnbrhqn1301",
+                "optionType": "text",
+                "label": "Purchase",
+                "isSubQues": false
+            },
+            {
+                "spid": "113nnbrhqn1302",
+                "optionType": "text",
+                "label": "Yearly Taxes",
+                "isSubQues": false
+            },            {
+                "spid": "113nnbrhqn1303",
+                "optionType": "text",
+                "label": "Yearly Common, Maintenance or HOA Charges",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 14,
+        "fixIndex": 14
+    },
+
+    {
+        "quesIndex": 15,
+        "fixIndex": 15,
+        "questionCondition": false,
+        "question": "How soon would you like to purchase a home?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "115nnbrhqn1501",
+                "optionType": "radio",
+                "label": "As Soon As Possible",
+                "isSubQues": false
+            },
+            {
+                "spid": "115nnbrhqn1502",
+                "optionType": "radio",
+                "label": "1-3 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "115nnbrhqn1503",
+                "optionType": "radio",
+                "label": "4-6 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "115nnbrhqn1504",
+                "optionType": "radio",
+                "label": "6-9 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "115nnbrhqn1505",
+                "optionType": "radio",
+                "label": "10-12 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "115nnbrhqn1506",
+                "optionType": "radio",
+                "label": "More Than a Year",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 16,
+        "fixIndex": 16,
+        "questionCondition": false,
+        "question": "Are you currently working with a real estate agent?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "116nnbrhqn1601",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "116nnbrhqn1602",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 17,
+        "fixIndex": 17,
+        "questionCondition": false,
+        "question": "Are you currently working with a real estate agent?",
+        "questionType": "text",
+        "quesAnsOption": [
+            {
+                "spid": "117nnbrhqn1701",
+                "optionType": "text",
+                "label": "First Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "117nnbrhqn1702",
+                "optionType": "text",
+                "label": "Last Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "117nnbrhqn1703",
+                "optionType": "text",
+                "label": "Mobile Phone",
+                "isSubQues": false
+            },
+            {
+                "spid": "117nnbrhqn1704",
+                "optionType": "text",
+                "label": "Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "117nnbrhqn1705",
+                "optionType": "text",
+                "label": "Confirm Email",
+                "isSubQues": false
+            }
+        ]
+    }
+]
