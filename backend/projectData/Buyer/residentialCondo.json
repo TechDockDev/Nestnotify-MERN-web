@@ -519,7 +519,24 @@
                 "label": "A renovation down within the past",
                 "isSubQues": true,
                 "subQuest": [
-
+                    {
+                        "spid": "99nnbrcqn903sub01",
+                        "optionType": "radio",
+                        "label": "5",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnbrcqn903sub02",
+                        "optionType": "radio",
+                        "label": "10",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "99nnbrcqn903sub03",
+                        "optionType": "radio",
+                        "label": "20",
+                        "isSubQues": false
+                    }
                 ]
             },            
             {
@@ -648,7 +665,54 @@
 
     {
         "quesIndex": 15,
-        "fixIndex": 15
+        "fixIndex": 15,
+        "questionCondition": false,
+        "question": "Are Purchasing with cash or mortgage/financing?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "115nnbrhqn1501",
+                "optionType": "radio",
+                "label": "Cash",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "115nnbrhqn1501sub01",
+                        "label": "Yes",
+                        "optionType": "radio",
+                        "subInfo": "Proof of Funds will consist of an account statement or statements showing the capability of purchasing the property with cash (no mortgage needed).\nPertinent information such as your address or account numbers can be blanked out, but when making offers you will have to present these types of documents.",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "115nnbrhqn1501sub02",
+                        "label": "No",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "115nnbrhqn1502",
+                "optionType": "text",
+                "label": "Mortgage/Financing",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "115nnbrhqn1502sub01",
+                        "label": "Yes",
+                        "optionType": "radio",
+                        "subInfo": "If you plan to purchase the property with a mortgage, it is imperative that you obtain a pre-approval from a lender.",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "115nnbrhqn1502sub02",
+                        "label": "No",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
     },
 
     {

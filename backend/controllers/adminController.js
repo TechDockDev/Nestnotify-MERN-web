@@ -17,6 +17,7 @@ import SellerCommercialForm from '../model/questionnaires/SellerCommercialQues.j
 import BuyerResidentialHomeForm from '../model/questionnaires/BuyerResidentialHomeQues.js';
 import BuyerResidentialCondoForm from '../model/questionnaires/BuyerResidentailCondoQues.js';
 import BuyerCommercialForm from '../model/questionnaires/BuyerCommercialQues.js';
+import BuyerLandQues from '../model/questionnaires/BuyerLandQues.js';
 
 
 // ==============================================================================================
@@ -661,7 +662,10 @@ export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)
     // const sellerPropertyForm = await SellerPropertyQues.create(req.body)
     // const sellerPropertyForm = await SellerResidentialHomeForm.create(req.body)
     // const sellerPropertyForm = await SellerResidentialCondoForm.create(req.body)
-    // const sellerPropertyForm = await SellerCommercialForm.create(req.body)
+    const sellerPropertyForm = await SellerCommercialForm.create(req.body)
+    // const sellerPropertyForm = await BuyerResidentialHomeForm.create(req.body)
+    // const sellerPropertyForm = await BuyerResidentialCondoForm.create(req.body)
+    // const sellerPropertyForm = await BuyerLandQues.create(req.body)
 
     res.status(201).json({
         success: true,

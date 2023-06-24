@@ -181,14 +181,13 @@ Select All
     c. Yearly Common, Maintenance or HOA Charges
 
 15. Are Purchasing with cash or mortgage/financing?
-    a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
-    account statement or statements showing the capability of purchasing the property
-    with cash (no mortgage needed). Pertinent information such as your address or account
-    numbers can be blanked out, but when making offers you will have to present these
-    types of documents.
+    a. Cash: 
+        Can you provide a proof of funds statement? 
+            Proof of Funds will consist of an account statement or statements showing the capability of purchasing the property with cash (no mortgage needed). 
+            Pertinent information such as your address or account numbers can be blanked out, but when making offers you will have to present these types of documents.
     b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
-    i. If you plan to purchase the property with a mortgage, it is imperative that you
-    obtain a pre-approval from a lender. Additional text information to come….
+        i. If you plan to purchase the property with a mortgage, it is imperative that you
+           obtain a pre-approval from a lender. Additional text information to come….
 
 16. How soon would you like to purchase a home?
     a. As Soon As Possible
@@ -317,68 +316,168 @@ Residential Land
 ================
 
 1. What type of property are you looking for?
-i. Residential Home
-ii. Condo or Co-Op
-iii. Commercial/Industrial
-iv. Land/Open Lot
-v. Rental – Residential
+    i. Residential Home
+    ii. Condo or Co-Op
+    iii. Commercial/Industrial
+    iv. Land/Open Lot
+    v. Rental – Residential
+
 2. What state would you like to look for a property? Drop Down of States
-3. What towns/cities/areas or counties within that state would you like to look within? Input box
-that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+
+3. What towns/cities/areas or counties within that state would you like to look within? 
+    Input box
+    that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+    
 4. What type of use do you want to get from the land?
-a. Residential Development
-b. Commercial Development
-c. Subdivision and Development
-d. Agricultural
-e. Equestrian
-f. I plan to keep it open and undeveloped
+    a. Residential Development
+    b. Commercial Development
+    c. Subdivision and Development
+    d. Agricultural
+    e. Equestrian
+    f. I plan to keep it open and undeveloped
+
 5. How much space do you need/lot size?
-a. Input box with dropdown for:
-i. Square Feet
-ii. Acres
+    a. Input box with dropdown for:
+        i. Square Feet
+        ii. Acres
+
 6. Do you need the property to be located on a main road?
-a. Yes
-b. No
-c. Doesn’t Matter
+    a. Yes
+    b. No
+    c. Doesn’t Matter
+
 7. What is your budget?
-a. Purchase
-b. Yearly Taxes
+    a. Purchase
+    b. Yearly Taxes
+
 8. (if purchase questions was chosen) Are You Purchasing with cash or mortgage/financing?
-a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
-account statement or statements showing the capability of purchasing the property
-with cash (no mortgage needed). Pertinent information such as your address or account
-numbers can be blanked out, but when making offers you will have to present these
-types of documents.
-b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
-i. If you plan to purchase the property with a mortgage, it is imperative that you
-obtain a pre-approval from a lender. Additional text information to come….
+    a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
+    account statement or statements showing the capability of purchasing the property
+    with cash (no mortgage needed). Pertinent information such as your address or account
+    numbers can be blanked out, but when making offers you will have to present these
+    types of documents.
+    b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
+    i. If you plan to purchase the property with a mortgage, it is imperative that you
+    obtain a pre-approval from a lender. Additional text information to come….
+
 9. Anything else we should know? Text area
+
 10. How soon would you like to be in this property?
-a. As Soon As Possible
-b. 1-3 Months
-c. 4-6 Months
-d. 6-9 Months
-e. 1-12 Months
-f. More Than a Year
+    a. As Soon As Possible
+    b. 1-3 Months
+    c. 4-6 Months
+    d. 6-9 Months
+    e. 1-12 Months
+    f. More Than a Year
+
 11. Are you currently working with a real estate agent?
-a. Yes
-b. No
+    a. Yes
+    b. No
+
 12. Now we need to know how to notify you with property matches
-a. First Name
-b. Last Name
-c. Mobile Phone
-d. Email
-e. Confirm Email
-f. Business Name
-g. Business Address (address line 1, line 2, city, state, zip)
+    a. First Name
+    b. Last Name
+    c. Mobile Phone
+    d. Email
+    e. Confirm Email
+    f. Business Name
+    g. Business Address (address line 1, line 2, city, state, zip)
 
 
 
 
 ======================
-Residential Commercial
+Buyer Questionnaire For Rental-Residential *The information submitted for this questionnaire will 
+only be used by NestNotify and not shared with any public service or municipality. 
 ======================
 
+1. What type of property are you looking for? 
+    i. Residential Home 
+    ii. Condo or Co-Op 
+    iii. Commercial/Industrial 
+    iv. Land/Open Lot 
+(*) v. Rental – Residential 
+
+2. What state would you like to look for a rental? Drop Down of States 
+
+3. What towns/cities/areas or counties within that state would you like to look within? Input box 
+that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+ 
+4. Are there any specific school districts that you would like to focus on? Yes/no; if yes: 
+    a. Again, an input box with suggestions 
+
+5. What type of residential rental are you looking for? Check all that apply 
+    a. Detached, Single Family Home Rental 
+    b. Mid Rise Rental (in building) 
+    c. Hi Rise Rental (in building) 
+    d. Garden Apartment Rental 
+    e. Unit within a multi-family home 
+    f. I’m open to anything 
+
+6. How many bedrooms do you need at a minimum? Drop down – 0 through 20, 20+ 
+
+7. How many bathrooms do you need at a minimum? Drop down - .5, 1, 1.5 to 20, 20+ 
+
+8. What renovation classes are you open to? Check all that apply 
+    Select All 
+    a. New Construction 
+    b. Turn-key Renovated 
+    c. A renovation down within the past 5/10/20 [dropdown] years is fine 
+    d. Original or Not Updated is Fine 
+
+9. What are you must have’s/cannot live with-outs? 
+
+10. What are you wish-list items? 
+
+11. Do you have any firm no’s in regards to a rental? 
+
+12. Do you want waterfront or waterviews? 
+    a. It doesn’t matter 
+    b. Waterfront 
+    c. Waterfront w/Dock Space 
+    d. Waterviews 
+    e. Keep me away from water! 
+
+13. Do you have any pets? 
+    a. Yes 
+    Checkboxes for: 
+    i. Dog 
+    ii. Cat 
+    iii. Other (input box) 
+    b. No 
+
+14. Utilities? 
+    a. Can be separate 
+    b. Must be included 
+
+15. What is your rental budget? 
+    a. Drop down (monthly) 
+
+16. What type of lease term are you looking for? 
+    a. 1 year 
+    b. 2 year 
+    c. More than 2 Years 
+    d. Month-to-Month 
+    e. Seasonal 
+
+17. How soon would you like to secure the rental? 
+    a. As Soon As Possible 
+    b. 1-3 Months 
+    c. 4-6 Months 
+    d. 6-9 Months 
+    e. 1-12 Months 
+    f. More Than a Year 
+
+18. Are you currently working with a real estate agent?  
+    a. Yes 
+    b. No 
+
+19. Now we need to know how to notify you with matched rentals 
+    a. First Name 
+    b. Last Name 
+    c. Mobile Phone 
+    d. Email 
+    e. Confirm Email 
 
 
 
@@ -627,3 +726,81 @@ ii. No
 9. Lot Dimension (if applicable) 
 10. Parking? 
 i. Yes/No
+
+
+==============
+
+==============
+
+1. Do you want to sell or rent you property?
+    i. Sell
+    ii. Rent
+    iii. Either
+
+2. What type of commercial or industrial property are you looking for ? 
+Checkboxes; select all that apply
+    a. Mult-Family Dwelling
+    b. Apartment Bulding
+    c. Farm/Agricultural
+    d. Office
+    e. Small Stores
+    f. Large Store
+    g. Free Standing Building
+    h. Office Building
+    i. Industrial Building
+    j. Warehouse
+    k. Recreational
+    l. Commercial/Industrial
+    m. Mixed Use (Residential and Commercial)
+    n. Restaurant
+    o. Equestrian
+    p. Multiple Lots/Subdivision
+    q. Shopping Center
+
+3. What are the yearly taxes on your property?
+
+4. If sell is chosen; What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?
+    a. Do you owe anything on your current property?
+    i. What do you currently owe?
+    ii. Are you current on payments? Yes/No
+
+5. If rent is chosen; what would be the monthly or annual rent you would like to charge?
+
+6. If rent is chosen; Will utilities be included?
+
+7. If rent is chosen; what type of lease will your offer?
+    a. Single Net
+    b. Double Net
+    c. Triple Net
+    d. Absolute Triple Net
+
+8. If rent was chosen; What type of Lease Term Do you Offer? Check all the apply
+    a. 1 Year
+    b. 2 Year
+    c. 3 Year
+    d. 4 Year
+    e. 5 Year
+    f. Greater than 5 Years
+    g. Month-to-Month
+    h. Seasonal
+
+9. Do you want to locate another property for yourself?
+    a. Yes
+    b. Not at this time, but eventually
+    c. No
+
+10. If sell was chosen; While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?
+    a. Yes/No Drop Down
+        i. If yes; input displays allowing them to enter a number and then choose
+        from drop with options of:
+        1. %
+        2. $/Flat Fee
+11. Would you possibly be open to listing your property on the market with an experienced agent at some point?
+
+12. Now we just need your contact info so that we can reach out when we’ve located a buyer match:
+    a. First Name
+    b. Last Name
+    c. Mobile Phone
+    d. Additional Phone
+    e. Email Address
+    f. Confirm Email
