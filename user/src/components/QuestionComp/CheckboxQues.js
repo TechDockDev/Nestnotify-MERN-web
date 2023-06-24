@@ -2,29 +2,33 @@ import { Checkbox, FormControlLabel, FormGroup, Grid, RadioGroup } from "@mui/ma
 import React, { useEffect } from "react";
 import { useState } from "react";
 import SubQuestion from "./SubQuestion";
+import QuesAnsOption from "./QuesAnsOption";
 
 const CheckboxQues = ({ question, quesAnsOption, id, handleCheckBoxChange }) => {
-   const [showSub, setShowSub] = useState(false);
-  const [tempOptions, setTempOptions] = useState({})
+   const [tempOptions, setTempOptions] = useState({});
 
-const genCheckData = ()=>{
-   let obj = {}
-   quesAnsOption?.map((quest)=>{
-     obj = {...obj,[quest.label]:false}
-   })
-   setTempOptions(obj);
-}
+   const genCheckData = () => {
+      let obj = {};
+      quesAnsOption?.map((quest) => {
+         obj = { ...obj, [quest.label]: false };
+      });
+      setTempOptions(obj);
+   };
 
-useEffect(() => {
- genCheckData()
-}, [])
+   // ==========================================
+   const handleChange = (e) => {
+      setTempOptions({ ...tempOptions, [e.target.name]: e.target.checked });
+   };
+   // ===================================
+   useEffect(() => {
+      genCheckData();
+   }, []);
+   // ****
+   useEffect(() => {
+      handleCheckBoxChange(id, tempOptions);
+   }, [tempOptions]);
 
-   const handleChange = (e)=>{
-    setTempOptions({...tempOptions, [e.target.name]:e.target.checked})
-   }
-
-
-   console.log(tempOptions);
+   // console.log(tempOptions);
 
    return (
       <>
@@ -40,22 +44,26 @@ useEffect(() => {
             }}>
             {question}
          </Grid>
-         <Grid
-            component={FormGroup}
-            item
-            container
-            xs={12}
-            id={id}
-            // onChange={(e) => {
-            //    handleCheckBoxChange(tempOptions);
-            // }}
-            >
+         <Grid component={FormGroup} item container xs={12} id={id}>
             {quesAnsOption.map((quest, index) => {
                return (
                   <React.Fragment key={index}>
                      <Grid item xs={12} sm={6}>
-                        <FormControlLabel control={<Checkbox checked={tempOptions?.[quest.label]} name={quest.label} onChange={handleChange} />} label={quest.label} />
-                        {quest?.isSubQues && showSub && <SubQuestion />}
+                        <FormControlLabel
+                           control={
+                              <Checkbox
+                                 checked={tempOptions?.[quest.label] ? tempOptions?.[quest.label] : false}
+                                 name={quest.label}
+                                 onChange={(e) => {
+                                    handleChange(e);
+                                 }}
+                              />
+                           }
+                           label={quest.label}
+                        />
+                        {quest?.isSubQues && tempOptions?.[quest.label] && (
+                           <QuesAnsOption question={quest.question} handleRadioChange={() => {}} handleCheckBoxChange={() => {}} id={quest._id} quesAnsOption={quest?.subQuest} questionType={quest?.optionType} handleInputTextChange={() => {}} handleSelectChange={() => {}} />
+                        )}
                      </Grid>
                   </React.Fragment>
                );

@@ -1,7 +1,8 @@
 import { FormControlLabel, Grid, RadioGroup, Radio, FormLabel } from "@mui/material";
 import React from "react";
-import SubQuestion from "./SubQuestion";
+// import SubQuestion from "./SubQuestion";
 import { useState } from "react";
+import QuesAnsOption from "./QuesAnsOption";
 
 const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
    const [showSub, setShowSub] = useState(false);
@@ -35,7 +36,11 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
                            control={<Radio />}
                            label={quest.label}
                         />
-                        {quest?.isSubQues && showSub && <SubQuestion questionType />}
+                        {quest?.isSubQues && showSub && <QuesAnsOption 
+                        
+                        question={quest.question} handleRadioChange={()=>{}} handleCheckBoxChange={()=>{}}  id={quest._id} quesAnsOption={quest?.subQuest} questionType={quest?.optionType} handleInputTextChange={()=>{}} handleSelectChange={()=>{}}
+                        
+                        />}
                      </Grid>
                   </React.Fragment>
                );

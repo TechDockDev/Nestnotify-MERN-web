@@ -7,22 +7,21 @@ import CheckboxQues from "./CheckboxQues";
 import SelectQues from "./SelectQues";
 import InputTextQues from "./InputTextQues";
 
-const QuesAnsOption = ({ question, questionType, quesAnsOption, id, handleRadioChange, handleCheckBoxChange }) => {
-
+const QuesAnsOption = ({ question, questionType, quesAnsOption, id, handleRadioChange, handleCheckBoxChange, handleInputTextChange, handleSelectChange }) => {
    return (
       <>
          <Grid item container xs={10}>
-            {questionType === "radio" ? <RadioQues 
-            question={question}
-            quesAnsOption={quesAnsOption}
-            id={id}
-            handleRadioChange={handleRadioChange}
-            /> : questionType === "checkbox" ? <CheckboxQues 
-            question={question}
-            quesAnsOption={quesAnsOption}
-            id={id}
-            handleCheckBoxChange={handleCheckBoxChange}
-            /> : questionType === "select" ? <SelectQues /> : <InputTextQues/>}
+            {questionType === "radio" ? (
+               <RadioQues question={question} quesAnsOption={quesAnsOption} id={id} handleRadioChange={handleRadioChange} />
+            ) : questionType === "checkbox" ? (
+               <CheckboxQues question={question} quesAnsOption={quesAnsOption} id={id} handleCheckBoxChange={handleCheckBoxChange} />
+            ) : questionType === "select" ? (
+               <SelectQues
+               questionType={questionType} question={question} quesAnsOption={quesAnsOption} id={id} handleSelectChange={handleSelectChange}
+               />
+            ) : (
+               <InputTextQues questionType={questionType} question={question} quesAnsOption={quesAnsOption} id={id} handleInputTextChange={handleInputTextChange} />
+            )}
          </Grid>
       </>
    );
