@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 
-const authSchema = new mongoose.Schema(
+const adminAuthSchema = new mongoose.Schema(
     {
         firstName: {
             type: String,
@@ -31,14 +31,19 @@ const authSchema = new mongoose.Schema(
         },
         role: {
             type: String,
-            default: 'user'
+            default: 'admin',
+        },
+        adminRole: {
+            type: String,
+            required: true,
+        },
+        adminPermission: {
+            type: Array,
+            require: true,
         },
         userActive: {
             type: Boolean,
             default: true,
-        },
-        dateOfBirth: {
-            type: Date,
         },
         master: {
             type: String,
@@ -48,7 +53,7 @@ const authSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'imageModel'
         },
-        userAccount: {
+        adminAccount: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'userAccount'
         },
@@ -60,17 +65,17 @@ const authSchema = new mongoose.Schema(
     }
 )
 
-authSchema.pre('save', async function(next){
+adminAuthSchema.pre('save', async function(next){
     if(!this.isModified('password')) return next()
     this.password = await bcrypt.hash(this.password, 12)
     next()
 });
 
-authSchema.methods.correctPassword = async function(candidatePassword, userPassword){
+adminAuthSchema.methods.correctPassword = async function(candidatePassword, userPassword){
     return await bcrypt.compare(candidatePassword, userPassword)
 };
 
-authSchema.methods.getResetPasswordToken = async function () {
+adminAuthSchema.methods.getResetPasswordToken = async function () {
     // generate token
     const resetToken = crypto.randomBytes(20).toString("hex");
     // generate hash token and add to db
@@ -79,6 +84,6 @@ authSchema.methods.getResetPasswordToken = async function () {
     return resetToken;
 }
 
-const Auth = mongoose.model("Auth", authSchema);
+const AdminAuth = mongoose.model("AdminAuth", adminAuthSchema);
 
-export default Auth;
+export default AdminAuth;

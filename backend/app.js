@@ -26,12 +26,13 @@ app.use(cors({credentials: true, origin:`http://localhost:3000`}));
 // app.use(cors())
 
 // -----| Application Route Imports
-import userAuthRoute from './routes/userAuthRoute.js';
+import superAdminRoute from './routes/superAdminRoutes.js'
 import adminRoute from './routes/adminRoute.js';
+import userAuthRoute from './routes/userAuthRoute.js';
 import sellerRoute from './routes/sellerRoute.js';
 
 // -----| APP ROUTES |-----
-app.use('/super/admin', adminRoute);
+app.use('/api/v1/super/admin', superAdminRoute);
 app.use('/api/v1/admin', adminRoute);
 app.use('/api/v1/user', userAuthRoute);
 app.use('/api/v1/seller', sellerRoute)
@@ -39,7 +40,7 @@ app.use('/api/v1/seller', sellerRoute)
 app.all('*', (req, res)=>{
     return res.status(404).json({
         success: false,
-        message: `OPs something went wrong ${404}`
+        message: `OPs Wrong URL '${req.url}' or Wrong REST API method, Try Correct one.`
     });
 })
 

@@ -1,0 +1,629 @@
+----------------------
+Buyer Question Form:
+----------------------
+
+================
+Residential Home
+================
+
+1. What type of property are you looking for?
+    i. Residential Home
+    ii. Condo or Co-Op
+    iii. Commercial/Industrial
+    iv. Land/Open Lot
+    v. Rental – Residential
+
+2. What state would you like to look for a home? Drop Down of States
+
+3. What towns/cities/areas or counties within that state would you like to look within? 
+    Input box
+        that upon beginning to type it makes suggestions to click;
+        adds to input box (with x to remove)
+
+4. Are there any specific school districts that you would like to focus on? 
+    Yes/; if yes:
+        a. Again, an input box with suggestions
+    No
+
+5. How many bedrooms do you need at a minimum? 
+    Drop down – 0 through 20, 20+
+
+6. How many bathrooms do you need at a minimum? 
+    Drop down - .5, 1, 1.5 to 20, 20+
+
+7. Type of home that interests you:
+    a. Select All
+    b. Colonial
+    c. Hi Ranch
+    d. Ranch
+    e. Split Level
+    f. Split Ranch/Splanch
+    g. Cape
+    h. Expanded Cape
+    i. Modern/Contemporary
+    j. Open to Anything (this is ultimately the same as selecting all for backend purposes)
+
+8. Basement? Check all that apply
+    a. Full
+    b. Partial
+    c. Finished
+    d. Unfinished
+    e. Something that has an entrance to outside
+    f. Slab (none)
+    g. Crawl Space
+
+9. What renovation classes are you open to? Check all that apply
+    Select All
+    a. New Construction
+    b. Turn-key Renovated
+    c. A renovation down within the past 5/10/20 [dropdown] years is fine
+    d. Original or Not Updated is Fine
+    e. Structurally Sound but may need cosmetic updating
+    f. I’m OK with a small project
+    g. I’m OK with a large project
+    h. I have no problem knocking it down and rebuilding
+
+10. What are you must have’s/cannot live with-outs?
+
+11. What are you wish-list items?
+
+12. Do you have any firm no’s in regards to a home?
+
+13. Do you want waterfront or waterviews?
+    a. It doesn’t matter
+    b. Waterfront
+    c. Waterfront w/Dock Space
+    d. Waterviews
+    e. Keep me away from water!
+    
+14. What is your budget?
+    a. Purchase
+    b. Yearly Taxes
+
+15. Are Purchasing with cash or mortgage/financing?
+    a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
+    account statement or statements showing the capability of purchasing the property
+    with cash (no mortgage needed). Pertinent information such as your address or account
+    numbers can be blanked out, but when making offers you will have to present these
+    types of documents.
+    b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
+    i. If you plan to purchase the property with a mortgage, it is imperative that you
+    obtain a pre-approval from a lender. Additional text information to come….
+
+16. How soon would you like to purchase a home?
+    a. As Soon As Possible
+    b. 1-3 Months
+    c. 4-6 Months
+    d. 6-9 Months
+    e. 1-12 Months
+    f. More Than a Year
+
+17. Are you currently working with a real estate agent?
+    a. Yes
+    b. No
+
+18. Now we need to know how to notify you with matched homes
+    a. First Name
+    b. Last Name
+    c. Mobile Phone
+    d. Email
+    e. Confirm Email
+
+
+
+=================
+Residential Condo
+=================
+
+1. What type of property are you looking for?
+    i. Residential Home
+    ii. Condo or Co-Op
+    iii. Commercial/Industrial
+    iv. Land/Open Lot
+    v. Rental – Residential
+2. What state would you like to look for a home? Drop Down of States
+
+3. What towns/cities/areas or counties within that state would you like to look within?
+    Input box
+        that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+
+4. Are there any specific school districts that you would like to focus on? 
+    Yes; if yes:
+        a. Again, an input box with suggestions
+    No
+    
+5. Do you prefer a Condo or a Co-Op…or Either? Checkboxes; select all that apply
+    a. Condo
+    b. Co-Op
+    c. Home Owner’s Association
+
+6. How many bedrooms do you need at a minimum? 
+    Drop down – 0 through 20, 20+
+7. How many bathrooms do you need at a minimum? 
+    Drop down - .5, 1, 1.5 to 20, 20+
+
+8. Style of Unit:
+    a. Garden Apartment
+    b. Midrise Building
+    c. Hi Rise Building
+    d. Detached/Standalone
+    e. Side-by-Side
+    f. Townhouse
+    g. Open to Anything (this is ultimately the same as selecting all for backend purposes)
+
+9. What renovation classes are you open to? Check all that apply
+Select All
+    a. New Construction
+    b. Turn-key Renovated
+    c. A renovation down within the past 5/10/20 [dropdown] years is fine
+    d. Original or Not Updated is Fine
+    e. Structurally Sound but may need cosmetic updating
+    f. I’m OK with a small project
+    g. I’m OK with a large project
+    h. I have no problem knocking it down and rebuilding
+
+10. What are you must have’s/cannot live with-outs?
+
+11. What are you wish-list items?
+
+12. Do you have any firm no’s in regards to a home?
+
+13. Do you want waterfront or waterviews?
+    a. It doesn’t matter
+    b. Waterfront
+    c. Waterfront w/Dock Space
+    d. Waterviews
+    e. Keep me away from water!
+
+14. What is your budget?
+    a. Purchase
+    b. Yearly Taxes
+    c. Yearly Common, Maintenance or HOA Charges
+
+15. Are Purchasing with cash or mortgage/financing?
+    a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
+    account statement or statements showing the capability of purchasing the property
+    with cash (no mortgage needed). Pertinent information such as your address or account
+    numbers can be blanked out, but when making offers you will have to present these
+    types of documents.
+    b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
+    i. If you plan to purchase the property with a mortgage, it is imperative that you
+    obtain a pre-approval from a lender. Additional text information to come….
+
+16. How soon would you like to purchase a home?
+    a. As Soon As Possible
+    b. 1-3 Months
+    c. 4-6 Months
+    d. 6-9 Months
+    e. 1-12 Months
+    f. More Than a Year
+
+17. Are you currently working with a real estate agent?
+    a. Yes
+    b. No
+
+18. Now we need to know how to notify you with matched homes
+    a. First Name
+    b. Last Name
+    c. Mobile Phone
+    d. Email
+    e. Confirm Email
+
+
+
+
+======================
+Residential Commercial
+======================
+
+1. What type of property are you looking for?
+    i. Residential Home
+    ii. Condo or Co-Op
+    iii. Commercial/Industrial
+    iv. Land/Open Lot
+    v. Rental – Residential
+
+2. What state would you like to look for a property? Drop Down of States
+
+3. What towns/cities/areas or counties within that state would you like to look within? Input box
+that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+
+4. Are you looking to purchase or rent a commercial or industry space?
+    Can select both A and B and C…or D alone
+    a. Purchase Empty for my Own Use
+    b. Purchase Empty For Investment
+    c. Purchase Occupied for Investment
+    d. Rent
+
+5. What type of commercial or industrial property are you looking for ? Checkboxes; select all that apply
+    a. Mult-Family Dwelling
+    b. Apartment Bulding
+    c. Farm/Agricultural
+    d. Office
+    e. Small Stores
+    f. Large Store
+    g. Free Standing Building
+    h. Office Building
+    i. Industrial Building
+    j. Warehouse
+    k. Recreational
+    l. Commercial/Industrial
+    m. Mixed Use (Residential and Commercial)
+    n. Restaurant
+    o. Equestrian
+    p. Multiple Lots/Subdivision
+    q. Shopping Center
+
+6. What is your budget?
+    If Purchase (chosen above):
+        a. Purchase
+        b. Yearly Taxes
+    If Rent (chosen above):
+        c. Monthly Rent
+
+7. (if purchase questions was chosen) Are You Purchasing with cash or mortgage/financing?
+    a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
+    account statement or statements showing the capability of purchasing the property
+    with cash (no mortgage needed). Pertinent information such as your address or account
+    numbers can be blanked out, but when making offers you will have to present these
+    types of documents.
+    b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
+    i. If you plan to purchase the property with a mortgage, it is imperative that you
+    obtain a pre-approval from a lender. Additional text information to come….
+
+8. How soon would you like to be in this property?
+    a. As Soon As Possible
+    b. 1-3 Months
+    c. 4-6 Months
+    d. 6-9 Months
+    e. 1-12 Months
+    f. More Than a Year
+
+9. If Lease was Chosen -> What type of lease are you looking for?
+    These should be clickable or have info icon to read more about each; popup/overlay with
+    information
+    a. Single Net
+    b. Double Net
+    c. Triple Net
+    d. Absolute Triple Net
+
+10. If lease was chosen; What type of Lease Term Do you Need? Check all the apply
+    a. 1 Year
+    b. 2 Year
+    c. 3 Year
+    d. 4 Year
+    e. 5 Year
+    f. Greater than 5 Years
+    g. Month-to-Month
+    h. Seasonal
+
+11. Are you currently working with a real estate agent?
+    a. Yes
+    b. No
+
+12. Now we need to know how to notify you with property matches
+    a. First Name
+    b. Last Name
+    c. Mobile Phone
+    d. Email
+    e. Confirm Email
+    f. Business Name
+    g. Business Address (address line 1, line 2, city, state, zip)
+
+
+
+================
+Residential Land
+================
+
+1. What type of property are you looking for?
+i. Residential Home
+ii. Condo or Co-Op
+iii. Commercial/Industrial
+iv. Land/Open Lot
+v. Rental – Residential
+2. What state would you like to look for a property? Drop Down of States
+3. What towns/cities/areas or counties within that state would you like to look within? Input box
+that upon beginning to type it makes suggestions to click; adds to input box (with x to remove)
+4. What type of use do you want to get from the land?
+a. Residential Development
+b. Commercial Development
+c. Subdivision and Development
+d. Agricultural
+e. Equestrian
+f. I plan to keep it open and undeveloped
+5. How much space do you need/lot size?
+a. Input box with dropdown for:
+i. Square Feet
+ii. Acres
+6. Do you need the property to be located on a main road?
+a. Yes
+b. No
+c. Doesn’t Matter
+7. What is your budget?
+a. Purchase
+b. Yearly Taxes
+8. (if purchase questions was chosen) Are You Purchasing with cash or mortgage/financing?
+a. Cash: Can you provide a proof of funds statement? Proof of Funds will consist of an
+account statement or statements showing the capability of purchasing the property
+with cash (no mortgage needed). Pertinent information such as your address or account
+numbers can be blanked out, but when making offers you will have to present these
+types of documents.
+b. Mortgage/Financing: Do you have your pre-approval yet? Yes/NO
+i. If you plan to purchase the property with a mortgage, it is imperative that you
+obtain a pre-approval from a lender. Additional text information to come….
+9. Anything else we should know? Text area
+10. How soon would you like to be in this property?
+a. As Soon As Possible
+b. 1-3 Months
+c. 4-6 Months
+d. 6-9 Months
+e. 1-12 Months
+f. More Than a Year
+11. Are you currently working with a real estate agent?
+a. Yes
+b. No
+12. Now we need to know how to notify you with property matches
+a. First Name
+b. Last Name
+c. Mobile Phone
+d. Email
+e. Confirm Email
+f. Business Name
+g. Business Address (address line 1, line 2, city, state, zip)
+
+
+
+
+======================
+Residential Commercial
+======================
+
+
+
+
+
+
+----------------------
+Seller Property Form:
+----------------------
+
+
+01. Is your property currently listed on the market or are you contracted with an agency and will be listed at some time in the future? 
+    o Not on the market and not contracted for a listing
+    o Contracted to list but not on the market yet
+    o Contracted to list and currently on the market
+    o Contracted to list and currently on the market…but expiring soon!
+        |=Y=| -> Date 
+        Upon choosing this option, a date input/calendar select should also become available 
+
+
+02. Are you the current owner of the property? 
+    o Yes 
+    o No, I am submitting this for someone else. 
+        If this option is selected, the fields for the first name, last name, best telephone number 
+        for contact and email should display with a message: 
+        “Since you are not the actual owner of this property, we will require their contact information in the event there is a buyer match for their property.” 
+            First Name                  |=Y=|
+            Last Name                   |=Y=|
+            Telephone                   |=Y=|
+            Mobile Phone                |=Y=|
+            Email                       |=Y=|
+            Your Relation to The Owner  |=Y=|
+
+
+03. Property Address 
+    |=Y=| 
+    Upon entering the address, an autopopulate/search should come up allowing them to quick click (finishes the address for the user; provides suggestions). 
+    
+ 
+04. What Type of Property are Your Submitting: 
+    o Residential Home 
+    o Condo or Co-Op 
+    o Commercial/Industrial 
+    o Land 
+    o Rental – Residential 
+    o Rental – Commercial
+
+
+05. When are you looking to close (or have the property rented by? If rental option was chosen)? 
+    o ASAP 
+    o 1-3 months 
+    o 4-6 months 
+    o 7-9 months 
+    o 10-12 months 
+    o More than a year 
+
+
+-----------------------
+Residential Home Form:
+-----------------------
+
+01. Is your home: 
+    ▪ Detached/Standalone 
+    ▪ Attached to Others (such as a townhouse) 
+
+
+02. What would you classify the style of your home to be? 
+    ▪ Colonial 
+    ▪ Hi Ranch 
+    ▪ Ranch 
+    ▪ Split Level 
+    ▪ Split Ranch/Splanch 
+    ▪ Cape 
+    ▪ Expanded Cape 
+    ▪ Modern/Contemporary 
+    ▪ Other (input box) 
+
+03. Would you say your home’s condition is… 
+    ▪ Brand New (this includes a new foundation and even studs within the wall) 
+    ▪ Updated within (20/10/5/past year) 
+    ▪ Original 
+    ▪ In Very Poor Condition; it might be best for a builder or contractor to purchase 
+
+04. Number of Bedrooms 
+    |=Y=|
+
+05. Number of Bathrooms 
+    |=Y=|
+    ▪ Full (input box) |=Y=| 
+    ▪ Half (input box) |=Y=|
+
+06. Basement? Check all that apply 
+    ▪ Full 
+    ▪ Partial 
+    ▪ Finished 
+    ▪ Unfinished 
+    ▪ Something that has an entrance to outside 
+    ▪ Slab (none) 
+    ▪ Crawl Space 
+
+07. Square Footage of Property 
+    |=Y=|
+
+08. Lot Size 
+    |=Y=|
+    
+09. Lot Dimension 
+    |=Y=|
+
+10. Number of Garages 
+    ▪ Drop Down 0 to 20 
+        • If 1 or more selected, drop down appears for: 
+        o Attached 
+        o Detached
+
+11. Pool (yes/no radio button); If yes, drop down: 
+    o Yes
+        o Inground – Chlorine 
+        o Inground – Salt Water 
+        o Above Ground – Chlorine 
+        o Above Ground – Saltwater 
+        ▪ Checkbox for “Heated?” 
+    o No
+
+12. Air Conditioning? Drop down 
+    ▪ Central AC  
+        How many zones? 
+    ▪ Ductless AC  
+        How many zones/units? 
+    ▪ Wall Units 
+        How many units? 
+    ▪ None
+
+13. Heating Type: 
+    ▪ Forced Hot Air
+        How many zones? 
+    ▪ Hotwater Baseboard
+        How many zones? 
+    ▪ Radiant
+        How many zones? 
+    ▪ Steam Radiator
+        How many zones? 
+    ▪ Electric
+        How many zones? 
+
+14. Heating Fuel: 
+    ▪ Gas 
+    ▪ Oil 
+        • While your heating fuel may not be natural gas, do you have natural gas within your home for other uses such as for cooking? 
+    ▪ Electric 
+        • While your heating fuel may not be natural gas, do you have natural gas within your home for other uses such as for cooking?
+         
+15. Current Property Taxes
+    |=Y=|
+
+16. Do you have an additional village tax?
+    |=Y=|
+
+17. Do you belong to an HOA 
+    o Yes
+        a.what are the yearly fees?
+            |=Y=| 
+        b. What does it include? 
+            |=Y=|
+    o No
+
+18. Does your home belong to a specific section or development? 
+    o Yes
+        a. What is it’s name?
+            |=Y=|
+    o No
+
+19. What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?
+    |=Y=|
+20. Do you owe anything on your current property? 
+    a. What do you currently owe? 
+        |=Y=|
+    b. Are you current on payments? 
+        o Yes
+        o No 
+21. Do you already have another property you will be moving to or will you need help in locating one? 
+    |=Y=|
+
+22. Add Photos of Your Property  
+    |=Y=| -> Image
+
+23. While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match? 
+    o Yes 
+        Drop Down If yes; input displays allowing them to enter a number and then choose from drop with options of: 
+            a. % 
+            b. $/Flat Fee 
+    o No
+
+24. Would you possibly be open to listing your home on the market with an experienced agent at some point? 
+    o Yes
+    o No
+
+25. Now we just need your contact info so that we can reach out when we’ve located a buyer match: 
+    a. First Name 
+    b. Last Name 
+    c. Mobile Phone 
+    d. Additional Phone 
+    e. Email Address 
+    f. Confirm Email 
+    g. Create a Password 
+    h. Confirm Password 
+    i. You’ll be able to access the details of your property at any time if you should want to change them 
+
+26. Agree to Terms/Conditions Checkbox 
+    |=Y=|
+
+27. Are you a human? Recaptcha
+    |=Y=|
+
+
+
+-------------------
+Residential Condo:
+-------------------
+1. Is your home: 
+▪ Condo 
+▪ Co-Op 
+▪ Home Owner’s Association 
+
+2. What is your type of home? 
+i. Garden Apartment 
+ii. Midrise Building 
+iii. Hi Rise Building 
+iv. Detached/Standalone 
+v. Side-by-Side 
+vi. Townhouse 
+3. Would you say your home’s condition is… 
+i. Brand New (this includes a new foundation and even studs within the wall) 
+ii. Updated within (20/10/5/past year) 
+iii. Original 
+iv. In Very Poor Condition; it might be best for a builder or contractor to 
+purchase 
+4. # of Bedrooms 
+5. # of Bathrooms 
+i. Full (input box) 
+ii. Half (input box) 
+6. In-Unit Laundry 
+i. Yes 
+ii. No 
+7. Square Footage of Property 
+8. Lot Size (if applicable) 
+9. Lot Dimension (if applicable) 
+10. Parking? 
+i. Yes/No

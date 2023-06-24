@@ -47,10 +47,6 @@
                 "isDate": true,
                 "isSubQues": false
             }
-        ],
-        "answerVal": {
-            "ansType": "Object", 
-            "data": {}
-        }
+        ]
     }
 ]

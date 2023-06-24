@@ -1,87 +1,108 @@
+// Module Import
+import crypto from 'crypto';
+
+// MiddleWares Import
 import CatchAsync from '../middleware/catchAsync.js';
 import ErrorHandler from '../utils/errorHandler.js';
 import authToken from '../utils/authToken.js';
-import crypto from 'crypto';
-
-
 import sendEmail from '../utils/sendEmail.js';
+
+// Database Import
+import AdminAuth from '../model/admin/AdminAuth.js';
 import Auth from '../model/auth/Auth.js';
 
 
 // -----| USER REGISTRATION |-----
-export const nestNotify_User_Registration = CatchAsync( async(req, res, next)=>{
-    const { firstName, lastName, email, password, contactNumber, role } = req.body;
+export const nestNotify_Admin_Registration_By_Super_Admin = CatchAsync( async(req, res, next)=>{
+    const { firstName, lastName, email, password, contactNumber, master, adminRole, adminPermission } = req.body;
 
-    if(!role){
-        req.body.role="user"
+    const permissions = ['account, seller, buyer, renters, landlords, investers, contactus']
+
+    if(!master){
+        req.body.master = null
+    }
+    else if(master.toLowerCase()==='super'){
+        req.body.adminPermission = permissions;
+        req.body.adminRole = 'Super Admin'
     }
 
     // 1) Checking if all field enterend
-    if(!firstName || !lastName || !email || !password || !contactNumber){
+    if(!firstName || !lastName || !email || !password || !contactNumber || !adminRole || !adminPermission){
         return next(new ErrorHandler("Please provide all details"), 400)
     }
 
-    // 2) Checking if user exist with same email address
+    // 2) Checking if user exist with same email address and contact numner
     const userExistanceCheck = await Auth.findOne({email: email});
     const contactExistanceCheck = await Auth.findOne({contactNumber: contactNumber})
+    const adminExistanceCheck = await AdminAuth.findOne({email: email});
+    const adminContactExistanceCheck = await AdminAuth.findOne({contactNumber: contactNumber})
 
-    if(userExistanceCheck){
+    if(userExistanceCheck || adminExistanceCheck){
         return next(new ErrorHandler(`User Already exist with same email address. Please, try with new one.`), 400)
     }
 
-    if(contactExistanceCheck){
+    if(contactExistanceCheck || adminContactExistanceCheck){
         return next(new ErrorHandler(`User Already exist with same contact number. Please, try with new one.`), 400)
     }
 
     // 3) User registration in database
-    const userCreate = await Auth.create({
+    const userCreate = await AdminAuth.create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         contactNumber: req.body.contactNumber,
         password: req.body.password,
-        role: req.body.role.toLowerCase(),
-        master: null
+        master: req.body.master,
+        adminRole: req.body.adminRole,
+        adminPermission: req.body.adminPermission
     })
 
     // 4) Fetching User Data
-    const auth = await Auth.findById({_id: userCreate._id})
+    const adminAuth = await AdminAuth.findById({_id: userCreate._id})
+
+    // 5) Sending response 
+    res.status(201).json({
+        success: true,
+        status: "success",
+        message: "Admin Registration Successful",
+        adminAuth
+    })
 
     // 5) Setting cookie and sending response
-    authToken.sendToken(auth, 200, res, 'register');
+    // authToken.adminSendToken(adminAuth, 200, res, 'register');
 })
 
-// -----| USER SIGNIN |-----
-export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
+// -----| ADMIN USER SIGNIN |-----
+export const nestNotify_Admins_Users_Sign_IN = CatchAsync( async(req, res, next)=>{
     const {email, password} = req.body;
     // console.log(req.body)
 
-    let userCheck;
     // 1) Checking if email and password
     if(!email || !password){
         return next(new ErrorHandler(`Please enter email and password`, 400))
     }
 
     // 2) Checking if user exist
-    userCheck  = await Auth.findOne({email}).select("+password");
+    const adminCheck  = await AdminAuth.findOne({email}).select("+password");
     // console.log(userCheck.email)
 
     // 3) Checking password are same or not
-    if(!userCheck || !await userCheck.correctPassword(password, userCheck.password)){
+    if(!adminCheck || !await adminCheck.correctPassword(password, adminCheck.password)){
         return next(new ErrorHandler('Invalid Credential', 401))
     }
 
     // 4) Fetching User data
-    const auth= await Auth.findById({_id: userCheck._id})
+    const admin = await AdminAuth.findById({_id: adminCheck._id})
 
     // 5) Setting cookie and sending reponse
-    authToken.sendToken(auth, 200, res, 'login')
+    authToken.adminSendToken(admin, 200, res, 'login')
 })
 
 
 // -----| USER LOGOUT |-----
-export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
+export const nestNotify_Admin_Users_Sign_Out = CatchAsync(async(req, res, next) => {
     
+    const name = req.auth.firstName+" "+req.auth.lastName
     // 1) Setting cookie null
     res.cookie('token', null, {
         expires: new Date(Date.now()),
@@ -92,8 +113,30 @@ export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
     res.status(200).json({
         success: true,
         status: "success",
-        message: 'You are logged out.'
+        message: `${name}, You are logged out.`
     })
+})
+
+
+// -----| Admin: Get Logged in user profile |-----
+export const nestNotify_Admin_Get_Profile_Data = CatchAsync(async(req, res, next) => {
+
+    // 1) Fetching user
+    const adminProfile = await AdminAuth.findById({_id: req.auth.id})
+    
+    // Checking for error
+    if(!adminProfile){
+        return next(new ErrorHandler('Something went wrong', 400))
+    }
+
+    // Sending response
+    res.status(200).json({
+        status: 'success',
+        success: true,
+        messgae: "Admin Proifle Data",
+        adminProfile
+    })
+
 })
 
 
@@ -101,7 +144,7 @@ export const nestNotify_User_SignOut = CatchAsync(async(req, res, next) => {
 export const nestNotify_User_Password_Update = CatchAsync(async(req, res, next) => {
 
     // 1) Fetching user
-    const auth = await Auth.findById(req.auth.id).select('+password');
+    const auth = await AdminAuth.findById(req.auth.id).select('+password');
     
     // 2) Checking saved and provided password are save or not 
     const ispasswordMatch = await auth.correctPassword(req.body.oldPassword, auth.password);
@@ -127,7 +170,7 @@ export const nestNotify_User_Password_Update = CatchAsync(async(req, res, next) 
 // -----| USER PASSWORD FORGOT |-----
 export const nestNotify_User_Password_Forgot = CatchAsync(async(req, res, next)=>{
     // 1) Fetching user
-    const auth = await Auth.findOne({email: req.body.email})
+    const auth = await AdminAuth.findOne({email: req.body.email})
     // console.log(user)
 
     if(!auth){
@@ -164,7 +207,7 @@ export const nestNotify_User_Password_Reset = CatchAsync(async(req, res, next)=>
     // Creating token hash
     const resetPasswordToken = crypto.createHash("sha256").update(req.params.token).digest("hex");
 
-    const auth = await Auth.findOne({
+    const auth = await AdminAuth.findOne({
         resetPasswordToken,
         resetPasswordExpire: {$gt: Date.now()}
     })

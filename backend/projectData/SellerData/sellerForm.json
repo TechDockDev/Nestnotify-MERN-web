@@ -1,0 +1,258 @@
+[
+    {
+        "questionCondition": null,
+        "extraInformation": null,
+        "question": "Is your property currently listed on the market or are you contacted with an agency and will be listed at some time in future?",
+        "questionType": "optional",
+        "questionOption": true,
+        "quesAnsOption": [
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "a": "Not on the market and not contracted for a listing",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "b": "Contracted to list but not on the market yet",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "c": "Contracted to list and currently on the market",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "d": "Contracted to list and currently on the market…but expiring soon!",
+                "conditionalQues": true,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": true,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "questionCondition": null,
+        "extraInformation": null,
+        "question": "Are you the current owner of the property?",
+        "questionType": "optional",
+        "questionOption": true,
+        "quesAnsOption": [
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "a": "Yes",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "b": "No, I am submitting this for someone else.",
+                "conditionalQues": true,
+                "multupleAns": false,
+                "inputBox": true,
+                "isDate": false,
+                "isSubQues": false,
+                "textObject" :{
+                    "firstName": "",
+                    "lastName": "",
+                    "telephone": "",
+                    "contactNumber": "",
+                    "email": "",
+                    "relationToOwner": ""
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "questionCondition": null,
+        "extraInformation": null,
+        "question": "Property Address",
+        "questionType": "inputText",
+        "questionOption": false,
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "questionCondition": null,
+        "extraInformation": "Let’s Get Some Details About Your Property",
+        "question": "What Type of Property are Your Submitting:",
+        "questionType": "optional",
+        "questionOption": true,
+        "quesAnsOption": [
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "a": "Residential Home",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "b": "Residential Home",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "c": "Commercial/Industrial",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "d": "Land",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "e": "Rental - Residential",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "f": "Rental - Commercial",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    },
+
+    {
+        "questionCondition": null,
+        "extraInformation": null,
+        "question": "When are you looking to close (or have the property rented by? If rental option was chosen)?",
+        "questionType": "optional",
+        "questionOption": true,
+        "quesAnsOption": [
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "a": "Asap",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "b": "1-3 months",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "c": "4-6 months",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "d": "7-9 months",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "e": "9-12 months",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            },
+            {
+                "optionInfo": null,
+                "optionType": "radio",
+                "f": "More than year",
+                "conditionalQues": false,
+                "multupleAns": false,
+                "inputBox": false,
+                "isDate": false,
+                "isSubQues": false
+            }
+        ],
+        "answerVal": {
+            "ansType": "Object", 
+            "data": {}
+        }
+    }
+
+]

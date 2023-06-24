@@ -4,12 +4,11 @@ import ErrorHandler from '../utils/errorHandler.js';
 import ApiFeatures from '../utils/apiFeatures.js';
 
 // Database Model Imports 
-import SellerForm from '../model/propertyQuesModels/SellerForm.js';
-import SellerResidentialForm from '../model/propertyQuesModels/SellerResidentialHomeForm.js';
-import SellerResidentialCondoForm from '../model/propertyQuesModels/SellerResidentialCondoForm.js';
-import SellerCommercialForm from '../model/propertyQuesModels/SellerCommercialForm.js';
+import SellerPropertyQues from '../model/questionnaires/SellerPropertyQues.js';
+import SellerResidentialForm from '../model/questionnaires/SellerResidentialHomeQues.js';
+import SellerResidentialCondoForm from '../model/questionnaires/SellerResidentialCondoQues.js';
+import SellerCommercialForm from '../model/questionnaires/SellerCommercialQues.js';
 
-import SellerPropertyForm from '../model/seller/SellerPropertyForm.js';
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -17,7 +16,7 @@ import SellerPropertyForm from '../model/seller/SellerPropertyForm.js';
 // 1) SELLER: FILL NEW PROPERTY FORM 
 export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, res, next)=>{
 
-    console.log(req.body.length)
+    // console.log(req.body.length)
 
     if(!req.body){
         return next(new ErrorHandler('Please enter details', 401))
@@ -25,12 +24,13 @@ export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, r
 
     const answerFill = await SellerPropertyForm.create({
         auth: req.auth.id,
-        sellerForm: req.body._id,
+        SellerPropertyQues: req.body._id,
         formAnswers: req.body
     })
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "New Property form filled",
         // answerFill
     })
@@ -38,10 +38,11 @@ export const nestNotify_Seller_Fill_New_Property_Form = CatchAsync( async(req, r
 
 export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(req, res, next)=>{
 
-    const answerFill = await SellerPropertyForm.find().populate('auth').populate('sellerForm')
+    const answerFill = await SellerPropertyForm.find().populate('auth').populate('SellerPropertyQues')
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "New Property form filled",
         length: answerFill.length,
         answerFill
@@ -52,9 +53,9 @@ export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(
 export const nestNotify_Seller_Get_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const resultPerPage = 3;
-    const propertyQuesCount = await SellerForm.countDocuments()
+    const propertyQuesCount = await SellerPropertyQues.countDocuments()
 
-    const apiFeature = new ApiFeatures(SellerForm.find(), req.query).pagination(resultPerPage)
+    const apiFeature = new ApiFeatures(SellerPropertyQues.find(), req.query).pagination(resultPerPage)
     const sellerPropertyForm = await apiFeature.query;
     
     if(!sellerPropertyForm){
@@ -63,6 +64,7 @@ export const nestNotify_Seller_Get_Property_Form = CatchAsync( async(req, res, n
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller new property form",
         propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -96,6 +98,7 @@ export const nestNotify_Seller_Get_Residential_Home_Form = CatchAsync( async(req
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Residential home property form",
         propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -129,6 +132,7 @@ export const nestNotify_Seller_Get_Residential_Condo_Form = CatchAsync( async(re
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Residential condo property form",
         propertyQuesCount,
         length: sellerPropertyForm.length,
@@ -162,6 +166,7 @@ export const nestNotify_Seller_Get_Commercial_Industrial_Form = CatchAsync( asyn
 
     res.status(200).json({
         success: true,
+        status: "success",
         message: "Seller Commercail property form",
         propertyQuesCount,
         length: sellerPropertyForm.length,

@@ -1,0 +1,431 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": false,
+        "question": "Do you want to sell or rent you property?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "optionType": "radio",
+                "label": "Sell",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "Rent",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "Either",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What type of commercial or industrial property are you looking for?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "key": "11ans11",
+                "optionType": "checkbox",
+                "label": "Mult-Family Dwelling",
+                "isSubQues": false
+            },
+            {
+                "key": "12ans12",
+                "optionType": "checkbox",
+                "label": "Apartment Bulding",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "Farm/Agricultural",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Office",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Small Stores",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Large Store",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Free Standing Building",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Office Building",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Industrial Building",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Warehouse",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Recreational",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Mixed Use (Residential and Commercial)",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Restaurant",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Equestrian",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Multiple Lots/Subdivision",
+                "isSubQues": false
+            },
+            {
+                
+                "optionType": "checkbox",
+                "label": "Shopping Center",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "What are the yearly taxes on your property?",
+        "questionType": "text"
+    }, 
+
+    {
+        "quesIndex": 3,
+        "fixIndex": 3,
+        "questionCondition": false,
+        "question": "What would be your ideal sale price for your home? What would be the absolute lowest price you would accept?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "Do you owe anything on your current property?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "sid": "441optsub1",
+                "optionType": "text",
+                "label": "What do you currently owe?",
+                "isSubQues": false
+            },
+            {
+                "sid": "442optsub2",
+                "optionType": "radio",
+                "label": "Are you current on payments? ",
+                "isSubQues": true,
+                "subQuestion": [ 
+                    {
+                        "optionType": "radio",
+                        "label": "Yes",
+                        "isSubQues": false
+                    },
+                    {
+                        "optionType": "radio",
+                        "label": "No",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 5,
+        "fixIndex": 5,
+        "questionCondition": false,
+        "question": "What would be the monthly or annual rent you would like to charge?",
+        "questionType": "text"
+    },
+
+    {
+        "permaIndex": 6,
+        "quesIndex": 6,
+        "questionCondition": "rent",
+        "questionCondition": "",
+        "question": "What would be the monthly or annual rent you would like to charge?",
+        "questionType": "text"
+    },
+
+    {
+        "permaIndex": 7,
+        "quesIndex": 7,
+        "questionCondition": "rent",
+        "questionCondition": "",
+        "question": "What type of lease will your offer?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "sid": "771optsub1",
+                "optionType": "radio",
+                "label": "Single Net",
+                "isSubQues": false
+            },
+            {
+                "sid": "772optsub2",
+                "optionType": "radio",
+                "label": "Double Net ",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "Triple Net",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "Absolute Triple Net",
+                "isSubQues": false
+            }
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "permaIndex": 8,
+        "quesIndex": 8,
+        "questionCondition": "rent",
+        "questionCondition": "",
+        "question": "What type of Lease Term Do you Offer?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "optionType": "checkbox",
+                "label": "1 Year",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "2 Year",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "3 Year",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "4 Year",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "5 Year",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "Greater than 5 Years",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "Month-to-Month",
+                "isSubQues": false
+            },
+            {
+                "optionType": "checkbox",
+                "label": "Seasonal",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "permaIndex": 9,
+        "quesIndex": 9,
+        "questionCondition": false,
+        "questionCondition": "",
+        "question": "Do you want to locate another property for yourself?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "Not at this time, but eventually",
+                "isSubQues": false
+            },
+            {
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "permaIndex": 10,
+        "quesIndex": 10,
+        "questionCondition": "sell",
+        "questionCondition": "",
+        "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": true,
+                "subQuestion": {
+                    "subQuesVal": "",
+                    "subquestionType": "dropDown",
+                    "subquestionOption": true,
+                    "subOptions": [
+                        {
+                            "optionType": "radio",
+                            "label": "%",
+                            "subConditionalQues": false,
+                            "submultupleAns": false,
+                            "subInputBox": true
+                        },
+                        {
+                            "optionType": "radio",
+                            "label": "$/Flat fee",
+                            "subConditionalQues": false,
+                            "submultupleAns": false,
+                            "subInputBox": true
+                        }
+                    ]
+                }
+            },
+            {
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "permaIndex": 11,
+        "quesIndex": 11,
+        "questionCondition": "",
+        "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
+        "questionType": "text"
+    },
+
+    {
+        "permaIndex": 12,
+        "quesIndex": 12,
+        "questionCondition": "",
+        "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
+        "questionType": "textObject",
+        
+        "textObject": {
+            "First Name": "",
+            "Last Name": "",
+            "Mobile Phone": "",
+            "Additional Phone": "",
+            "Email Address": "",
+            "Confirm Email": "",
+            "Create a Password":"",
+            "Confirm Password": ""
+        }
+    },
+
+    {
+        "permaIndex": 13,
+        "quesIndex": 13,
+        "questionCondition": "",
+        "question": "Agree to Terms/Conditions Checkbox",
+        "questionType": "checkbox",
+        
+        "quesAnsOption": [
+            {
+                "optionType": "checkbox",
+                "label": "",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "permaIndex": 14,
+        "quesIndex": 14,
+        "questionCondition": "",
+        "question": "Are you a human?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "optionType": "checkbox",
+                "label": "",
+                "isSubQues": false
+            }
+        ]
+    }
+    
+]
