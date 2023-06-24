@@ -1,9 +1,16 @@
 import { DataGrid } from "@mui/x-data-grid";
-import React from "react";
-import { FormControlLabel, Switch, Button, Grid, Typography, } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
+import { FormControlLabel, Switch, Button, Grid, Typography } from "@mui/material";
 import { GridToolbarQuickFilter } from "@mui/x-data-grid";
-const AdminAccounts = () => {
+import axios from "axios";
+import { DataContext } from "../../AppContext";
+import { useNavigate } from "react-router-dom";
 
+const AdminAccounts = () => {
+   const navigate = useNavigate();
+   const [adminsData, setAdminsData] = useState([]);
+   const [dataLoading, setDataLoading] = useState(false)
+   const { snackbar } = useContext(DataContext);
    // *************************************************
    const CustomeToolBar = () => {
       return (
@@ -38,7 +45,6 @@ const AdminAccounts = () => {
                   size="small"
                   sx={{
                      marginX: "10px",
-
                      padding: "0px",
                      "& .MuiOutlinedInput-root": {
                         borderRadius: "30px",
@@ -55,6 +61,7 @@ const AdminAccounts = () => {
             {/*  <======👇 add a new Admin BTN👇  ======> */}
             <Grid item sm={4} xs={12} mt={{ xs: 1, sm: 0 }} textAlign={{ sm: "right" }} boxSizing={"border-box"}>
                <Button
+                  onClick={()=>navigate("add-new-admin") }
                   variant="contained"
                   disableElevation
                   sx={{
@@ -87,8 +94,6 @@ const AdminAccounts = () => {
          headerName: "Image",
          width: 150,
          renderCell: (params) => {
-            console.log(params);
-
             return <img src={params.row.image} alt="" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />;
          },
       },
@@ -96,9 +101,13 @@ const AdminAccounts = () => {
          field: "name",
          headerName: "Name",
          width: 150,
+         valueGetter: (params) => {
+            let name =  params?.row?.firstName + " "+  params?.row?.lastName 
+            return name
+         },
       },
       {
-         field: "phone",
+         field: "contactNumber",
          headerName: "Phone",
          width: 150,
       },
@@ -134,58 +143,36 @@ const AdminAccounts = () => {
       },
    ];
 
-   const rows = [
-      {
-         id: 1,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 2,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 3,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 4,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 5,
-         image: "https://picsum.photos/200",
-         name: "Radhe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-   ];
+   // <======👇 Get All Admins👇  ======>
+   const getAllAdmins = async () => {
+      try {
+         setDataLoading(true)
+         const { data } = await axios.get("/super/admin/all/admins");
+         setAdminsData(data.allAdmins);
+         setDataLoading(false)
+      } catch (error) {
+         snackbar("error", error?.response?.data);
+         setDataLoading(false)
+
+      }
+   };
+   // <======👆 Get All Admins👆  ======>
+   useEffect(() => {
+      getAllAdmins();
+   }, []);
+   console.log(adminsData);
 
    return (
       <>
          <DataGrid
-            rows={rows}
+            rows={adminsData ? adminsData : []}
             disableColumnFilter
             disableColumnSelector
             disableDensitySelector
             disableRowSelectionOnClick
             columns={columns}
+            loading={dataLoading}
+            getRowId={(row) => row._id}
             rowHeight={60}
             slots={{ toolbar: CustomeToolBar }}
             slotProps={{

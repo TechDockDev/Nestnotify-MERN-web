@@ -1,78 +1,61 @@
-// import { useContext } from "react";
-// import { DataContext } from "./AppContext";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { DataContext } from "./AppContext";
+import { Route, RouterProvider, Routes, createBrowserRouter, redirect } from "react-router-dom";
 import Root from "./components/Root/Root";
 import SignUp from "./components/AuthComponents/SignUp";
 import Login from "./components/AuthComponents/Login";
 import DashboardRoot from "./components/DashboardRoot/DashboardRoot";
 import AdminAccounts from "./components/AdminAccounts/AdminAccounts";
 import UserAccounts from "./components/UserAccounts.js/UserAccounts";
-import SellersQues from "./components/SellersQues/SellersQues";
 import BuyersQues from "./components/BuyersQues/BuyersQues";
 import RentersQues from "./components/RentersQues/RentersQues";
 import LandlordsQues from "./components/LandlordsQues/LandlordsQues";
+import axios from "axios";
+import SellerResidentialHome from "./components/SellersQues/SellerResidentialHome";
+import SellerResidentialCondo from "./components/SellersQues/SellerResidentialCondo";
+import SellerCommercial from "./components/SellersQues/SellerCommercial";
+import SellerLandLot from "./components/SellersQues/SellerLandLot";
+import AddNewAdmin from "./components/AdminAccounts/AddNewAdmin";
 
 function App() {
-   // const {
-   //    snackbar,
-   //    adminAuthData,
-   //    setAdminAuthData,
-   //    isLoggedIn,
-   //    setIsLoggedIn,
-   // } = useContext(DataContext);
+   const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
 
-   // <======👇 Routes👇  ======>
-   const router = createBrowserRouter([
-      {
-         path: "/",
-         element: <Root />,
-         children: [
-            {
-               index: true,
-               element: <Login />,
-            },
-            {
-               path: "/signup",
-               element: <SignUp />,
-            },
-         ],
-      },
-      {
-         path: "/dashboard",
-         element: <DashboardRoot />,
-         children: [
-            {
-               path: "admin-accounts",
-               element: <AdminAccounts />,
-            },
-            {
-               path: "users-accounts",
-               element: <UserAccounts />,
-            },
-            
-            {
-               path: "sellers-questionnaire",
-               element: <SellersQues />,
-            },
-            {
-               path: "buyers-questionnaire",
-               element: <BuyersQues />,
-            },
-            {
-               path: "renters-questionnaire",
-               element: <RentersQues />,
-            },
-            {
-               path: "landlords-questionnaire",
-               element: <LandlordsQues />,
-            },
-            
-         ],
-      },
-   ]);
-   // <======👆 Routes👆  ======>
+   const authHandler = async () => {
+      try {
+         const { data } = await axios.get("/api/v1/user/get/profile");
+         setAdminAuthData(data?.auth);
+         setIsLoggedIn(true);
+      } catch (error) {
+         snackbar("error", error?.response?.data);
+      }
+   };
+   console.log("isLoggedIn-->", isLoggedIn);
 
-   return <RouterProvider router={router} />;
+   useEffect(() => {
+      authHandler();
+   }, []);
+
+   return (
+      <>
+         <Routes>
+            <Route path="/" element={<Root />}>
+               <Route index element={<Login />} />
+               <Route path="/signup" element={<SignUp />} />
+            </Route>
+            <Route path="/dashboard" element={<DashboardRoot />}>
+               <Route path="admin-accounts" element={<AdminAccounts />} />
+               <Route path="admin-accounts/add-new-admin" element={<AddNewAdmin />} />
+               <Route path="users-accounts" element={<UserAccounts />} />
+               <Route path="sellers-questionnaire/residential-home" element={<SellerResidentialHome />} />
+               <Route path="sellers-questionnaire/residential-condo" element={<SellerResidentialCondo />} />
+               <Route path="sellers-questionnaire/commercial" element={<SellerCommercial />} />
+               <Route path="sellers-questionnaire/land" element={<SellerLandLot />} />
+            </Route>
+         </Routes>
+      </>
+   );
 }
 
 export default App;
+
+

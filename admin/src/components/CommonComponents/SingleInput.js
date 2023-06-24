@@ -2,14 +2,14 @@ import { Grid, IconButton } from "@mui/material";
 import React, { useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandler, labelInputId, requiredTrue, placeholderText, width = "100%", minLength }) => {
+const SingleInput = ({ labelText, inputType, inputName, inputValue, onChangeHandler, labelInputId, requiredTrue, placeholderText, width = "100%", minLength }) => {
    const [showPassword, setShowPassword] = useState(false);
    const handleClickShowPassword = () => setShowPassword((show) => !show);
 
    return (
       <>
          {inputType !== "password" ? (
-            <Grid container mt={3} width={width}>
+            <Grid container mt={1} width={width}>
                <Grid
                   component={"label"}
                   htmlFor={labelInputId}
@@ -17,7 +17,7 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                   xs={12}
                   sx={{
                      fontFamily: "Montserrat",
-                     fontSize: "12px",
+                     fontSize: "16px",
                      display: "flex",
                      alignItems: "center",
                      fontWeight: "500",
@@ -42,16 +42,16 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                      height: "34px",
                      outline: "none",
                      border: "none",
-                     borderBottom: "1px solid #CED4DA",
-                     padding: "0px",
+                     border: "2px solid #0D507D",
+                     padding: "10px",
                      mt: 1,
-
-                     fontSize: "14px",
-                     "&:focus": { borderColor: "#0D507D" },
+                     borderRadius:"8px",
+                     fontSize: "16px",
+                     "&:focus": { borderColor: "#2298BC" },
                   }}></Grid>
             </Grid>
          ) : (
-            <Grid container mt={3} position={"relative"} width={width}>
+            <Grid container mt={1} position={"relative"} width={width}>
                <Grid
                   component={"label"}
                   htmlFor={labelInputId}
@@ -59,7 +59,7 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                   xs={12}
                   sx={{
                      fontFamily: "Montserrat",
-                     fontSize: "12px",
+                     fontSize: "16px",
                      display: "flex",
                      alignItems: "center",
                      fontWeight: "500",
@@ -84,11 +84,13 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                      height: "34px",
                      outline: "none",
                      border: "none",
-                     borderBottom: "1px solid #CED4DA",
-                     padding: "0px",
-                     fontSize: "14px",
+                     border: "2px solid #0D507D",
+                     padding: "10px",
+                     fontSize: "16px",
                      mt: 1,
-                     "&:focus": { borderColor: "#0D507D" },
+                     borderRadius:"8px",
+
+                     "&:focus": { borderColor: "#2298BC" },
                   }}></Grid>
 
                <IconButton
@@ -96,8 +98,8 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
                   onClick={handleClickShowPassword}
                   sx={{
                      position: "absolute",
-                     right: "-7px",
-                     top: "26px",
+                     right: "0px",
+                     top: "32px",
                      "& svg": {
                         fontSize: "18px",
                      },
@@ -110,4 +112,4 @@ const AuthInputs = ({ labelText, inputType, inputName, inputValue, onChangeHandl
    );
 };
 
-export default AuthInputs;
+export default SingleInput;

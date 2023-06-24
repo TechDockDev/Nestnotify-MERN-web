@@ -3,7 +3,7 @@ import { Typography, Stack, Grid, TextField, InputAdornment, IconButton } from "
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SingleQuest from "../SingleQuest/SingleQuest";
 
-const SellersQues = () => {
+const SellerResidentialHome = () => {
    const [quesList, setQuesList] = useState([
       { id: 1, ques: "Hi" },
       { id: 2, ques: "Hello" },
@@ -103,4 +103,4 @@ const SellersQues = () => {
    );
 };
 
-export default SellersQues;
+export default SellerResidentialHome;
