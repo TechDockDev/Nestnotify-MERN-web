@@ -5,8 +5,7 @@ import { useState } from "react";
 import QuesAnsOption from "./QuesAnsOption";
 
 const RadioQues = ({ question, quesAnsOption, handleRadioChange, handleCheckBoxChange, handleInputTextChange, handleSelectChange, id }) => {
-   const [showSub, setShowSub] = useState(false);
-   const radioRef = useRef(null);
+  const [optionId, setOptionId] = useState("")
 
    return (
       <>
@@ -29,12 +28,8 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, handleCheckBoxC
                   <React.Fragment key={index}>
                      <Grid item xs={12} sm={6}>
                         <FormControlLabel
-                           inputRef={radioRef}
-                           onClick={(e) => {
-                              // console.log(radioRef.current.checked);
-                              console.log(radioRef);
-
-                              setShowSub(quest.isSubQues);
+                           onClick={() => {
+                              setOptionId(quest.spid)
                            }}
                            key={index}
                            value={quest?.label}
@@ -42,7 +37,7 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, handleCheckBoxC
                            label={quest.label}
                         />
                         {quest?.isSubQues &&
-                           showSub &&
+                           quest.spid === optionId &&
                            quest?.subQues.map((ques) => {
                               return (
                                  <QuesAnsOption
