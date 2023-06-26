@@ -10,7 +10,7 @@ const QuestionComp = () => {
 
    const getQuestData = async () => {
       try {
-         const { data } = await axios.get("api/v1/admin/seller/residential/home/form");
+         const { data } = await axios.get("api/v1/admin/seller/commercial/form");
          setQuestData(data?.sellerPropertyForm);
          console.log(data.sellerPropertyForm);
       } catch (error) {
@@ -19,25 +19,21 @@ const QuestionComp = () => {
    };
 
    const handleRadioChange = (e) => {
-    setValue({...value,[e.target.name]: e.target.value});
-    
+      setValue({ ...value, [e.target.name]: e.target.value });
    };
 
    const handleCheckBoxChange = (id, obj) => {
-      setValue({...value,[id]: obj});
-      
-    };
+      setValue({ ...value, [id]: obj });
+   };
 
-    console.log(value);
+   console.log(value);
 
-    const handleInputTextChange = (id, obj)=>{
-      setValue({...value,[id]: obj});
-      
-    }
-    const handleSelectChange = (id, obj)=>{
-      setValue({...value,[id]: obj});
-      
-    }
+   const handleInputTextChange = (id, obj) => {
+      setValue({ ...value, [id]: obj });
+   };
+   const handleSelectChange = (id, obj) => {
+      setValue({ ...value, [id]: obj });
+   };
 
    useEffect(() => {
       getQuestData();
@@ -65,8 +61,17 @@ const QuestionComp = () => {
                            }}>
                            {quest?.quesIndex}
                         </Typography>
-                     </Grid>   
-                        <QuesAnsOption question={quest.question} handleRadioChange={handleRadioChange} handleCheckBoxChange={handleCheckBoxChange}  id={quest._id} quesAnsOption={quest?.quesAnsOption} questionType={quest?.questionType} handleInputTextChange={handleInputTextChange} handleSelectChange={handleSelectChange} />
+                     </Grid>
+                     <QuesAnsOption
+                        question={quest.question}
+                        id={quest._id}
+                        quesAnsOption={quest?.quesAnsOption}
+                        questionType={quest?.questionType}
+                        handleRadioChange={handleRadioChange}
+                        handleCheckBoxChange={handleCheckBoxChange}
+                        handleInputTextChange={handleInputTextChange}
+                        handleSelectChange={handleSelectChange}
+                     />
                   </React.Fragment>
                );
             })}

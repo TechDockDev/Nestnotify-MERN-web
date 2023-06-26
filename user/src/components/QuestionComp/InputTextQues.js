@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const InputTextQues = ({ questionType, question, quesAnsOption, id, handleInputTextChange }) => {
-  const [state, setState] = useState()
+  const [state, setState] = useState("")
 
   const handleChange = (e)=>{
     setState(e.target.value)

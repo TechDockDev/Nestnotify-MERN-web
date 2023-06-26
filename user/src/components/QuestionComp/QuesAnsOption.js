@@ -12,13 +12,20 @@ const QuesAnsOption = ({ question, questionType, quesAnsOption, id, handleRadioC
       <>
          <Grid item container xs={10}>
             {questionType === "radio" ? (
-               <RadioQues question={question} quesAnsOption={quesAnsOption} id={id} handleRadioChange={handleRadioChange} />
+               <RadioQues question={question} quesAnsOption={quesAnsOption} id={id} handleRadioChange={handleRadioChange} handleCheckBoxChange={handleCheckBoxChange} handleInputTextChange={handleInputTextChange} handleSelectChange={handleSelectChange} />
             ) : questionType === "checkbox" ? (
-               <CheckboxQues question={question} quesAnsOption={quesAnsOption} id={id} handleCheckBoxChange={handleCheckBoxChange} />
+               <CheckboxQues question={question} quesAnsOption={quesAnsOption} id={id}
+               handleRadioChange={handleRadioChange}
+               handleCheckBoxChange={handleCheckBoxChange}
+               handleInputTextChange={handleInputTextChange}
+               handleSelectChange={handleSelectChange}
+                 />
             ) : questionType === "select" ? (
-               <SelectQues
-               questionType={questionType} question={question} quesAnsOption={quesAnsOption} id={id} handleSelectChange={handleSelectChange}
-               />
+               <SelectQues questionType={questionType} question={question} quesAnsOption={quesAnsOption} id={id} handleRadioChange={handleRadioChange}
+               handleCheckBoxChange={handleCheckBoxChange}
+               handleInputTextChange={handleInputTextChange}
+               handleSelectChange={handleSelectChange}
+                />
             ) : (
                <InputTextQues questionType={questionType} question={question} quesAnsOption={quesAnsOption} id={id} handleInputTextChange={handleInputTextChange} />
             )}
