@@ -1,10 +1,12 @@
 import { FormControlLabel, Grid, RadioGroup, Radio, FormLabel } from "@mui/material";
-import React from "react";
-import SubQuestion from "./SubQuestion";
+import React, { useRef } from "react";
+// import SubQuestion from "./SubQuestion";
 import { useState } from "react";
+import QuesAnsOption from "./QuesAnsOption";
 
-const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
+const RadioQues = ({ question, quesAnsOption, handleRadioChange, handleCheckBoxChange, handleInputTextChange, handleSelectChange, id }) => {
    const [showSub, setShowSub] = useState(false);
+   const radioRef = useRef(null);
 
    return (
       <>
@@ -14,7 +16,7 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
             xs={12}
             id={id}
             sx={{
-                color:"#000",
+               color: "#000",
                fontSize: "18px",
                fontWeight: "600",
                fontFamily: "Montserrat",
@@ -27,7 +29,11 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
                   <React.Fragment key={index}>
                      <Grid item xs={12} sm={6}>
                         <FormControlLabel
-                           onClick={() => {
+                           inputRef={radioRef}
+                           onClick={(e) => {
+                              // console.log(radioRef.current.checked);
+                              console.log(radioRef);
+
                               setShowSub(quest.isSubQues);
                            }}
                            key={index}
@@ -35,7 +41,23 @@ const RadioQues = ({ question, quesAnsOption, handleRadioChange, id }) => {
                            control={<Radio />}
                            label={quest.label}
                         />
-                        {quest?.isSubQues && showSub && <SubQuestion questionType />}
+                        {quest?.isSubQues &&
+                           showSub &&
+                           quest?.subQues.map((ques) => {
+                              return (
+                                 <QuesAnsOption
+                                    key={ques.spid}
+                                    question={ques.question}
+                                    id={ques.spid}
+                                    quesAnsOption={ques?.quesAnsOption}
+                                    questionType={ques?.questionType}
+                                    handleRadioChange={handleRadioChange}
+                                    handleCheckBoxChange={handleCheckBoxChange}
+                                    handleInputTextChange={handleInputTextChange}
+                                    handleSelectChange={handleSelectChange}
+                                 />
+                              );
+                           })}
                      </Grid>
                   </React.Fragment>
                );
