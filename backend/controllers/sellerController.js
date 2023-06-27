@@ -91,12 +91,6 @@ export const nestNotify_Seller_Get_Filled_New_Property_Form = CatchAsync( async(
 // 4) SELLER: GET NEW RESIDENTIL HOME FORM 
 export const nestNotify_Seller_Get_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
 
-    // const resultPerPage = 3;
-    // const propertyQuesCount = await SellerResidentialHomeForm.countDocuments()
-
-    // const apiFeature = new ApiFeatures(SellerResidentialHomeForm.find(), req.query).pagination(resultPerPage)
-    // const sellerPropertyForm = await apiFeature.query;
-
     const sellerPropertyForm = await SellerResidentialHomeForm.find().sort({quesIndex: 0})
 
     if(!sellerPropertyForm){
@@ -107,37 +101,80 @@ export const nestNotify_Seller_Get_Residential_Home_Form = CatchAsync( async(req
         success: true,
         status: "success",
         message: "Seller Residential home property form",
-        propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
 })
 
-// 4) SELLER: FILL NEW RESIDENTIAL HOME FORM 
+// 5) SELLER: FILL NEW RESIDENTIAL HOME FORM 
 export const nestNotify_Seller_Fill_New_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
 
-    console.log(req.body)
+    const anss = req.body
+    for(let i =0; i< anss.length; i++){
+        console.log(anss[i])
+    }
+
+    const answerFill = await SellerPropertyAns.create({
+        auth: req.auth.id,
+        formAns: req.body.formAns
+    })
 
     res.status(200).json({
         success: true,
-        message: "New Residential home Property form filled",
+        status: "success",
+        message: "New Residential Home Property form filled",
+        answerFill
+    })
+})
+
+
+// 6) SELLER: GET FILLED SELLER PROPERTY FORM 
+export const nestNotify_Seller_Get_Filled_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const answerFill = await SellerPropertyAns.find()
+    .populate({path: 'formAns.sellerpropertyques',
+        select: { 'question': 1},
+    })
+
+    // Object.values(answerFill).map((data)=>{
+    //     console.log("1------>",data)
+    // })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "New Property form filled",
+        length: answerFill.length,
+        answerFill
     })
 })
 
 
 
+// ==============================================================================================
+// Seller Residential Condo Form
+// ==============================================================================================
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 // 5) SELLER: FILL NEW PROPERTY FORM 
 export const nestNotify_Seller_Fill_New_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+    const anss = req.body
+    for(let i =0; i< anss.length; i++){
+        console.log(anss[i])
+    }
 
-    console.log(req.body)
+    const answerFill = await SellerPropertyAns.create({
+        auth: req.auth.id,
+        formAns: req.body.formAns
+    })
 
     res.status(200).json({
         success: true,
-        message: "New Residential Condo Property form filled",
+        status: "success",
+        message: "New Residential Home Property form filled",
+        answerFill
     })
 })
 // 6) SELLER: GET NEW PROPERTY FORM 
@@ -163,17 +200,50 @@ export const nestNotify_Seller_Get_Residential_Condo_Form = CatchAsync( async(re
     })
 })
 
+// 6) SELLER: GET FILLED SELLER PROPERTY FORM 
+export const nestNotify_Seller_Get_Filled_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+    const answerFill = await SellerPropertyAns.find()
+    .populate({path: 'formAns.sellerpropertyques',
+        select: { 'question': 1},
+    })
+
+    // Object.values(answerFill).map((data)=>{
+    //     console.log("1------>",data)
+    // })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "New Property form filled",
+        length: answerFill.length,
+        answerFill
+    })
+})
+
+
 
 // 7) SELLER: FILL NEW PROPERTY FORM 
 export const nestNotify_Seller_Fill_New_Commercial_Industrial_Form = CatchAsync( async(req, res, next)=>{
 
+    const anss = req.body
+    for(let i =0; i< anss.length; i++){
+        console.log(anss[i])
+    }
+
+    const answerFill = await SellerPropertyAns.create({
+        auth: req.auth.id,
+        formAns: req.body.formAns
+    })
+
     res.status(200).json({
         success: true,
-        message: "New Commercail Property form filled",
+        status: "success",
+        message: "New Residential Home Property form filled",
+        answerFill
     })
 })
+
 // 8) SELLER: GET NEW PROPERTY FORM 
 export const nestNotify_Seller_Get_Commercial_Industrial_Form = CatchAsync( async(req, res, next)=>{
 
@@ -197,4 +267,23 @@ export const nestNotify_Seller_Get_Commercial_Industrial_Form = CatchAsync( asyn
     })
 })
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------//
+// 6) SELLER: GET FILLED SELLER PROPERTY FORM 
+export const nestNotify_Seller_Get_Filled_Commercial_Industrial_Form = CatchAsync( async(req, res, next)=>{
+
+    const answerFill = await SellerPropertyAns.find()
+    .populate({path: 'formAns.sellerpropertyques',
+        select: { 'question': 1},
+    })
+
+    // Object.values(answerFill).map((data)=>{
+    //     console.log("1------>",data)
+    // })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: "New Property form filled",
+        length: answerFill.length,
+        answerFill
+    })
+})
