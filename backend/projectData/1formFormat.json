@@ -1,0 +1,43 @@
+[
+    {
+        "consditionToShow": "null/String",
+        "permaIndex": "Number",
+        "quesIndex": "Number",
+        "extraInformation": "String",
+        "question": "String",
+        "quesType": "inputText/multiOption/dropDown/checkbox/dateVal",
+        "quesOption": "Boolean",
+        "quesAnsOption": [
+            {
+                "optType": "inputText/radio/radio/select/dateVal",
+                "a": "String",
+                "conditionalQues": "Boolean",
+                "multiAns": "Boolean",
+                "inputBox": "Boolean",
+                "isDate": "Boolean",
+                "isSubQues": "Boolean",
+                "subQuestion": {
+                    "subQuesToShow": "null/String",
+                    "subQuesVal": "String",
+                    "subQuesType": "inputText/multiOption/dropDown/checkbox/dateVal",
+                    "subQuesOption": "Boolean",
+                    "subOptions": [
+                        {
+                            "subOptType": "inputText/radio/radio/select/dateVal",
+                            "a": "String",
+                            "subConditionalQues": "Boolean",
+                            "subMultiAns": "Boolean",
+                            "subInputBox": "Boolean",
+                            "subIsDate": "Boolean"
+                        }
+                    ]
+                }
+            }
+        ],
+        "answerVal": {
+            "ansType": "single", 
+            "data": {}
+        }
+    }
+]
+

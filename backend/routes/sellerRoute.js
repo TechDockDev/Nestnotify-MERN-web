@@ -17,8 +17,9 @@ from '../controllers/sellerController.js';
 const router = express.Router()
 
 // New property form
+router.route('/new/property/form').post( nestNotify_Seller_Fill_New_Property_Form)
 router.route('/new/property/form').post(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Fill_New_Property_Form)
-router.route('/get/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Filled_New_Property_Form)
+router.route('/get/filled/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Filled_New_Property_Form)
 router.route('/get/property/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Property_Form)
 
 // New residential home form

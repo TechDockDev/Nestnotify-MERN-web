@@ -1,0 +1,481 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": true,
+        "question": "Do you want to sell or rent you property?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "00nnsciqn001",
+                "label": "Sell",
+                "questionType": "radio",
+                "isSubQues": true,
+                "subQues": [
+                    {
+                        "spid": "00nnsciqn001sub01",
+                        "questionCondition": true,
+                        "questionType": "radio",
+                        "question": "While not required, would you be willing to pay a commission to an agent that may be working with a potential buyer match?",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnsciqn001sub01s01",
+                                "label": "Yes",
+                                "isSubQues": true,
+                                "questionType": "radio",
+                                "subQues": [
+                                    {
+                                        "spid": "00nnsciqn001sub01s01s01",
+                                        "questionCondition": true,
+                                        "questionType": "radio",
+                                        "question": "% or flat fee",
+                                        "quesAnsOption": [
+                                            {
+                                                "spid": "00nnsciqn001sub01s01s01a01",
+                                                "label": "%",
+                                                "questionType": "radio",
+                                                "isSubQues": true,
+                                                "subQues": [
+                                                    {
+                                                        "spid": "00nnsciqn001sub01s01s01a01a01",
+                                                        "questionCondition": false,
+                                                        "questionType": "number",
+                                                        "question": "%"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "spid": "00nnsciqn001sub01s01s01a02",
+                                                "label": "Flat fee",
+                                                "isSubQues": true,
+                                                "subQues": [
+                                                    {
+                                                        "spid": "00nnsciqn001sub01s01s01a02a01",
+                                                        "questionCondition": false,
+                                                        "questionType": "number",
+                                                        "question": "Flat fee"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "spid": "00nnsciqn001sub01s02",
+                                "label": "No",
+                                "isSubQues": false,
+                                "questionType": "radio"
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "00nnsciqn001sub02",
+                        "questionCondition": false,
+                        "questionType": "text",
+                        "question": "What would be your ideal sale price for your home?"
+                    },
+                    {
+                        "spid": "00nnsciqn001sub03",
+                        "questionCondition": false,
+                        "questionType": "text",
+                        "question": "What would be your ideal sale price for your home?"
+                    },
+                    {
+                        "spid": "00nnsciqn001sub04",
+                        "questionCondition": true,
+                        "questionType": "radio",
+                        "question": "Do you owe anything on your current property?",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnsciqn001sub04s01",
+                                "label": "Yes",
+                                "questionType": "radio",
+                                "isSubQues": true,
+                                "subQues": [
+                                    {
+                                        "spid": "00nnsciqn001sub04s01s01",
+                                        "questionCondition": false,
+                                        "question": "What do you currently owe?",
+                                        "questionType": "text"
+                                    },
+                                    {
+                                        "spid": "00nnsciqn001sub04s01s02",
+                                        "questionCondition": false,
+                                        "question": "Are you current on payments?",
+                                        "questionType": "radio",
+                                        "subQquesAnsOptionues": [
+                                            {
+                                                "spid": "00nnsciqn001sub04s01s02a01",
+                                                "label": "Yes",
+                                                "questionType": "radio",
+                                                "isSubQues": false
+                                            },
+                                            {
+                                                "spid": "00nnsciqn001sub04s01s02a02",
+                                                "label": "No",
+                                                "questionType": "radio",
+                                                "isSubQues": false
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "spid": "00nnsciqn001sub04s02",
+                                "label": "No",
+                                "questionType": "radio",
+                                "isSubQues": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "spid": "00nnsciqn002",
+                "questionType": "radio",
+                "label": "Rent",
+                "isSubQues": true,
+                "subQues": [
+                    {
+                        "spid": "00nnsciqn002sub01",
+                        "questionCondition": false,
+                        "questionType": "text",
+                        "question": "What would be the monthly or annual rent you would like to charge?"
+                    },
+                    {
+                        "spid": "00nnsciqn002sub02",
+                        "questionCondition": true,
+                        "questionType": "radio",
+                        "question": "Will utilities be included?",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnsciqn002sub02s01",
+                                "questionType": "radio",
+                                "label": "Yes",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub02s02",
+                                "questionType": "radio",
+                                "label": "No",
+                                "isSubQues": false
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "00nnsciqn002sub03",
+                        "questionCondition": true,
+                        "questionType": "radio",
+                        "question": "What type of Lease Term Do you Offer?",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnsciqn002sub03s01",
+                                "questionType": "radio",
+                                "label": "Single Net",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub03s02",
+                                "questionType": "radio",
+                                "label": "Double Net",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub03s03",
+                                "questionType": "radio",
+                                "label": "Triple Net",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub03s04",
+                                "questionType": "radio",
+                                "label": "Absolute Triple Net",
+                                "isSubQues": false
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "00nnsciqn002sub04",
+                        "questionCondition": true,
+                        "questionType": "checkbox",
+                        "question": "What type of Lease Term Do you Offer?",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnsciqn002sub04s01",
+                                "questionType": "checkbox",
+                                "label": "1 Year",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s02",
+                                "questionType": "checkbox",
+                                "label": "2 Year",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s03",
+                                "questionType": "checkbox",
+                                "label": "3 Year",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s04",
+                                "questionType": "checkbox",
+                                "label": "4 Year",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s05",
+                                "questionType": "checkbox",
+                                "label": "5 Year",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s06",
+                                "questionType": "checkbox",
+                                "label": "Greater than 5 Years",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s07",
+                                "questionType": "checkbox",
+                                "label": "Month-to-Month",
+                                "isSubQues": false
+                            },
+                            {
+                                "spid": "00nnsciqn002sub04s08",
+                                "questionType": "checkbox",
+                                "label": "Seasonal",
+                                "isSubQues": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "spid": "00nnsciqn003",
+                "questionType": "radio",
+                "label": "Either",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What type of commercial or industrial property are you looking for?",
+        "questionType": "checkbox",
+        "quesAnsOption": [
+            {
+                "spid": "11nnsciqn101",
+                "questionType": "checkbox",
+                "label": "Mult-Family Dwelling",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn102",
+                "questionType": "checkbox",
+                "label": "Apartment Bulding",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn103",
+                "questionType": "checkbox",
+                "label": "Farm/Agricultural",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn104",
+                "questionType": "checkbox",
+                "label": "Office",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn105",
+                "questionType": "checkbox",
+                "label": "Small Stores",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn106",
+                "questionType": "checkbox",
+                "label": "Large Store",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn107",
+                "questionType": "checkbox",
+                "label": "Free Standing Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn108",
+                "questionType": "checkbox",
+                "label": "Office Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn109",
+                "questionType": "checkbox",
+                "label": "Industrial Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn110",
+                "questionType": "checkbox",
+                "label": "Warehouse",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn111",
+                "questionType": "checkbox",
+                "label": "Recreational",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn112",
+                "questionType": "checkbox",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn13",
+                "questionType": "checkbox",
+                "label": "Mixed Use (Respidential and Commercial)",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn114",
+                "questionType": "checkbox",
+                "label": "Restaurant",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn115",
+                "questionType": "checkbox",
+                "label": "Equestrian",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn116",
+                "questionType": "checkbox",
+                "label": "Multiple Lots/Subdivision",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnsciqn117",
+                "questionType": "checkbox",
+                "label": "Shopping Center",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "What are the yearly taxes on your property?",
+        "questionType": "text"
+    },
+
+    {
+        "fixIndex": 3,
+        "quesIndex": 3,
+        "questionCondition": false,
+        "question": "Do you want to locate another property for yourself?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "33nnsciqn301",
+                "questionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnsciqn302",
+                "questionType": "radio",
+                "label": "Not at this time, but eventually",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnsciqn303",
+                "questionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "fixIndex": 4,
+        "quesIndex": 4,
+        "questionCondition": false,
+        "question": "Would you possibly be open to listing your home on the market with an experienced agent at some point?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "44nnsciqn401",
+                "questionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnsciqn402",
+                "questionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "fixIndex": 5,
+        "quesIndex": 5,
+        "questionCondition": false,
+        "question": "Now we just need your contact info so that we can reach out when we’ve located a buyer match",
+        "questionType": "text",
+        "quesAnsOption": [
+            {
+                "spid": "55nnsciqn501",
+                "questionType": "radio",
+                "label": "First Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsciqn502",
+                "questionType": "radio",
+                "label": "Last Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsciqn503",
+                "questionType": "radio",
+                "label": "Mobile Phone",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsciqn504",
+                "questionType": "radio",
+                "label": "Additional Phone",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsciqn505",
+                "questionType": "radio",
+                "label": "Email Address",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnsciqn506",
+                "questionType": "radio",
+                "label": "Confirm Email",
+                "isSubQues": false
+            }
+        ]
+    }
+
+]
