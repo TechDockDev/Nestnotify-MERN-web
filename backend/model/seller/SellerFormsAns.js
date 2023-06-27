@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const SellerPropertyAnsSchema = new mongoose.Schema(
+const SellerFormsAnsModel = new mongoose.Schema(
     {
         auth: {
             type: mongoose.Schema.Types.ObjectId,
@@ -19,24 +19,12 @@ const SellerPropertyAnsSchema = new mongoose.Schema(
                 answer: String
             }
         ],
-        propertyImage: [
-            {
-                public_id: {
-                    type: String,
-                    required: true
-                },
-                url: {
-                    type: String,
-                    required: true
-                }
-            }
-        ]
     }, 
     {
         timestamps: true
     }
 )
 
-const SellerPropertyAns = mongoose.model('SellerPropertyAns', SellerPropertyAnsSchema)
+const SellerFormsAns= mongoose.model('SellerFormsAns', SellerFormsAnsModel)
 
-export default SellerPropertyAns;
+export default SellerFormsAns

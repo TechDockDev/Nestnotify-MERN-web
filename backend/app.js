@@ -30,12 +30,14 @@ import superAdminRoute from './routes/superAdminRoutes.js'
 import adminRoute from './routes/adminRoute.js';
 import userAuthRoute from './routes/userAuthRoute.js';
 import sellerRoute from './routes/sellerRoute.js';
+import buyerRoute from './routes/buyerRoute.js';
 
 // -----| APP ROUTES |-----
 app.use('/api/v1/super/admin', superAdminRoute);
 app.use('/api/v1/admin', adminRoute);
 app.use('/api/v1/user', userAuthRoute);
-app.use('/api/v1/seller', sellerRoute)
+app.use('/api/v1/seller', sellerRoute);
+app.use('/api/v1/buyer', buyerRoute)
 
 app.all('*', (req, res)=>{
     return res.status(404).json({
