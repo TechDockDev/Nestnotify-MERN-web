@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const BuyerResidentialHomeModel = new mongoose.Schema(    
+const BuyerLandModel = new mongoose.Schema(
     {
         quesIndex: Number,
         fixIndex: Number,
@@ -12,9 +12,10 @@ const BuyerResidentialHomeModel = new mongoose.Schema(
             default: []
         },
     }, 
-    { timestamps: true }
+    {
+        timestamps: true
+    }
 );
  
-const BuyerResidentialHomeQues = mongoose.model('BuyerResidentialHomeQues', BuyerResidentialHomeModel);
-
-export default BuyerResidentialHomeQues;
+const BuyerLandQues = mongoose.model('BuyerLandQues', BuyerLandModel);
+export default BuyerLandQues;

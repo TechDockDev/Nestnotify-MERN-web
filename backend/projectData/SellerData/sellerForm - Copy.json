@@ -1,0 +1,265 @@
+[
+    {
+        "quesIndex": 0,
+        "fixIndex": 0,
+        "questionCondition": true,
+        "question": "Is your property currently listed on the market or are you contacted with an agency and will be listed at some time in future?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "00nnspqn001",
+                "questionType": "radio",
+                "label": "Not on the market and not contracted for a listing",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnspqn002",
+                "questionType": "radio",
+                "label": "Contracted to list but not on the market yet",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnspqn003",
+                "questionType": "radio",
+                "label": "Contracted to list and currently on the market",
+                "isSubQues": false
+            },
+            {
+                "spid": "00nnspqn004",
+                "questionType": "radio",
+                "label": "Contracted to list and currently on the market…but expiring soon!",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "00nnspqn004sub01",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Enter list expiry date",
+                        "quesAnsOption": [
+                            {
+                                "spid": "00nnspqn004sub01s01",
+                                "label": "Enter list expiry date",
+                                "questionType": "date",
+                                "isSubQues": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": true,
+        "question": "Are you the current owner of the property?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "11nnspqn101",
+                "questionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "11nnspqn102",
+                "questionType": "radio",
+                "label": "No, I am submitting this for someone else.",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "11nnspqn102sub01",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Owner First Name",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub01s01",
+                                "label": "Owner First Name",
+                                "questionType": "text",
+                                "isSubQues": false
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "11nnspqn102sub02",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Owner Last Name",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub02s02",
+                                "label": "Owner Last Name",
+                                "questionType": "text",
+                                "isSubQues": true
+                                
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "11nnspqn102sub03",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Telephone",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub03s03",
+                                "label": "Telephone",
+                                "questionType": "number",
+                                "isSubQues": true
+                                
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "11nnspqn102sub04",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Mobile Number",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub04s03",
+                                "label": "Mobile Number",
+                                "questionType": "number",
+                                "isSubQues": true
+                                
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "11nnspqn102sub05",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Email Address",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub05s01",
+                                "label": "Email Address",
+                                "questionType": "text",
+                                "isSubQues": true
+                                
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "11nnspqn102sub06",
+                        "questionCondition": true,
+                        "questionType": "text",
+                        "question": "Your Relation to The Owner",
+                        "quesAnsOption": [
+                            {
+                                "spid": "11nnspqn102sub06s01",
+                                "label": "Your Relation to The Owner",
+                                "questionType": "text",
+                                "isSubQues": true
+                                
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "Property Address",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 3,
+        "fixIndex": 3,
+        "questionCondition":false,
+        "extraInformation": "Let’s Get Some Details About Your Property",
+        "question": "What Type of Property are Your Submitting:",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "33nnspqn301",
+                "questionType": "radio",
+                "label": "Residential Home",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnspqn302",
+                "questionType": "radio",
+                "label": "Residential Home",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnspqn303",
+                "questionType": "radio",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnspqn304",
+                "questionType": "radio",
+                "label": "Land",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnspqn305",
+                "questionType": "radio",
+                "label": "Rental - Residential",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnspqn306",
+                "questionType": "radio",
+                "label": "Rental - Commercial",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "When are you looking to close (or have the property rented by? If rental option was chosen)?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "44nnspqn401",
+                "questionType": "radio",
+                "label": "Asap",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnspqn402",
+                "questionType": "radio",
+                "label": "1-3 months",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnspqn403",
+                "questionType": "radio",
+                "label": "4-6 months",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnspqn404",
+                "questionType": "radio",
+                "label": "7-9 months",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnspqn405",
+                "questionType": "radio",
+                "label": "9-12 months",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnspqn406",
+                "questionType": "radio",
+                "label": "More than year",
+                "isSubQues": false
+            }
+        ]
+    }
+]
