@@ -12,6 +12,7 @@ import AdminAuth from '../model/admin/AdminAuth.js';
 import Auth from '../model/auth/Auth.js';
 
 
+
 // -----| USER REGISTRATION |-----
 export const nestNotify_Admin_Registration_By_Super_Admin = CatchAsync( async(req, res, next)=>{
     const { firstName, lastName, email, password, contactNumber, master, adminRole, adminPermission } = req.body;
