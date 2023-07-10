@@ -24,7 +24,7 @@ const Login = () => {
    const loginHandler = async (e) => {
       e.preventDefault();
       try {
-         const { data } = await axios.post("api/v1/user/signin", formData);
+         const { data } = await axios.post("/api/v1/super/admin/signin", formData);
          snackbar(data.status, data.message);
          console.log(data?.auth);
          setAdminAuthData(data?.auth);
@@ -34,6 +34,8 @@ const Login = () => {
          snackbar("error", error.response.data.message);
       }
    };
+
+
    // <======🍀👆 Login handler👆 🍀======>
 
    return (
