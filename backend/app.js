@@ -5,6 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import mogran from 'morgan';
 import cookieParser from 'cookie-parser';
+import fileUpload from 'express-fileupload';
 import errorMiddleware from './middleware/error.js';
 
 // -----| CONFIGURATIONS |-----
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+app.use(fileUpload());
 app.use(mogran("common"));
 app.use(helmet())
 app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
