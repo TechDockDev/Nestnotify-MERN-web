@@ -16,6 +16,7 @@ const QuestionComp = () => {
    const getQuestData = async () => {
       try {
 
+
          // const { data } = await axios.get("api/v1/admin/seller/property/form").then((data)=>{
          //    setQuestData(data.sellerPropertyForm);
          // })
@@ -24,6 +25,7 @@ const QuestionComp = () => {
          // console.log(response.data.sellerPropertyForm)
          setQuestData(response.data.sellerPropertyForm)
          console.log(questData);
+
       } catch (error) {
          console.log(error);
       }
@@ -32,7 +34,7 @@ const QuestionComp = () => {
    const handleRadioChange = (e) => {
       setValue({ ...value, [e.target.name]: e.target.value });
    };
-
+   
    const handleCheckBoxChange = (id, obj) => {
       setValue({ ...value, [id]: obj });
    };
