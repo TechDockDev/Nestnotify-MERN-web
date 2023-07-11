@@ -147,11 +147,13 @@ const AdminAccounts = () => {
    const getAllAdmins = async () => {
       try {
          setDataLoading(true)
-         const { data } = await axios.get("/super/admin/all/admins");
+
+         const { data } = await axios.get("/api/v1/admin/all/admins");
+         console.log(data)
          setAdminsData(data.allAdmins);
          setDataLoading(false)
       } catch (error) {
-         snackbar("error", error?.response?.data);
+         snackbar("error", error?.message);
          setDataLoading(false)
 
       }
@@ -160,7 +162,9 @@ const AdminAccounts = () => {
    useEffect(() => {
       getAllAdmins();
    }, []);
-   console.log(adminsData);
+
+   console.log("---->",adminsData);
+
 
    return (
       <>

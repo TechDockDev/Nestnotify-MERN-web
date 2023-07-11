@@ -1,14 +1,21 @@
-import React, { useRef, useState } from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import { Typography, Stack, Grid, TextField, InputAdornment, IconButton } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SingleQuest from "../SingleQuest/SingleQuest";
+import axios from "axios";
 
 const SellerResidentialHome = () => {
-   const [quesList, setQuesList] = useState([
-      { id: 1, ques: "Hi" },
-      { id: 2, ques: "Hello" },
-      { id: 3, ques: "Bye" },
-   ]);
+
+   // const [quesList, setQuesList] = useState([
+   //    { id: 1, ques: "Hi" },
+   //    { id: 2, ques: "Hello" },
+   //    { id: 3, ques: "Bye" },
+   // ]);
+
+   const [quesList, setQuesList] = useState([]);
+   
+
 
    const dragItem = useRef();
    const dragOverItem = useRef();
@@ -33,6 +40,19 @@ const SellerResidentialHome = () => {
       dragOverItem.current = null;
       setQuesList(copyListItems);
    };
+
+
+
+   const getSellerResiHomeData = async() =>{
+      const { data } = await axios.get("/api/v1/admin/seller/residential/home/form");
+      console.log(data.sellerPropertyForm)
+      setQuesList(data.sellerPropertyForm)
+   }
+
+   useEffect(()=>{
+      getSellerResiHomeData() 
+   },[getSellerResiHomeData])
+
 
    return (
       <Stack
@@ -64,7 +84,9 @@ const SellerResidentialHome = () => {
                      borderLeft: "4px solid #2298BC",
                      padding: "10px",
                   }}>
-                  Admin Accounts
+
+                  Residential Home
+
                </Typography>
             </Grid>
             {/* <======👆 Table heading (left corner)👆  ======> */}
@@ -96,7 +118,10 @@ const SellerResidentialHome = () => {
          {/* <======👆 Heading TOPBAR 👆  ======> */}
          <Stack >
             {quesList.map((item, index) => {
-               return <SingleQuest key={item.id} ques={item.ques} dragStart={dragStart} dragEnter={dragEnter} drop={drop} index={index} />;
+
+               return <SingleQuest key={item.id} ques={item.question} dragStart={dragStart} dragEnter={dragEnter} drop={drop} index={index} />;
+
+
             })}
          </Stack>
       </Stack>

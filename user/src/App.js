@@ -31,6 +31,10 @@ function App() {
             <Route path="/" element={<TopNavBar/>}>
                <Route index element={<QuestionComp/>}/>
             </Route>
+
+            <Route path='/signin' element={<Login/>}/>
+            <Route path='/signup' element={<SignUp/>}/>
+
          </Routes>
       </>
    );

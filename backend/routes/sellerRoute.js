@@ -19,6 +19,12 @@ from '../controllers/sellerController.js';
 
 const router = express.Router()
 
+// Unauth
+router.route('/get/property/form').get(nestNotify_Seller_Get_Property_Form)
+router.route('/get/residential/home/form').get(nestNotify_Seller_Get_Residential_Home_Form)
+router.route('/get/residential/condo/form').get(nestNotify_Seller_Get_Residential_Condo_Form)
+router.route('/get/commercial/form').get(nestNotify_Seller_Get_Commercial_Industrial_Form)
+
 // New property form
 router.route('/new/property/form').post( nestNotify_Seller_Fill_New_Property_Form)
 // router.route('/new/property/form').post(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Fill_New_Property_Form)
@@ -42,5 +48,6 @@ router.route('/new/commercial/form').post(nestNotify_Seller_Fill_New_Commercial_
 router.route('/new/commercial/form').post(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Fill_New_Commercial_Industrial_Form)
 router.route('/get/commercial/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Commercial_Industrial_Form)
 router.route('/get/filled/seller/commercial/property/form').get(authToken.isUserAuthenticated, authToken.authorizedRoles('seller'), nestNotify_Seller_Get_Filled_Commercial_Industrial_Form)
+
 
 export default router;
