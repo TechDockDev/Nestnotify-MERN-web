@@ -2,9 +2,9 @@ import CatchAsync from '../middleware/catchAsync.js';
 import ErrorHandler from '../utils/errorHandler.js';
 import authToken from '../utils/authToken.js';
 import crypto from 'crypto';
-
-
 import sendEmail from '../utils/sendEmail.js';
+
+// Database Import
 import Auth from '../model/auth/Auth.js';
 
 
@@ -40,8 +40,7 @@ export const nestNotify_User_Registration = CatchAsync( async(req, res, next)=>{
         email: req.body.email,
         contactNumber: req.body.contactNumber,
         password: req.body.password,
-        role: req.body.role.toLowerCase(),
-        master: null
+        role: req.body.role.toLowerCase()
     })
 
     // 4) Fetching User Data
@@ -72,7 +71,7 @@ export const nestNotify_User_SignIn = CatchAsync( async(req, res, next)=>{
     }
 
     // 4) Fetching User data
-    const auth= await Auth.findById({_id: userCheck._id})
+    const auth = await Auth.findById({_id: userCheck._id})
 
     // 5) Setting cookie and sending reponse
     authToken.sendToken(auth, 200, res, 'login')

@@ -37,5 +37,319 @@
                 "isSubQues": false
             }
         ]
+    },
+    
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What state would you like to look for a home?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "What towns/cities/areas or counties within that state would you like to look within?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex":3,
+        "fixIndex":3,
+        "questionCondition": false,
+        "question": "What type of use do you want to get from the land?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "33nnblolqqn301",
+                "optionType": "radio",
+                "label": "Residential Development",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnblolqqn302",
+                "optionType": "radio",
+                "label": "Commercial Development",
+                "isSubQues": false
+            },            
+            {
+                "spid": "33nnblolqqn303",
+                "optionType": "radio",
+                "label": "Subdivision and Development",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnblolqqn304",
+                "optionType": "radio",
+                "label": "Agricultural",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnblolqqn305",
+                "optionType": "radio",
+                "label": "Equestrian",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnblolqqn306",
+                "optionType": "radio",
+                "label": "I plan to keep it open and undeveloped",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "How much space do you need/lot size?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "44nnblolqqn401",
+                "optionType": "text",
+                "label": "Square Feet",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnblolqqn402",
+                "optionType": "text",
+                "label": "Acres",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 5,
+        "fixIndex": 5,
+        "questionCondition": false,
+        "question": "Do you need the property to be located on a main road?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "55nnblolqqn501",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnblolqqn502",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnblolqqn503",
+                "optionType": "radio",
+                "label": "Doesn’t Matter",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 6,
+        "fixIndex": 6,
+        "questionCondition": false,
+        "question": "What is your budget?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "66nnblolqqn601",
+                "optionType": "radio",
+                "label": "Purchase",
+                "isSubQues": false,
+                "subQuest": [
+                    {
+                        "spid": "66nnblolqqn601s01",
+                        "optionType": "radio",
+                        "label": "Are You Purchasing with cash or mortgage/financing?",
+                        "isSubQues": true,
+                        "subQuest": [
+                            {
+                                "spid": "66nnblolqqn601s01",
+                                "optionType": "radio",
+                                "label": "Cash",
+                                "isSubQues": true,
+                                "subQuest": [
+                                    {
+                                        "spid": "66nnblolqqn601s01s01",
+                                        "label": "Yes",
+                                        "optionType": "radio",
+                                        "subInfo": "Proof of Funds will consist of an account statement or statements showing the capability of purchasing the property with cash (no mortgage needed).\nPertinent information such as your address or account numbers can be blanked out, but when making offers you will have to present these types of documents.",
+                                        "isSubQues": false
+                                    },
+                                    {
+                                        "spid": "66nnblolqqn601s01s02",
+                                        "label": "No",
+                                        "optionType": "radio",
+                                        "isSubQues": false
+                                    }
+                                ]
+                            },
+                            {
+                                "spid": "66nnblolqqn601s02",
+                                "optionType": "text",
+                                "label": "Mortgage/Financing",
+                                "isSubQues": true,
+                                "subQuest": [
+                                    {
+                                        "spid": "66nnblolqqn601s02s01",
+                                        "label": "Yes",
+                                        "optionType": "radio",
+                                        "subInfo": "If you plan to purchase the property with a mortgage, it is imperative that you obtain a pre-approval from a lender.",
+                                        "isSubQues": false
+                                    },
+                                    {
+                                        "spid": "66nnblolqqn601s02s02",
+                                        "label": "No",
+                                        "optionType": "radio",
+                                        "isSubQues": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "spid": "66nnblolqqn602",
+                "optionType": "radio",
+                "label": "Yearly Taxes",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 7,
+        "fixIndex": 7,
+        "questionCondition": false,
+        "question": "Anything else we should know?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 8,
+        "fixIndex": 8,
+        "questionCondition": false,
+        "question": "How soon would you like to purchase a home?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "88nnblolqqn801",
+                "optionType": "radio",
+                "label": "As Soon As Possible",
+                "isSubQues": false
+            },
+            {
+                "spid": "88nnblolqqn802",
+                "optionType": "radio",
+                "label": "1-3 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnblolqqn803",
+                "optionType": "radio",
+                "label": "4-6 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnblolqqn804",
+                "optionType": "radio",
+                "label": "6-9 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnblolqqn805",
+                "optionType": "radio",
+                "label": "10-12 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "88nnblolqqn806",
+                "optionType": "radio",
+                "label": "More Than a Year",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 9,
+        "fixIndex": 9,
+        "questionCondition": false,
+        "question": "Are you currently working with a real estate agent?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "99nnbciqn901",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "99nnbciqn902",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 10,
+        "fixIndex": 10,
+        "questionCondition": false,
+        "question": "Now we need to know how to notify you with property matches",
+        "questionType": "text",
+        "quesAnsOption": [
+            {
+                "spid": "110nnbciqn1001",
+                "optionType": "text",
+                "label": "First Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1002",
+                "optionType": "text",
+                "label": "Last Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1003",
+                "optionType": "text",
+                "label": "Mobile Phone",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1004",
+                "optionType": "text",
+                "label": "Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1005",
+                "optionType": "text",
+                "label": "Confirm Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1006",
+                "optionType": "text",
+                "label": "Business Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1007",
+                "optionType": "text",
+                "label": "Business Address",
+                "isSubQues": false
+            }
+        ]
     }
 ]

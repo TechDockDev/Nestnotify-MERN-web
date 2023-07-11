@@ -69,11 +69,12 @@ router.route('/get/user/profile/:id').get(authToken.isAdminAuthenticated, authTo
 router.route('/seller/property/form').get( nestNotify_Admin_Get_Seller_Property_Form);
 router.route('/seller/residential/condo/form').get(nestNotify_Admin_Get_Seller_Residential_Condo_Form);
 router.route('/seller/residential/home/form').get(nestNotify_Admin_Get_Seller_Residential_Home_Form);
+router.route('/seller/commercial/form').get(nestNotify_Admin_Get_Seller_Commercial_Property_Form);
 // Admin: Seller Questionnaires
 // router.route('/seller/property/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Property_Form);
 // router.route('/seller/residential/home/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Residential_Home_Form);
 // router.route('/seller/residential/condo/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Residential_Condo_Form);
-router.route('/seller/commercial/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Commercial_Property_Form);
+// router.route('/seller/commercial/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Seller_Commercial_Property_Form);
 
 // Admin: Buyer Questionnaires
 router.route('/buyer/residential/home/form').get(authToken.isAdminAuthenticated, authToken.authorizedAdminRoles('admin'), nestNotify_Admin_Get_Buyer_Residential_Home_Form);
