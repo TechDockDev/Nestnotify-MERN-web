@@ -12,7 +12,7 @@ const QuestionComp = () => {
       try {
          const { data } = await axios.get("api/v1/admin/seller/commercial/form");
          setQuestData(data?.sellerPropertyForm);
-         console.log(data.sellerPropertyForm);
+         console.log("--->",data.sellerPropertyForm);
       } catch (error) {
          console.log(error);
       }
@@ -21,7 +21,7 @@ const QuestionComp = () => {
    const handleRadioChange = (e) => {
       setValue({ ...value, [e.target.name]: e.target.value });
    };
-
+   
    const handleCheckBoxChange = (id, obj) => {
       setValue({ ...value, [id]: obj });
    };
