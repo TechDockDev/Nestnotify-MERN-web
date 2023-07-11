@@ -147,6 +147,7 @@ const AdminAccounts = () => {
    const getAllAdmins = async () => {
       try {
          setDataLoading(true)
+
          const { data } = await axios.get("/api/v1/admin/all/admins");
          console.log(data)
          setAdminsData(data.allAdmins);
@@ -154,13 +155,16 @@ const AdminAccounts = () => {
       } catch (error) {
          snackbar("error", error?.message);
          setDataLoading(false)
+
       }
    };
    // <======👆 Get All Admins👆  ======>
    useEffect(() => {
       getAllAdmins();
    }, []);
+
    console.log("---->",adminsData);
+
 
    return (
       <>

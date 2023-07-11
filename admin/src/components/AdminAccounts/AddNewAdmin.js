@@ -1,9 +1,11 @@
+
 import React, { useState,useContext } from "react";
 import { Stack, Grid, Typography, Button, FormControlLabel, Checkbox } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { DataContext } from "../../AppContext";
+
 import SingleInput from "../CommonComponents/SingleInput";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -12,7 +14,9 @@ const AddNewAdmin = () => {
    const navigate = useNavigate();
    const [formData, setFormData] = useState({});
    const [superAdmin, setSuperAdmin] = useState(false);
+
    const { snackbar } = useContext(DataContext);
+
    // <======🍀👇 Handle Change👇 🍀======>
    const handleChange = (e, index) => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,6 +29,7 @@ const AddNewAdmin = () => {
    // <======🍀👆 superAdminChange 👆 🍀======>
    // <======🍀👇 Handle Submit👇 🍀======>
    const handleSubmit = (e) => {
+
       console.log(formData)
        axios.post('/api/v1/super/admin/new/admin', formData)
        .then(function (response) {
@@ -36,6 +41,7 @@ const AddNewAdmin = () => {
       e.preventDefault();
    };
    // <======🍀👆 Handle Submit👆 🍀======>
+
 
    return (
       <Stack

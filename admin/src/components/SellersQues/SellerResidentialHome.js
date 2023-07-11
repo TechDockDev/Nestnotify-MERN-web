@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography, Stack, Grid, TextField, InputAdornment, IconButton } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -15,11 +16,13 @@ const SellerResidentialHome = () => {
    const [quesList, setQuesList] = useState([]);
    
 
+
    const dragItem = useRef();
    const dragOverItem = useRef();
 
    const dragStart = (e, position) => {
       dragItem.current = position;
+
       console.log("positon.start.", position);
    };
 
@@ -39,6 +42,7 @@ const SellerResidentialHome = () => {
    };
 
 
+
    const getSellerResiHomeData = async() =>{
       const { data } = await axios.get("/api/v1/admin/seller/residential/home/form");
       console.log(data.sellerPropertyForm)
@@ -48,6 +52,7 @@ const SellerResidentialHome = () => {
    useEffect(()=>{
       getSellerResiHomeData() 
    },[getSellerResiHomeData])
+
 
    return (
       <Stack
@@ -79,7 +84,9 @@ const SellerResidentialHome = () => {
                      borderLeft: "4px solid #2298BC",
                      padding: "10px",
                   }}>
+
                   Residential Home
+
                </Typography>
             </Grid>
             {/* <======👆 Table heading (left corner)👆  ======> */}
@@ -111,7 +118,10 @@ const SellerResidentialHome = () => {
          {/* <======👆 Heading TOPBAR 👆  ======> */}
          <Stack >
             {quesList.map((item, index) => {
+
                return <SingleQuest key={item.id} ques={item.question} dragStart={dragStart} dragEnter={dragEnter} drop={drop} index={index} />;
+
+
             })}
          </Stack>
       </Stack>

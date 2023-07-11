@@ -9,7 +9,6 @@ import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const SignUp = () => {
-   
    const smallDevice = useMediaQuery("(max-width:600px)");
 
    const [formData, setFormData] = useState({

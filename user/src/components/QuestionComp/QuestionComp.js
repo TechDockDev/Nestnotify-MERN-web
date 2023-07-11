@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import QuesAnsOption from "./QuesAnsOption";
 import axios from "axios";
 import { useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 const QuestionComp = () => {
@@ -14,6 +15,7 @@ const QuestionComp = () => {
 
    const getQuestData = async () => {
       try {
+
          // const { data } = await axios.get("api/v1/admin/seller/property/form").then((data)=>{
          //    setQuestData(data.sellerPropertyForm);
          // })
@@ -35,6 +37,7 @@ const QuestionComp = () => {
       setValue({ ...value, [id]: obj });
    };
 
+
    // console.log(value);
 
    const handleInputTextChange = (id, obj) => {
@@ -43,6 +46,7 @@ const QuestionComp = () => {
    const handleSelectChange = (id, obj) => {
       setValue({ ...value, [id]: obj });
    };
+
 
    const handleProceedClick = async (e) => {
       e.preventDefault()

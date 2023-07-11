@@ -1,4 +1,5 @@
 import { DataGrid } from "@mui/x-data-grid";
+
 import React, { useContext, useEffect, useState } from "react";
 import { FormControlLabel, Switch, Button, Grid, Typography, } from "@mui/material";
 import { GridToolbarQuickFilter } from "@mui/x-data-grid";
@@ -12,6 +13,7 @@ const UserAccounts = () => {
    const [usersData, setusersData] = useState([]);
    const [dataLoading, setDataLoading] = useState(false)
    const { snackbar } = useContext(DataContext);
+
 
    // *************************************************
    const CustomeToolBar = () => {
@@ -141,6 +143,7 @@ const UserAccounts = () => {
       },
    ];
 
+
    // const rows = [
    //    {
    //       id: 1,
@@ -206,12 +209,15 @@ const UserAccounts = () => {
    return (
       <>
          <DataGrid
+
             rows={usersData ? usersData : []}
+
             disableColumnFilter
             disableColumnSelector
             disableDensitySelector
             disableRowSelectionOnClick
             columns={columns}
+
             loading={dataLoading}
             getRowId={(row) => row._id}
             rowHeight={60}
