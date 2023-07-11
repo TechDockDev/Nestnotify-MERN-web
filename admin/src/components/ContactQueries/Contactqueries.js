@@ -1,13 +1,13 @@
 import {React,useState} from 'react'
 import { Stack , Typography , Box,Paper} from '@mui/material'
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid } from '@mui/x-data-grid';
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 
 const columns = [
   { 
-    Name: 'Name', 
+    field: 'Name', 
     headerName: 'Name', 
     width: 150,
   },
@@ -41,8 +41,26 @@ const rows = [
      Message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tincidunt lacus, nec hendrerit.',
      date : '05/29/2023 01:12 PM',
      reply : 'Reply'
+    },
+    {   
+     id : '2',
+     Name: 'Jordi Alba',
+     Email: 'alba@gmail.com',
+     Message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tincidunt lacus, nec hendrerit.',
+     date : '05/29/2023 01:12 PM',
+     reply : 'Reply'
+    },
+    {   
+     id : '3',
+     Name: 'Jordi Alba',
+     Email: 'alba@gmail.com',
+     Message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tincidunt lacus, nec hendrerit.',
+     date : '05/29/2023 01:12 PM',
+     reply : 'Reply'
     }
+
 ];
+
 
 const SearchBar = ({setSearchQuery}) => (
   <Paper sx={{borderRadius:'25px', width:'300px'}}>
@@ -61,7 +79,6 @@ const SearchBar = ({setSearchQuery}) => (
       placeholder="Search"
       size="small"
     />
-   
   </Paper>
 );
 
@@ -69,7 +86,7 @@ const Contactqueries = () => {
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <Box sx = {{margin : '25px'}}>
-    <Stack direction= "row"   justifyContent="space-between" alignItems="center">
+    <Stack direction= "row"  justifyContent="space-between" alignItems="center">
         <Typography sx={{
             fontSize:'25px',
             fontWeight : '600',
@@ -89,7 +106,7 @@ const Contactqueries = () => {
         disableColumnMenu
     />
     </Box>
-    </Box>
+  </Box>
 )
 }
 

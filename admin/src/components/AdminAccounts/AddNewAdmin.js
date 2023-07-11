@@ -12,6 +12,7 @@ const AddNewAdmin = () => {
    const navigate = useNavigate();
    const [formData, setFormData] = useState({});
    const [superAdmin, setSuperAdmin] = useState(false);
+   const [confirmPassword,setConfirmPassword] = useState("")
    const { snackbar } = useContext(DataContext);
    // <======🍀👇 Handle Change👇 🍀======>
    const handleChange = (e, index) => {
@@ -24,16 +25,21 @@ const AddNewAdmin = () => {
    };
    // <======🍀👆 superAdminChange 👆 🍀======>
    // <======🍀👇 Handle Submit👇 🍀======>
-   const handleSubmit = (e) => {
-      console.log(formData)
-       axios.post('/api/v1/super/admin/new/admin', formData)
-       .then(function (response) {
-       console.log(response);
-  })
-  .catch(function (error) {
+   const handleSubmit = async (e) => {
+      if(formData.password === confirmPassword){
+      await axios.post('/api/v1/super/admin/new/admin', 
+      {...formData,
+          master: null,
+          adminRole: "account",
+          adminPermission: ["Account"]
+      }).catch(function (error) {
       snackbar("error", error?.message)
-  });
-      e.preventDefault();
+    });
+   }
+    else{
+      snackbar("error" , "password does not match")
+    }
+    e.preventDefault()
    };
    // <======🍀👆 Handle Submit👆 🍀======>
 
@@ -104,7 +110,7 @@ const AddNewAdmin = () => {
             <SingleInput labelText={"Password"} inputType={"password"} inputName={"password"} inputValue={formData.password} onChangeHandler={handleChange} labelInputId={"password"} requiredTrue={true} placeholderText={"Password"} />
             {/* <======👆 Password 👆  ======> */}
             {/* <======👇 Confirm Password 👇  ======> */}
-            <SingleInput labelText={"Confirm Password "} inputType={"password"} inputName={"confirmPassword"} inputValue={formData.confirmPassword} onChangeHandler={handleChange} labelInputId={"confirmPassword"} requiredTrue={true} placeholderText={"Confirm Password"} />
+            <SingleInput labelText={"Confirm Password "} inputType={"password"} inputName={"confirmPassword"} inputValue={confirmPassword} onChangeHandler={(e)=>setConfirmPassword(e.target.value)} labelInputId={"confirmPassword"} requiredTrue={true} placeholderText={"Confirm Password"} />
             {/* <======👆 Confirm Password 👆  ======> */}
 
             {/* <======👇 Super Admin👇  ======> */}
@@ -125,7 +131,6 @@ const AddNewAdmin = () => {
             />
 
             {/* <======👆 Super Admin 👆  ======> */}
-
             <Button
                variant="contained"
                disableElevation
