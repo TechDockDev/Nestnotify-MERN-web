@@ -18,15 +18,15 @@ import SellerLandLot from "./components/SellersQues/SellerLandLot";
 import AddNewAdmin from "./components/AdminAccounts/AddNewAdmin";
 
 import Contactqueries from "./components/ContactQueries/Contactqueries";
+import SellerNewProperty from "./components/SellersQues/SellerNewProperty";
 
 function App() {
    const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
 
    const authHandler = async () => {
       try {
-
          const { data } = await axios.get("api/v1/super/admin/get/profile/data");
-         console.log(data)
+         console.log(data);
          setAdminAuthData(data?.auth);
          setIsLoggedIn(true);
       } catch (error) {
@@ -34,7 +34,6 @@ function App() {
       }
    };
    // console.log("isLoggedIn-->", isLoggedIn);
-
 
    useEffect(() => {
       authHandler();
@@ -48,18 +47,17 @@ function App() {
                <Route path="/signup" element={<SignUp />} />
             </Route>
             <Route path="/dashboard" element={<DashboardRoot />}>
-
-               <Route path="admin-accounts" element={<AdminAccounts />}/>
+               <Route path="admin-accounts" element={<AdminAccounts />} />
 
                <Route path="admin-accounts/add-new-admin" element={<AddNewAdmin />} />
                <Route path="users-accounts" element={<UserAccounts />} />
+               <Route path="sellers-questionnaire/new-property" element={<SellerNewProperty />} />
                <Route path="sellers-questionnaire/residential-home" element={<SellerResidentialHome />} />
                <Route path="sellers-questionnaire/residential-condo" element={<SellerResidentialCondo />} />
                <Route path="sellers-questionnaire/commercial" element={<SellerCommercial />} />
-               <Route path="sellers-questionnaire/land" element={<SellerLandLot />} />
+               {/* <Route path="sellers-questionnaire/land" element={<SellerLandLot />} /> */}
 
-               <Route path="contact-form" element={<Contactqueries/>}/>
-
+               <Route path="contact-form" element={<Contactqueries />} />
             </Route>
          </Routes>
       </>
@@ -67,5 +65,3 @@ function App() {
 }
 
 export default App;
-
-

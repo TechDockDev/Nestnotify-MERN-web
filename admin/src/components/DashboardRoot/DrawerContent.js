@@ -40,10 +40,11 @@ const DrawerContent = ({ handleDrawerToggle }) => {
                },
             }}>
             <NestedLink icon={<LuClipboardList />} linkText={"Seller"}>
+               <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/new-property"} linkText={"New Property Form"} />
                <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/residential-home"} linkText={"Residential Home"} />
                <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/residential-condo"} linkText={"Residential Condo/CoOp"} />
                <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/commercial"} linkText={"Commercial/Industrial"} />
-               <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/land"} linkText={"Land/Open Lot"} />
+               {/* <SingleMenuNavLink handleDrawerToggle={handleDrawerToggle} icon={<ArrowForwardIcon />} to={"sellers-questionnaire/land"} linkText={"Land/Open Lot"} /> */}
             </NestedLink>
             {/* ================ */}
           
