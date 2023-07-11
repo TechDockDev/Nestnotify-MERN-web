@@ -37,5 +37,508 @@
                 "isSubQues": false
             }
         ]
+    },
+        
+    {
+        "quesIndex": 1,
+        "fixIndex": 1,
+        "questionCondition": false,
+        "question": "What state would you like to look for a home?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 2,
+        "fixIndex": 2,
+        "questionCondition": false,
+        "question": "What towns/cities/areas or counties within that state would you like to look within?",
+        "questionType": "text"
+    },
+
+    {
+        "quesIndex": 3,
+        "fixIndex": 3,
+        "questionCondition": false,
+        "question": "Are you looking to purchase or rent a commercial or industry space?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "33nnbciqn301",
+                "optionType": "radio",
+                "label": "Purchase Empty for my Own Use",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnbciqn302",
+                "optionType": "radio",
+                "label": "Purchase Empty For Investment",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnbciqn303",
+                "optionType": "radio",
+                "label": "Purchase Occupied for Investment",
+                "isSubQues": false
+            },
+            {
+                "spid": "33nnbciqn304",
+                "optionType": "radio",
+                "label": "Rent",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "33nnbciqn304sub01",
+                        "optionType": "radio",
+                        "label": "What type of lease are you looking for?",
+                        "isSubQues": true,
+                        "subQuest": [
+                            {
+                                "spid": "33nnbciqn304sub01sub01",
+                                "optionType": "radio",
+                                "label": "Single Net",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub01sub02",
+                                "optionType": "radio",
+                                "label": "Double Net",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub01sub03",
+                                "optionType": "radio",
+                                "label": "Triple Net",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub01sub04",
+                                "optionType": "radio",
+                                "label": "Absolute Triple Net",
+                                "isSubQues": true
+                            }
+                        ]
+                    },
+                    {
+                        "spid": "33nnbciqn304sub02",
+                        "optionType": "radio",
+                        "label": "What type of Lease Term Do you Need?",
+                        "isSubQues": true,
+                        "subQuest": [
+                            {
+                                "spid": "33nnbciqn304sub02sub01",
+                                "optionType": "radio",
+                                "label": "1 Year",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub02",
+                                "optionType": "radio",
+                                "label": "2 Year",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub03",
+                                "optionType": "radio",
+                                "label": "3 Year",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub04",
+                                "optionType": "radio",
+                                "label": "4 Year",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub05",
+                                "optionType": "radio",
+                                "label": "5 Year",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub06",
+                                "optionType": "radio",
+                                "label": "Greater than 5 Years",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub07",
+                                "optionType": "radio",
+                                "label": "Month-to-Month",
+                                "isSubQues": true
+                            },
+                            {
+                                "spid": "33nnbciqn304sub02sub08",
+                                "optionType": "radio",
+                                "label": "Seasonal",
+                                "isSubQues": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "spid": "33nnbciqn305",
+                "optionType": "radio",
+                "label": "Both A B and C",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 4,
+        "fixIndex": 4,
+        "questionCondition": false,
+        "question": "What type of commercial or industrial property are you looking for?",
+        "questionType": "chechbox",
+        "quesAnsOption": [
+            {
+                "spid": "44nnbciqn401",
+                "optionType": "chechbox",
+                "label": "Mult-Family Dwelling",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn402",
+                "optionType": "chechbox",
+                "label": "Apartment Bulding",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn403",
+                "optionType": "radio",
+                "label": "Farm/Agricultural",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn404",
+                "optionType": "chechbox",
+                "label": "Office",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn405",
+                "optionType": "chechbox",
+                "label": "Small Stores",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn406",
+                "optionType": "chechbox",
+                "label": "Large Store",
+                "isSubQues": false
+            },            {
+                "spid": "44nnbciqn407",
+                "optionType": "chechbox",
+                "label": "Free Standing Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn408",
+                "optionType": "chechbox",
+                "label": "Office Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn409",
+                "optionType": "radio",
+                "label": "Industrial Building",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn410",
+                "optionType": "chechbox",
+                "label": "Warehouse",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn411",
+                "optionType": "chechbox",
+                "label": "Recreational",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn412",
+                "optionType": "chechbox",
+                "label": "Commercial/Industrial",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn413",
+                "optionType": "chechbox",
+                "label": "Mixed Use (Residential and Commercial)",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn414",
+                "optionType": "chechbox",
+                "label": "Restaurant",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn415",
+                "optionType": "radio",
+                "label": "Equestrian",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn416",
+                "optionType": "chechbox",
+                "label": "Multiple Lots/Subdivision",
+                "isSubQues": false
+            },
+            {
+                "spid": "44nnbciqn417",
+                "optionType": "chechbox",
+                "label": "Shopping Center",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 5,
+        "fixIndex": 5,
+        "questionCondition": false,
+        "question": "What is your budget?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "55nnbciqn501",
+                "optionType": "text",
+                "label": "Purchase",
+                "isSubQues": false
+            },
+            {
+                "spid": "55nnbciqn502",
+                "optionType": "text",
+                "label": "Yearly Taxes",
+                "isSubQues": false
+            },            {
+                "spid": "55nnbciqn503",
+                "optionType": "text",
+                "label": "Yearly Common, Maintenance or HOA Charges",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 6,
+        "fixIndex": 6,
+        "questionCondition": false,
+        "question": "Are Purchasing with cash or mortgage/financing?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "66nnbciqn601",
+                "optionType": "radio",
+                "label": "Cash",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "66nnbciqn601sub01",
+                        "label": "Yes",
+                        "optionType": "radio",
+                        "subInfo": "Proof of Funds will consist of an account statement or statements showing the capability of purchasing the property with cash (no mortgage needed).\nPertinent information such as your address or account numbers can be blanked out, but when making offers you will have to present these types of documents.",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "66nnbciqn601sub02",
+                        "label": "No",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            },
+            {
+                "spid": "66nnbciqn602",
+                "optionType": "text",
+                "label": "Mortgage/Financing",
+                "isSubQues": true,
+                "subQuest": [
+                    {
+                        "spid": "66nnbciqn602sub01",
+                        "label": "Yes",
+                        "optionType": "radio",
+                        "subInfo": "If you plan to purchase the property with a mortgage, it is imperative that you obtain a pre-approval from a lender.",
+                        "isSubQues": false
+                    },
+                    {
+                        "spid": "66nnbciqn602sub02",
+                        "label": "No",
+                        "optionType": "radio",
+                        "isSubQues": false
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 7,
+        "fixIndex": 7,
+        "questionCondition": false,
+        "question": "How soon would you like to purchase a home?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "77nnbciqn701",
+                "optionType": "radio",
+                "label": "As Soon As Possible",
+                "isSubQues": false
+            },
+            {
+                "spid": "77nnbciqn702",
+                "optionType": "radio",
+                "label": "1-3 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn703",
+                "optionType": "radio",
+                "label": "4-6 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn704",
+                "optionType": "radio",
+                "label": "6-9 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn705",
+                "optionType": "radio",
+                "label": "10-12 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn706",
+                "optionType": "radio",
+                "label": "More Than a Year",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 8,
+        "fixIndex": 8,
+        "questionCondition": false,
+        "question": "How soon would you like to purchase a home?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "77nnbciqn701",
+                "optionType": "radio",
+                "label": "As Soon As Possible",
+                "isSubQues": false
+            },
+            {
+                "spid": "77nnbciqn702",
+                "optionType": "radio",
+                "label": "1-3 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn703",
+                "optionType": "radio",
+                "label": "4-6 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn704",
+                "optionType": "radio",
+                "label": "6-9 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn705",
+                "optionType": "radio",
+                "label": "10-12 Months",
+                "isSubQues": false
+            },            
+            {
+                "spid": "77nnbciqn706",
+                "optionType": "radio",
+                "label": "More Than a Year",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 9,
+        "fixIndex": 9,
+        "questionCondition": false,
+        "question": "Are you currently working with a real estate agent?",
+        "questionType": "radio",
+        "quesAnsOption": [
+            {
+                "spid": "99nnbciqn901",
+                "optionType": "radio",
+                "label": "Yes",
+                "isSubQues": false
+            },
+            {
+                "spid": "99nnbciqn902",
+                "optionType": "radio",
+                "label": "No",
+                "isSubQues": false
+            }
+        ]
+    },
+
+    {
+        "quesIndex": 10,
+        "fixIndex": 10,
+        "questionCondition": false,
+        "question": "Now we need to know how to notify you with property matches",
+        "questionType": "text",
+        "quesAnsOption": [
+            {
+                "spid": "110nnbciqn1001",
+                "optionType": "text",
+                "label": "First Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1002",
+                "optionType": "text",
+                "label": "Last Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1003",
+                "optionType": "text",
+                "label": "Mobile Phone",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1004",
+                "optionType": "text",
+                "label": "Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1005",
+                "optionType": "text",
+                "label": "Confirm Email",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1006",
+                "optionType": "text",
+                "label": "Business Name",
+                "isSubQues": false
+            },
+            {
+                "spid": "110nnbciqn1007",
+                "optionType": "text",
+                "label": "Business Address",
+                "isSubQues": false
+            }
+        ]
     }
+
 ]

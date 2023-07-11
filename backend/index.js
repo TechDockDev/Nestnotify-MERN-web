@@ -1,5 +1,6 @@
 import app from './app.js';
 import connectDatabase from './config/database.js';
+import cloudinary from 'cloudinary';
 const PORT = process.env.PORT || 5000;
 
 // UncaughtException Error and server shut down
@@ -10,6 +11,13 @@ process.on('uncaughtException', (err) => {
 
 // Database connection
 connectDatabase()
+
+// Cloudinary Configuration
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const server = app.listen(PORT, ( err)=>{
     if(err) console.log(err)

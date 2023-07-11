@@ -1,8 +1,19 @@
 import { DataGrid } from "@mui/x-data-grid";
-import React from "react";
+
+import React, { useContext, useEffect, useState } from "react";
 import { FormControlLabel, Switch, Button, Grid, Typography, } from "@mui/material";
 import { GridToolbarQuickFilter } from "@mui/x-data-grid";
+import axios from "axios";
+import { DataContext } from "../../AppContext";
+import { useNavigate } from "react-router-dom";
+
 const UserAccounts = () => {
+
+   const navigate = useNavigate();
+   const [usersData, setusersData] = useState([]);
+   const [dataLoading, setDataLoading] = useState(false)
+   const { snackbar } = useContext(DataContext);
+
 
    // *************************************************
    const CustomeToolBar = () => {
@@ -132,58 +143,83 @@ const UserAccounts = () => {
       },
    ];
 
-   const rows = [
-      {
-         id: 1,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 2,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 3,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 4,
-         image: "https://picsum.photos/200",
-         name: "John Doe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-      {
-         id: 5,
-         image: "https://picsum.photos/200",
-         name: "Radhe",
-         phone: "111222333",
-         email: "111@mail.com",
-         action: "pending",
-      },
-   ];
+
+   // const rows = [
+   //    {
+   //       id: 1,
+   //       image: "https://picsum.photos/200",
+   //       name: "John Doe",
+   //       phone: "111222333",
+   //       email: "111@mail.com",
+   //       action: "pending",
+   //    },
+   //    {
+   //       id: 2,
+   //       image: "https://picsum.photos/200",
+   //       name: "John Doe",
+   //       phone: "111222333",
+   //       email: "111@mail.com",
+   //       action: "pending",
+   //    },
+   //    {
+   //       id: 3,
+   //       image: "https://picsum.photos/200",
+   //       name: "John Doe",
+   //       phone: "111222333",
+   //       email: "111@mail.com",
+   //       action: "pending",
+   //    },
+   //    {
+   //       id: 4,
+   //       image: "https://picsum.photos/200",
+   //       name: "John Doe",
+   //       phone: "111222333",
+   //       email: "111@mail.com",
+   //       action: "pending",
+   //    },
+   //    {
+   //       id: 5,
+   //       image: "https://picsum.photos/200",
+   //       name: "Radhe",
+   //       phone: "111222333",
+   //       email: "111@mail.com",
+   //       action: "pending",
+   //    },
+   // ];
+
+      // <======👇 Get All Users👇  ======>
+      const getAllUsers = async () => {
+         try {
+            setDataLoading(true)
+            const { data } = await axios.get("/api/v1/admin/all/users");
+            console.log(data)
+            setusersData(data);
+            setDataLoading(false)
+         } catch (error) {
+            snackbar("error", error?.message);
+            setDataLoading(false)
+         }
+      };
+      // <======👆 Get All Admins👆  ======>
+      useEffect(() => {
+         getAllUsers();
+      }, []);
+      console.log("------>> ",usersData);
 
    return (
       <>
          <DataGrid
-            rows={rows}
+
+            rows={usersData ? usersData : []}
+
             disableColumnFilter
             disableColumnSelector
             disableDensitySelector
             disableRowSelectionOnClick
             columns={columns}
+
+            loading={dataLoading}
+            getRowId={(row) => row._id}
             rowHeight={60}
             slots={{ toolbar: CustomeToolBar }}
             slotProps={{

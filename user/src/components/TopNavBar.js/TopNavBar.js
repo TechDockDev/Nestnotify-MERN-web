@@ -15,7 +15,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { MenuItem, Stack } from "@mui/material";
-import { NavLink, Outlet } from "react-router-dom";
+
+import { Link, NavLink, Navigate, Outlet, useNavigate } from "react-router-dom";
 import SingleNavLink from "./SingleNavLink";
 import ScreensWrapper from "../CommonComponents/ScreensWrapper";
 
@@ -23,6 +24,8 @@ const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
 const TopNavBar = (props) => {
+
+   const navigate = useNavigate()
    const [mobileOpen, setMobileOpen] = React.useState(false);
 
    const handleDrawerToggle = () => {
@@ -108,7 +111,12 @@ const TopNavBar = (props) => {
                         variant={"contained"}
                         onClick={() => {
                            console.log("login");
+
+                           navigate("/signin")
                         }}
+                        component={NavLink}
+                        to={"/signin"}
+
                      />
                      <SingleNavLink
                         linkText={"Sign Up"}
