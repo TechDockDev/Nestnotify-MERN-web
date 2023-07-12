@@ -20,11 +20,7 @@ import BuyerCommercialForm from '../model/questionnaires/BuyerCommercialQues.js'
 import BuyerLandQues from '../model/questionnaires/BuyerLandQues.js';
 
 
-// ==============================================================================================
-// Users related routes
-// ==============================================================================================
-
-// Admin: Admin Account Disable Enable
+// 01) Admin: Admin Account Disable Enable
 export const nestNotify_Admin_Account_Enable_Disable_Admin = CatchAsync( async(req, res, next)=>{
     
     const userExist = await AdminAuth.findById(req.params.id)
@@ -50,7 +46,8 @@ export const nestNotify_Admin_Account_Enable_Disable_Admin = CatchAsync( async(r
     })
 })
 
-// Admin: User Account Disable Enable
+
+// 02) Admin: User Account Disable Enable
 export const nestNotify_Admin_Account_Enable_Disable_User = CatchAsync( async(req, res, next)=>{
     
     const userExist = await Auth.findById(req.params.id)
@@ -78,8 +75,7 @@ export const nestNotify_Admin_Account_Enable_Disable_User = CatchAsync( async(re
 })
 
 
-
-// 1)Admin: Get All Admins account
+// 03) Admin: Get All Admins account
 export const nestNotify_Admin_Get_All_Admins = CatchAsync( async(req, res, next) =>{
     // const adminsData = await AdminAuth.find({role: "admin", master: null})
     const adminsData = await AdminAuth.find({role: "admin"})
@@ -99,13 +95,14 @@ export const nestNotify_Admin_Get_All_Admins = CatchAsync( async(req, res, next)
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Admins`,
+        message: `All Admins list`,
         length: allAdmins.length,
         allAdmins
     })
 })
 
-// 2) Admin: Get Differernt Users
+
+// 04) Admin: Get Differernt Users
 export const nestNotify_Admin_Get_All_Users = CatchAsync( async(req, res, next) =>{
 
     const allUsers = await Auth.find()
@@ -116,13 +113,14 @@ export const nestNotify_Admin_Get_All_Users = CatchAsync( async(req, res, next) 
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Users List`,
+        message: `All Users list`,
         length: allUsers.length,
         allUsers
     })
 })
 
-// 3) Admin: Get Sellers
+
+// 05) Admin: Get Sellers
 export const nestNotify_Admin_Get_All_Sellers = CatchAsync( async(req, res, next) =>{
 
     const allSellers = await Auth.find({role: "seller", master: null})
@@ -134,14 +132,14 @@ export const nestNotify_Admin_Get_All_Sellers = CatchAsync( async(req, res, next
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Sellers`,
+        message: `All Sellers list`,
         length: allSellers.length,
         allSellers
     })
 })
 
 
-// 4) Admin: Get Buyers
+// 06) Admin: Get Buyers
 export const nestNotify_Admin_Get_All_Buyers = CatchAsync( async(req, res, next) =>{
 
     const allBuyers = await Auth.find({role: "buyer", master: null})
@@ -153,13 +151,14 @@ export const nestNotify_Admin_Get_All_Buyers = CatchAsync( async(req, res, next)
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Buyers`,
+        message: `All Buyers list`,
         length: allBuyers.length,
         allBuyers
     })
 })
 
-// 5) Admin: Get Renters
+
+// 07) Admin: Get Renters
 export const nestNotify_Admin_Get_All_Renters = CatchAsync( async(req, res, next) =>{
     const allRenters = await Auth.find({role: "renter", master: null})
 
@@ -170,14 +169,14 @@ export const nestNotify_Admin_Get_All_Renters = CatchAsync( async(req, res, next
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Renters`,
+        message: `All Renters list`,
         length: allRenters.length,
         allRenters
     })
 })
 
 
-// 6) Admin: Get LandLords
+// 08) Admin: Get LandLords
 export const nestNotify_Admin_Get_All_LandLords = CatchAsync( async(req, res, next) =>{
 
     const allLandLords = await Auth.find({role: "landlord", master: null})
@@ -189,14 +188,14 @@ export const nestNotify_Admin_Get_All_LandLords = CatchAsync( async(req, res, ne
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All Landlords`,
+        message: `All Landlords list`,
         length: allLandLords.length,
         allLandLords
     })
 })
 
 
-// 7) Admin: Investors
+// 09) Admin: Investors
 export const nestNotify_Admin_Get_All_Invetors = CatchAsync( async(req, res, next) =>{
 
     const allInvestors = await Auth.find({role: "invester", master: null})
@@ -208,14 +207,14 @@ export const nestNotify_Admin_Get_All_Invetors = CatchAsync( async(req, res, nex
     res.status(200).json({
         success: true,
         status: "success",
-        message: `All investers`,
+        message: `All investers list`,
         length: allInvestors.length,
         allInvestors
     })
 })
 
 
-// 8) Admin: Get Single User
+// 10) Admin: Get Single User
 export const nestNotify_Admin_Single_User_Profile = CatchAsync( async(req, res, next) =>{
 
     if(!req.params.id){
@@ -256,11 +255,11 @@ export const nestNotify_Admin_Single_User_Profile = CatchAsync( async(req, res, 
 // ==============================================================================================
 
 
-// Admin: Get Seller Property Form
+// 11) Admin: Get Seller Property Form
 export const nestNotify_Admin_Get_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const sellerPropertyForm = await SellerPropertyQues.find().sort({quesIndex: 0})
-    // {_id: "6494056572e4214f2ff3b549"}
+
     // const resultPerPage = 3;
     // const propertyQuesCount = await SellerPropertyQues.countDocuments()
 
@@ -280,10 +279,13 @@ export const nestNotify_Admin_Get_Seller_Property_Form = CatchAsync( async(req, 
         sellerPropertyForm
     })
 })
-// Admin: shuffle Seller Property Form
+
+
+// 12) Admin: Shuffle Seller Property Form
 export const nestNotify_Admin_Shuffle_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerPropertyQues.countDocuments()
+    
     if(req.body.length!==sCF){
         return next(new ErrorHandler('Something wrong in form', 401))
     }
@@ -304,11 +306,12 @@ export const nestNotify_Admin_Shuffle_Seller_Property_Form = CatchAsync( async(r
     return res.status(200).json({
         success: true,
         status: "success",
-        message: `Seller Commercail Form shuffled`,
+        message: `Seller New Property Form Questionnaire Suffled`,
     })
 })
 
-// Admin: Reset Seller Property Form
+
+// 13) Admin: Reset Seller Property Form
 export const nestNotify_Admin_Reset_Seller_Property_Form = CatchAsync( async(req, res, next)=>{
 
     const sellerPropForm = await SellerPropertyQues.find().sort({createdAt: 0})
@@ -327,8 +330,7 @@ export const nestNotify_Admin_Reset_Seller_Property_Form = CatchAsync( async(req
     return res.status(200).json({
         success: true,
         status: "success",
-        message: `Reset Seller Property form`,
-        sellerPropForm
+        message: `Seller New Property Form Questionnaire Reset`,
     })
 })
 
@@ -337,7 +339,7 @@ export const nestNotify_Admin_Reset_Seller_Property_Form = CatchAsync( async(req
 // Seller Residential Home Form Questionnaires (Get, Suffle, Reset)
 // ==============================================================================================
 
-// Admin: Get Seller Residetnial Home Form (Single Questionnaire)
+// 14) Admin: Get Seller Residetnial Home Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
     
     const sellerPropertyForm = await SellerResidentialHomeForm.find().sort({quesIndex: 0});
@@ -349,36 +351,64 @@ export const nestNotify_Admin_Get_Seller_Residential_Home_Form = CatchAsync( asy
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Seller Form Data",
+        message: "Seller Residetial Home Questionnaire",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
 })
 
-// Admin: shuffle Seller Form Residential Home
+
+// 15) Admin: shuffle Seller Residential Home Form
 export const nestNotify_Admin_Shuffle_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await SellerResidentialHomeForm.countDocuments()
+
     if(req.body.length!==sCF){
         return next(new ErrorHandler('Something wrong in form', 401))
     }
 
-    Object.entries(req.body).forEach(async (data)=>{
-        const qID = data[1].quesID
-        await SellerResidentialHomeForm.findByIdAndUpdate({_id: qID}, 
-                    {quesIndex: data[1].quesIndex},
-                    {
-                        new: true,
-                        runValidators: true,
-                        userFindAndModify: true
-                    })
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await SellerResidentialHomeForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
     })
 
     res.status(200).json({
         success: true,
         status: "success",
-        message: `Seller Commercail Form shuffled`,
+        message: `Seller Residetial Home Questionnaire Shuffled`,
+    })
+})
+
+
+// 16) Admin: Reset Seller Property Form
+export const nestNotify_Admin_Reset_Seller_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await SellerResidentialHomeForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await SellerResidentialHomeForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Seller Residetial Home Questionnaire Reset`,
     })
 })
 
@@ -386,19 +416,7 @@ export const nestNotify_Admin_Shuffle_Seller_Residential_Home_Form = CatchAsync(
 // Seller Residential Condo Form Questionnaires (Get, Suffle, Reset)
 // ==============================================================================================
 
-
-
-// ==============================================================================================
-// Seller Commercial Industrial Questionnaires (Get, Suffle, Reset)
-// ==============================================================================================
-// Admin: Seller Questionnaire Types
-
-
-
-
-
-
-// Admin: Get Seller Residential Condo Form (Single Questionnaire)
+// 17) Admin: Get Seller Residential Condo Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
     const sellerPropertyForm = await SellerResidentialCondoForm.find().sort({quesIndex: 0});
@@ -410,7 +428,7 @@ export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( as
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Seller Form Data",
+        message: "Seller Residential Condo Form Questionnaire",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
@@ -418,8 +436,66 @@ export const nestNotify_Admin_Get_Seller_Residential_Condo_Form = CatchAsync( as
 })
 
 
+// 18) Admin: shuffle Seller Residentail Condo Form 
+export const nestNotify_Admin_Shuffle_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
 
-// Admin: Get Seller Commercial Form (Single Questionnaire)
+    const sCF = await SellerResidentialCondoForm.countDocuments()
+    console.log(sCF)
+    console.log(req.body.length)
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await SellerResidentialCondoForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Seller Residential Condo Form Questionnaire shuffled`,
+    })
+})
+
+
+// 19) Admin: Reset Seller Residential Condo Form
+export const nestNotify_Admin_Reset_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await SellerResidentialCondoForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await SellerResidentialCondoForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Seller Residential Condo Form Questionnaire Reset`,
+    })
+})
+
+
+// ==============================================================================================
+// Seller Commercial Industrial Questionnaires (Get, Suffle, Reset)
+// ==============================================================================================
+
+// 20) Admin: Get Seller Commercial Form (Single Questionnaire)
 export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( async(req, res, next)=>{
    
     const sellerPropertyForm = await SellerCommercialForm.find().sort({quesIndex: 0});
@@ -431,14 +507,74 @@ export const nestNotify_Admin_Get_Seller_Commercial_Property_Form = CatchAsync( 
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Seller Form Data",
+        message: "Seller Commercail Form Questionnaire",
         // propertyQuesCount,
         length: sellerPropertyForm.length,
         sellerPropertyForm
     })
 })
 
-// Admin: Get Buyer Residential Home Form 
+
+// 21) Admin: shuffle Seller Commercial Form 
+export const nestNotify_Admin_Shuffle_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await SellerCommercialForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    // console.log(req.body)
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await SellerCommercialForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Seller Commercail Form Questionnaire Shuffled`,
+    })
+})
+
+
+// 22) Admin: Reset Seller Commercial/Industrial Form
+export const nestNotify_Admin_Reset_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await SellerCommercialForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await SellerCommercialForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Seller Commercail Form Questionnaire Reset`,
+    })
+})
+
+
+
+// ==============================================================================================
+// Buyer Residential Home Questionnaires (Get, Suffle, Reset)
+// ==============================================================================================
+
+// 23) Admin: Get Buyer Residential Home Form 
 export const nestNotify_Admin_Get_Buyer_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
    
     const buyerPropertyForm = await BuyerResidentialHomeForm.find().sort({quesIndex: 0});
@@ -450,13 +586,72 @@ export const nestNotify_Admin_Get_Buyer_Residential_Home_Form = CatchAsync( asyn
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Buyer Residential Home Form",
+        message: "Buyer Residential Home Form Questionnaire",
         length: buyerPropertyForm.length,
         buyerPropertyForm
     })
 })
 
-// Admin: Get Buyer Reseidential Condo
+// 24) Admin: shuffle Buyer Residential Home Form
+export const nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerResidentialHomeForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    // console.log(req.body)
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await BuyerResidentialHomeForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Residential Home Form Questionnaire Shuffled`,
+    })
+})
+
+
+// 25) Admin: Reset Buyer Residential Home Form
+export const nestNotify_Admin_Reset_Buyer_Residential_Home_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await BuyerResidentialHomeForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await BuyerResidentialHomeForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Residential Home Form Questionnaire Reset`,
+    })
+})
+
+
+
+// ==============================================================================================
+// Buyer Residential Condo Questionnaires (Get, Suffle, Reset)
+// ==============================================================================================
+
+// 26) Admin: Get Buyer Reseidential Condo
 export const nestNotify_Admin_Get_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
    
     const buyerPropertyForm = await BuyerResidentialCondoForm.find().sort({quesIndex: 0});
@@ -468,13 +663,73 @@ export const nestNotify_Admin_Get_Buyer_Residential_Condo_Form = CatchAsync( asy
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Buyer Residential Condo Form",
+        message: "Buyer Residential Condo Form Questionnaire Form",
         length: buyerPropertyForm.length,
         buyerPropertyForm
     })
 })
 
-// Admin: Get Buyer Commercial Form
+
+// 27) Admin: shuffle Buyer Residential Condo
+export const nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerResidentialCondoForm.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    // console.log(req.body)
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await BuyerResidentialCondoForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Residential Condo Form Questionnaire Shuffled`,
+    })
+})
+
+
+// 28) Admin: Reset Buyer Residential Condo Form
+export const nestNotify_Admin_Reset_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await BuyerResidentialCondoForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await BuyerResidentialCondoForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Residential Condo Form Questionnaire Reset`,
+    })
+})
+
+
+
+// ==============================================================================================
+// Buyer Commercial/Industrial Questionnaires (Get, Suffle, Reset)
+// ==============================================================================================
+
+// 29) Admin: Get Buyer Commercial Form
 export const nestNotify_Admin_Get_Buyer_Commercial_Form = CatchAsync( async(req, res, next)=>{
    
     const buyerPropertyForm = await BuyerCommercialForm.find().sort({quesIndex: 0});
@@ -486,130 +741,14 @@ export const nestNotify_Admin_Get_Buyer_Commercial_Form = CatchAsync( async(req,
     res.status(200).json({
         success: true,
         status: "success",
-        message: "Buyer Commercial Questionnaire",
+        message: "Buyer Commercial Form Questionnaire",
         length: buyerPropertyForm.length,
         buyerPropertyForm
     })
 })
 
 
-// ==============================================================================================
-// shuffle Seller forms
-// ==============================================================================================
-
-
-
-
-
-
-// Admin: shuffle Seller Residentail Condo Form 
-export const nestNotify_Admin_Shuffle_Seller_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
-
-    const sCF = await SellerResidentialCondoForm.countDocuments()
-    if(req.body.length!==sCF){
-        return next(new ErrorHandler('Something wrong in form', 401))
-    }
-
-    Object.entries(req.body).forEach(async (data)=>{
-        const qID = data[1].quesID
-        await SellerResidentialCondoForm.findByIdAndUpdate({_id: qID}, 
-                    {quesIndex: data[1].quesIndex},
-                    {
-                        new: true,
-                        runValidators: true,
-                        userFindAndModify: true
-                    })
-    })
-
-    res.status(200).json({
-        success: true,
-        status: "success",
-        message: `Seller Commercail Form shuffled`,
-    })
-})
-
-// Admin: shuffle Seller Residentail Condo Form 
-export const nestNotify_Admin_Shuffle_Seller_Commercail_Form = CatchAsync( async(req, res, next)=>{
-
-    const sCF = await SellerCommercialForm.countDocuments()
-    if(req.body.length!==sCF){
-        return next(new ErrorHandler('Something wrong in form', 401))
-    }
-
-    req.body.forEach(async (data)=>{
-        await SellerCommercialForm.findByIdAndUpdate(
-            {_id: data.quesID}, 
-            {quesIndex: data.quesIndex}, 
-            {new: true, runValidators: true, userFindAndModify: true}
-        )
-    })
-
-    res.status(200).json({
-        success: true,
-        status: "success",
-        message: `Seller Commercail Form shuffled`,
-    })
-})
-
-
-
-// ==============================================================================================
-// shuffle Buyer Forms
-// ==============================================================================================
-
-// Admin: shuffle Buyer Residential Home Form
-export const nestNotify_Admin_Shuffle_Buyer_Residentail_Home_Form = CatchAsync( async(req, res, next)=>{
-
-    const sCF = await BuyerResidentialHomeForm.countDocuments()
-    if(req.body.length!==sCF){
-        return next(new ErrorHandler('Something wrong in form', 401))
-    }
-
-    Object.entries(req.body).forEach(async (data)=>{
-        const qID = data[1].quesID
-        await BuyerResidentialHomeForm.findByIdAndUpdate({_id: qID}, 
-                    {quesIndex: data[1].quesIndex},
-                    {
-                        new: true,
-                        runValidators: true,
-                        userFindAndModify: true
-                    })
-    })
-
-    res.status(200).json({
-        success: true,
-        status: "success",
-        message: `Seller Commercail Form shuffled`,
-    })
-})
-
-// Admin: shuffle Buyer Residential Condo
-export const nestNotify_Admin_Shuffle_Buyer_Residential_Condo_Form = CatchAsync( async(req, res, next)=>{
-
-    const sCF = await BuyerResidentialCondoForm.countDocuments()
-    if(req.body.length!==sCF){
-        return next(new ErrorHandler('Something wrong in form', 401))
-    }
-
-    Object.entries(req.body).forEach(async (data)=>{
-        const qID = data[1].quesID
-        await BuyerResidentialCondoForm.findByIdAndUpdate({_id: qID}, 
-                    {quesIndex: data[1].quesIndex},
-                    {
-                        new: true,
-                        runValidators: true,
-                        userFindAndModify: true
-                    })
-    })
-
-    res.status(200).json({
-        success: true,
-        status: "success",
-        message: `Seller Commercail Form shuffled`,
-    })
-})
-
-// Admin: shuffle Seller Commercail Form
+// 30) Admin: shuffle Seller Commercail Form
 export const nestNotify_Admin_Shuffle_Buyer_Commercail_Form = CatchAsync( async(req, res, next)=>{
 
     const sCF = await BuyerCommercialForm.countDocuments()
@@ -617,51 +756,133 @@ export const nestNotify_Admin_Shuffle_Buyer_Commercail_Form = CatchAsync( async(
         return next(new ErrorHandler('Something wrong in form', 401))
     }
 
-    Object.entries(req.body).forEach(async (data)=>{
-        const qID = data[1].quesID
-        await BuyerCommercialForm.findByIdAndUpdate({_id: qID}, 
-                    {quesIndex: data[1].quesIndex},
-                    {
-                        new: true,
-                        runValidators: true,
-                        userFindAndModify: true
-                    })
+    // console.log(req.body)
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await BuyerCommercialForm.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
     })
 
     res.status(200).json({
         success: true,
         status: "success",
-        message: `Seller Commercail Form shuffled`,
+        message: `Buyer Commercial Form Questionnaire Shuffled`,
+    })
+})
+
+
+// 31) Admin: Reset Buyer Commercial Industrial Form
+export const nestNotify_Admin_Reset_Buyer_Commercail_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await BuyerCommercialForm.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await BuyerCommercialForm.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Commercial Form Questionnaire Reset`,
     })
 })
 
 
 
+// ==============================================================================================
+// Buyer Land Lot Questionnaires (Get, Suffle, Reset)
+// ==============================================================================================
 
-// Admin: User Account Disable
-export const nestNotify_Admin_Users_Account_Disable = CatchAsync( async(req, res, next)=>{
-    
-    const userExist = await Auth.findById({ _id: req.params.id})
+// 32) Admin: Get Buyer Commercial Form
+export const nestNotify_Admin_Get_Buyer_Land_Form = CatchAsync( async(req, res, next)=>{
+   
+    const buyerPropertyForm = await BuyerLandQues.find().sort({quesIndex: 0});
 
-    if(!userExist){
-        return next(new ErrorHandler(`User doesn't exist`, 404))
-    }
-
-    if(userExist.userActive === true){
-        userExist.userActive = false
-        await userExist.save()
-    } else if( userExist.userActive ===false){
-        userExist.userActive = true
-        await userExist.save()
+    if(!buyerPropertyForm){
+        return next(new ErrorHandler('Something went wrong', 404))
     }
 
     res.status(200).json({
-        success: true, 
+        success: true,
         status: "success",
+        message: "Buyer Land Form Questionnaire",
+        length: buyerPropertyForm.length,
+        buyerPropertyForm
     })
 })
 
 
+// 33) Admin: shuffle Seller Commercail Form
+export const nestNotify_Admin_Shuffle_Buyer_Land_Form = CatchAsync( async(req, res, next)=>{
+
+    const sCF = await BuyerLandQues.countDocuments()
+    if(req.body.length!==sCF){
+        return next(new ErrorHandler('Something wrong in form', 401))
+    }
+
+    // console.log(req.body)
+    const questionArray = req.body
+    questionArray.forEach(async (data)=>{
+        await BuyerLandQues.findByIdAndUpdate( 
+            { _id: data.quesID }, 
+            { quesIndex: data.quesIndex },
+            {
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Land Form Questionnaire Shuffled`,
+    })
+})
+
+
+// 34) Admin: Reset Buyer Commercial Industrial Form
+export const nestNotify_Admin_Reset_Buyer_Land_Form = CatchAsync( async(req, res, next)=>{
+
+    const sellerPropForm = await BuyerLandQues.find().sort({createdAt: 0})
+
+    Object.entries(sellerPropForm).forEach(async (data)=>{
+        console.log(data[0])
+        await BuyerLandQues.findByIdAndUpdate({_id: data[1]._id}, {quesIndex: data[1].fixIndex}, 
+            {                 
+                new: true,
+                runValidators: true,
+                userFindAndModify: true
+            }
+        )
+    })
+
+    return res.status(200).json({
+        success: true,
+        status: "success",
+        message: `Buyer Land Form Questionnaire Reset`,
+    })
+})
+
+
+
+
+// ===================================================================================================================================================================
 // -----| Question Post |-----
 export const nestNotify_Admin_Post_Questions = CatchAsync( async(req, res, next)=>{
 

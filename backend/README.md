@@ -21,31 +21,41 @@
 | 006 | Admin:                                 |        |                                                                        |
 | 007 | Admin: Password Change                 | PUT    | http://localhost:5000/api/v1/admin/password/update                     |
 | 008 | Admin: Password Forgot                 | POST   | http://localhost:5000/api/v1/admin/password/forgot                     |
-| 009 | Admin: Password Reset Token            | POST   | http://localhost:5000/api/v1/admin/password/reset/:token               |
+| 009 | Admin: Password Reset                  | POST   | http://localhost:5000/api/v1/admin/password/reset/:token               |
 | 010 | Admin: Admin Account Enable/Disable    | PUT    | http://localhost:5000/api/v1/admin/admin/account/modify/:id            |
 | 011 | Admin: User Account Enable/Disable     | PUT    | http://localhost:5000/api/v1/admin/user/account/modify/:id             |
-| 012 | Admin: Get All Users                   | GET    | http://localhost:5000/api/v1/admin/all/users                           | 
-| 013 | Admin: Get All Admins                  | GET    | http://localhost:5000/api/v1/admin/all/admins                          |
+| 012 | Admin: Get All Admins                  | GET    | http://localhost:5000/api/v1/admin/all/admins                          | 
+| 013 | Admin: Get All Users                   | GET    | http://localhost:5000/api/v1/admin/all/users                           |
 | 014 | Admin: Get All Sellers                 | GET    | http://localhost:5000/api/v1/admin/all/sellers                         | 
 | 015 | Admin: Get All Buyers                  | GET    | http://localhost:5000/api/v1/admin/all/buyers                          |
 | 016 | Admin: Get All Renters                 | GET    | http://localhost:5000/api/v1/admin/all/renters                         | 
 | 017 | Admin: Get All Landlords               | GET    | http://localhost:5000/api/v1/admin/all/landlords                       |
 | 018 | Admin: Get All Investers               | GET    | http://localhost:5000/api/v1/admin/all/invertors                       |
 | 019 | Admin: Get Single User                 | GET    | http://localhost:5000/api/v1/admin/get/user/profile/:id                |
-| 020 | Admin: Seller Property Form            | GET    | http://localhost:5000/api/v1/admin/shuffle/seller/property/form        |
-| 021 | Admin: Seller Residential Home         | GET    | http://localhost:5000/api/v1/admin/seller/residential/home/form        | 
-| 022 | Admin: Seller Residential Condo        | GET    | http://localhost:5000/api/v1/admin/seller/residential/condo/form       | 
-| 023 | Admin: Seller Commerical Form          | GET    | http://localhost:5000/api/v1/admin/seller/commercial/form              | 
-| 024 | Admin: Buyer Residential Home          | GET    | http://localhost:5000/api/v1/admin/buyer/residential/home/form         | 
-| 025 | Admin: Buyer Residential Condo         | GET    | http://localhost:5000/api/v1/admin/buyer/residential/condo/form        | 
-| 026 | Admin: Buyer Commerical Form           | GET    | http://localhost:5000/api/v1/admin/buyer/commercial/form               | 
-| 027 | Admin: Suffle Seller Property Form     | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/property/form        |
-| 028 | Admin: Suffle Seller Residential Home  | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/resihome/form        |
-| 029 | Admin: Suffle Seller Residential Condo | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/resicondo/form       |
-| 030 | Admin: Suffle Seller Commerical Form   | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/commercail/form      |
-| 031 | Admin: Suffle Buyer Residential Home   | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/resihome/form         |
-| 032 | Admin: Suffle Buyer Residential Condo  | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/resicondo/form        |
-| 033 | Admin: Suffle Buyer Commerical Form    | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/commercail/form       | 
+| 020 | Admin: Seller New Property Form        | GET    | http://localhost:5000/api/v1/admin/seller/property/form                |
+| 021 | Admin: Shuffle Seller New Property Form| PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/property/form        |
+| 022 | Admin: Reset Seller New Property Form  | GET    | http://localhost:5000/api/v1/admin/reset/seller/property/form          |
+| 023 | Admin: Seller Residential Home         | GET    | http://localhost:5000/api/v1/admin/seller/residential/home/form        |
+| 024 | Admin: Shuffle Seller Residential Home | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/resihome/form        |
+| 025 | Admin: Reset Seller Residential Home   | GET    | http://localhost:5000/api/v1/admin/reset/seller/resihome/form          |
+| 026 | Admin: Seller Residential Condo        | GET    | http://localhost:5000/api/v1/admin/seller/residential/condo/form       |
+| 027 | Admin: Shuffle Seller Residential Condo| PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/resicondo/form       |
+| 028 | Admin: Reset  Seller Residential Condo | GET    | http://localhost:5000/api/v1/admin/reset/seller/resicondo/form         |
+| 029 | Admin: Seller Commerical Form          | GET    | http://localhost:5000/api/v1/admin/seller/commercial/form              | 
+| 030 | Admin: Shuffle Seller Commerical Form  | PUT    | http://localhost:5000/api/v1/admin/shuffle/seller/commercail/form      |
+| 031 | Admin: Reset Seller Commerical Form    | GET    | http://localhost:5000/api/v1/admin/reset/seller/commercial/form        |
+| 032 | Admin: Buyer Residential Home          | GET    | http://localhost:5000/api/v1/admin/buyer/residential/home/form         | 
+| 033 | Admin: Shuffle Buyer Residential Home  | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/resihome/form         |
+| 034 | Admin: Reset Buyer Residential Home    | GET    | http://localhost:5000/api/v1/admin/reset/buyer/resihome/form           |
+| 035 | Admin: Buyer Residential Condo         | GET    | http://localhost:5000/api/v1/admin/buyer/residential/condo/form        | 
+| 036 | Admin: Shuffle Buyer Residential Condo | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/resicondo/form        |
+| 037 | Admin: Reset Buyer Residential Condo   | GET    | http://localhost:5000/api/v1/admin/reset/buyer/resicondo/form          |
+| 038 | Admin: Buyer Commerical Form           | GET    | http://localhost:5000/api/v1/admin/buyer/commercial/form               | 
+| 039 | Admin: Shuffle Buyer Commerical Form   | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/commercail/form       |
+| 040 | Admin: Reset Buyer Commerical Form     | GET    | http://localhost:5000/api/v1/admin/reset/buyer/commercial/form         |
+| 041 | Admin: Buyer Land Form                 | GET    | http://localhost:5000/api/v1/admin/buyer/land/form                     | 
+| 042 | Admin: Shuffle Buyer Land Form         | PUT    | http://localhost:5000/api/v1/admin/shuffle/buyer/land/form             |
+| 043 | Admin: Reset Buyer Land Form           | GET    | http://localhost:5000/api/v1/admin/reset/buyer/land/form               |
 
 
 #### Authentication Endpoint Table (User)
