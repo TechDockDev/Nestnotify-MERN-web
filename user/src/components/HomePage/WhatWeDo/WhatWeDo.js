@@ -71,7 +71,7 @@ const WhatWeDo = () => {
                                             FIND & BUY Your Property
                                         </Typography>
                                         <Typography sx={{
-                                            fontSize: '16px',
+                                            fontSize: { xs: '14px', md: '16px' },
                                             fontWeight: 400,
                                             color: '#333333'
                                         }}>
@@ -111,7 +111,7 @@ const WhatWeDo = () => {
                                             SELL Your Property
                                         </Typography>
                                         <Typography sx={{
-                                            fontSize: '16px',
+                                            fontSize: { xs: '14px', md: '16px' },
                                             fontWeight: 400,
                                             color: '#333333'
                                         }}>
@@ -151,7 +151,7 @@ const WhatWeDo = () => {
                                             RENT Your Property
                                         </Typography>
                                         <Typography sx={{
-                                            fontSize: '16px',
+                                            fontSize: { xs: '14px', md: '16px' },
                                             fontWeight: 400,
                                             color: '#333333'
                                         }}>
@@ -167,10 +167,10 @@ const WhatWeDo = () => {
                         <Box
                             component="img"
                             sx={{
-                                display: 'block',
+                                display: { md: 'block', xs: 'none' },
                                 width: '100%',
                                 height: '100%',
-                                boxSizing: 'border-box'
+                                boxSizing: 'border-box',
                             }}
                             alt="The house from the offer."
                             src="./assets/House_searching.png"

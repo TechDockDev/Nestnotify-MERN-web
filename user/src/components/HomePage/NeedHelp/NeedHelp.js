@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Properties = () => {
+const NeedHelp = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const Properties = () => {
     )
 }
 
-export default Properties
+export default NeedHelp
