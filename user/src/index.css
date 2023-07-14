@@ -3,3 +3,7 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+.css-oc856-MuiStack-root{
+    padding: 0px !important;
+}
