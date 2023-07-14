@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CircleIcon from '@mui/icons-material/Circle';
-const SingleQuest = ({ ques, drop, dragStart, dragEnter, index, item }) => {
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
+
+const SingleQuest = ({ ques, drop, dragStart, dragEnter, index, item , dragEnable}) => {
    const [open, setOpen] = useState(false);
    const toggleOptions = () => {
       setOpen(!open);
    };
-   console.log(item);
 
    return (
       <Box
@@ -24,7 +25,7 @@ const SingleQuest = ({ ques, drop, dragStart, dragEnter, index, item }) => {
          onDragEnd={(e) => {
             drop();
          }}
-         draggable
+         draggable = {dragEnable}
          sx={{
             background: "#F6F9FB",
             padding: "15px 10px",
@@ -33,22 +34,43 @@ const SingleQuest = ({ ques, drop, dragStart, dragEnter, index, item }) => {
             "&:hover": {
                cursor: "sizeall",
             },
+            transition:"all 200ms ease"
          }}>
          <Typography
             variant="h2"
             sx={{
-               fontSize: "18px",
-               fontWeight: "500",
+               fontSize: "14px",
+               fontWeight: "600",
                background: "#F6F9FB",
                position: "relative",
-            }}>{index+1+ "."} &nbsp;
+               display:"flex",
+               justifyItems:"center",
+               transition:"all 200ms ease",
+               "&:hover":{
+                  cursor: dragEnable ? "all-scroll" : "default",
+                  scale:dragEnable ? "0.98" : "1"
+
+               }
+            }}>
+               {dragEnable && <DragIndicatorIcon sx={{
+                  color:"grey",
+                  cursor:"all-scroll",
+                  position: "relative",
+                  marginY:"auto",
+                  marginRight:"5px",
+                  right:"0px"
+               }}/>}
+               {index+1+ "."} &nbsp;
             {ques}
            {item?.questionType !== "text" && <IconButton
                onClick={toggleOptions}
                sx={{
-                  position: "absolute",
-                  right: "0px",
-                  bottom: "-12px",
+                  position: "relative",
+                  marginY:"auto",
+                  marginLeft:"auto",
+                  right:"0px",
+                  p:0
+
                }}>
                <ArrowDropDownIcon />
             </IconButton>}
@@ -58,7 +80,7 @@ const SingleQuest = ({ ques, drop, dragStart, dragEnter, index, item }) => {
                marginLeft:"20px"
             }}>
                {item?.quesAnsOption?.map((optn, index) => {
-                  return <Typography variant="h3" sx={{
+                  return <Typography key={index} variant="h3" sx={{
                      fontSize: "14px",
                      fontWeight: "400",
                      display:"flex",

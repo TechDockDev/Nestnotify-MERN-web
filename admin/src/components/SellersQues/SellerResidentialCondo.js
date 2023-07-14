@@ -1,34 +1,50 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Typography, Stack, Grid, TextField, InputAdornment, IconButton } from "@mui/material";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { Typography, Stack, Grid, TextField, InputAdornment, IconButton, FormControl, Select, OutlinedInput, MenuItem, Button } from "@mui/material";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SingleQuest from "../SingleQuest/SingleQuest";
 import axios from "axios";
+import EditIcon from "@mui/icons-material/Edit";
+import { DataContext } from "../../AppContext";
+import { filterData, SearchType } from "filter-data";
 
 const SellerResidentialCondo = () => {
 
-   // const [quesList, setQuesList] = useState([
-   //    { id: 1, ques: "Hi" },
-   //    { id: 2, ques: "Hello" },
-   //    { id: 3, ques: "Bye" },
-   // ]);
-
    const [quesList, setQuesList] = useState([]);
-   
-
-
+   const [questionsMilestone, setQuestionsMilestone] = useState("");
    const dragItem = useRef();
    const dragOverItem = useRef();
+   const [dragEnable, setDragEnable] = useState(false);
+   const { snackbar } = useContext(DataContext);
+   const [searchData, setSearchData] = useState("");
+   const noOfQues = ["3 Questions per screen", "4 Questions per screen", "5 Questions per screen", "6 Questions per screen"];
+
+   // =================
+   const handleSearchChange = (e) => {
+      setSearchData(e.target.value);
+   };
+   // =================
+
+   const searchConditions = [
+      {
+         key: "question",
+         value: searchData,
+         type: SearchType.LK,
+      },
+   ];
+
+   const result = filterData(quesList, searchConditions);
+
+   // ========================================
 
    const dragStart = (e, position) => {
       dragItem.current = position;
-
-      console.log("positon.start.", position);
    };
+   // ========================================
 
    const dragEnter = (e, position) => {
       dragOverItem.current = position;
-      console.log("positon. enter.", position);
    };
+   // ========================================
 
    const drop = (e) => {
       const copyListItems = [...quesList];
@@ -39,18 +55,40 @@ const SellerResidentialCondo = () => {
       dragOverItem.current = null;
       setQuesList(copyListItems);
    };
+   // ========================================
 
-
-
-   const getSellerResiHomeData = async() =>{
+   const getSellerResiCondoData = async () => {
       const { data } = await axios.get("/api/v1/admin/seller/residential/condo/form");
       // console.log(data.sellerPropertyForm)
-      setQuesList(data.sellerPropertyForm)
-   }
+      setQuesList(data.sellerPropertyForm);
+   };
+   // ========================================
 
-   useEffect(()=>{
-      getSellerResiHomeData() 
-   },[])
+   const handleChange = (event) => {
+      setQuestionsMilestone(event.target.value);
+   };
+   // console.log(quesList);
+
+   // ========================================
+   const updateListOrder = async () => {
+      try {
+         const shortData = quesList.map((item, index) => {
+            return {
+               quesID: item._id,
+               quesIndex: index,
+            };
+         });
+         const { data } = await axios.put("/api/v1/admin/shuffle/seller/property/form", shortData);
+         // console.log('--->', data);
+         snackbar(data.status, data.message);
+      } catch (error) {
+         console.log(error);
+      }
+   };
+
+   useEffect(() => {
+      getSellerResiCondoData();
+   }, []);
 
 
    return (
