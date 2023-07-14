@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const UserAccounts = () => {
 
    const navigate = useNavigate();
-   const [usersData, setusersData] = useState([]);
+   const [usersData, setUsersData] = useState([]);
    const [dataLoading, setDataLoading] = useState(false)
    const { snackbar } = useContext(DataContext);
 
@@ -143,57 +143,13 @@ const UserAccounts = () => {
       },
    ];
 
-
-   // const rows = [
-   //    {
-   //       id: 1,
-   //       image: "https://picsum.photos/200",
-   //       name: "John Doe",
-   //       phone: "111222333",
-   //       email: "111@mail.com",
-   //       action: "pending",
-   //    },
-   //    {
-   //       id: 2,
-   //       image: "https://picsum.photos/200",
-   //       name: "John Doe",
-   //       phone: "111222333",
-   //       email: "111@mail.com",
-   //       action: "pending",
-   //    },
-   //    {
-   //       id: 3,
-   //       image: "https://picsum.photos/200",
-   //       name: "John Doe",
-   //       phone: "111222333",
-   //       email: "111@mail.com",
-   //       action: "pending",
-   //    },
-   //    {
-   //       id: 4,
-   //       image: "https://picsum.photos/200",
-   //       name: "John Doe",
-   //       phone: "111222333",
-   //       email: "111@mail.com",
-   //       action: "pending",
-   //    },
-   //    {
-   //       id: 5,
-   //       image: "https://picsum.photos/200",
-   //       name: "Radhe",
-   //       phone: "111222333",
-   //       email: "111@mail.com",
-   //       action: "pending",
-   //    },
-   // ];
-
       // <======👇 Get All Users👇  ======>
       const getAllUsers = async () => {
          try {
             setDataLoading(true)
             const { data } = await axios.get("/api/v1/admin/all/users");
             console.log(data)
-            setusersData(data);
+            setUsersData(data.allUsers);
             setDataLoading(false)
          } catch (error) {
             snackbar("error", error?.message);

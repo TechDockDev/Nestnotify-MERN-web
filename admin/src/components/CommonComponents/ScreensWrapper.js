@@ -9,7 +9,7 @@ const ScreensWrapper = ({ children }) => {
             minHeight:{xs:`calc(100vh - 48px)`, md:`calc(100vh - 60px)`},
             maxWidth: {xs:"100%",md:`calc(100% - 250px)`},
             boxSizing:"border-box",
-            padding:"20px",
+            paddingX:"20px",
             marginTop:{xs:"48px", md:"60px"},
             bgcolor:"#ECF2F8",
          }}>

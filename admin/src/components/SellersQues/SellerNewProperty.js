@@ -7,7 +7,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { DataContext } from "../../AppContext";
 import { filterData, SearchType } from "filter-data";
 
-const SellerResidentialHome = () => {
+const SellerNewProperty = () => {
    const [quesList, setQuesList] = useState([]);
    const [questionsMilestone, setQuestionsMilestone] = useState("");
    const dragItem = useRef();
@@ -56,8 +56,8 @@ const SellerResidentialHome = () => {
    };
    // ========================================
 
-   const getSellerResiHomeData = async () => {
-      const { data } = await axios.get("/api/v1/admin/seller/residential/home/form");
+   const getSellerNewPropertyData = async () => {
+      const { data } = await axios.get("/api/v1/admin/seller/property/form");
       // console.log(data.sellerPropertyForm)
       setQuesList(data.sellerPropertyForm);
    };
@@ -77,7 +77,7 @@ const SellerResidentialHome = () => {
                quesIndex: index,
             };
          });
-         const { data } = await axios.put("/api/v1/admin/shuffle/seller/resihome/form", shortData);
+         const { data } = await axios.put("/api/v1/admin/shuffle/seller/property/form", shortData);
          // console.log('--->', data);
          snackbar(data.status, data.message);
       } catch (error) {
@@ -86,10 +86,8 @@ const SellerResidentialHome = () => {
    };
 
    useEffect(() => {
-      getSellerResiHomeData();
+      getSellerNewPropertyData();
    }, []);
-
-
 
    return (
       <Stack
@@ -124,7 +122,7 @@ const SellerResidentialHome = () => {
                      // borderBottom:"4px solid #0D507D",
                      width:"fit-content"
                   }}>
-                  Residential Home
+                  New Property Form
                </Typography>
             </Grid>
             {/* <======👆 Table heading (left corner)👆  ======> */}
@@ -264,4 +262,4 @@ const SellerResidentialHome = () => {
    );
 };
 
-export default SellerResidentialHome;
+export default SellerNewProperty;
