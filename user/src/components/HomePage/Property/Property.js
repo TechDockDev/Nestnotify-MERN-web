@@ -135,15 +135,8 @@ const Property = () => {
                                         </Typography>
                                     </Stack> {/* card content */}
 
-                                    <Button variant="contained" endIcon={<ArrowForwardIosIcon />}
-                                        sx={{
-                                            display: 'flex',
-                                            padding: '12px 20px',
-                                            justifyContent: 'center',
-                                            alignItems: 'center',
-                                            width: '100%',
-                                            borderRadius: '64px'
-                                        }}>
+                                    <Button fullWidth endIcon={<ArrowForwardIosIcon />}
+                                    >
                                         view
                                     </Button>
                                 </Paper>
