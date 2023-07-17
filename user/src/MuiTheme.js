@@ -19,61 +19,111 @@ const MuiTheme = createTheme({
          defaultProps: {
             size: 'small',
             variant: "contained",
-            sx: {
+            
+         },
+         styleOverrides:{
+            root: {
                display: 'flex',
-               padding: '12px',
                justifyContent: 'center',
                alignItems: 'center',
+               padding: '12px',
+               fontWeight:"600",
                borderRadius: '64px'
             }
          }
+         
       },
       MuiButtonGroup: {
-         size: 'small',
+         defaultProps: {
+
+            size: 'small',
+         }
       },
       MuiCheckbox: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiFab: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiFormControl: {
-         margin: 'dense',
-         size: 'small',
+         defaultProps: {
+            
+            margin: 'dense',
+            size: 'small',
+         }
       },
       MuiFormHelperText: {
-         margin: 'dense',
+         defaultProps: {
+            
+            margin: 'dense',
+         }
       },
       MuiIconButton: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiInputBase: {
-         margin: 'dense',
+         defaultProps: {
+            
+            margin: 'dense',
+         }
       },
       MuiInputLabel: {
-         margin: 'dense',
+         defaultProps: {
+            
+            margin: 'dense',
+         }
       },
       MuiRadio: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiSwitch: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiTextField: {
-         margin: 'dense',
-         size: 'small',
+         defaultProps: {
+            
+            margin: 'dense',
+            size: 'small',
+         }
       },
       MuiList: {
-         dense: true,
+         defaultProps: {
+            
+            dense: true,
+         }
       },
       MuiMenuItem: {
-         dense: true,
+         defaultProps: {
+            
+            dense: true,
+         }
       },
       MuiTable: {
-         size: 'small',
+         defaultProps: {
+            
+            size: 'small',
+         }
       },
       MuiButtonBase: {
-         disableRipple: true,
+         defaultProps: {
+            
+            disableRipple: true,
+         }
       },
    }
 });
