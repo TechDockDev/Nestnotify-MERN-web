@@ -34,12 +34,14 @@ const SingleNavLink = ({ linkText, hyperLink, btn = false, onClick, variant, dro
             ) : (
                <>
                   <Button
+                     variant="text"
                      onClick={openDropdown}
                      aria-controls={open ? "sub-menu" : undefined}
                      aria-haspopup="true"
                      aria-expanded={open ? "true" : undefined}
                      disableElevation
                      disableRipple
+                     p={0}
                      sx={{
                         position: "relative",
                         display: "flex",
@@ -47,7 +49,7 @@ const SingleNavLink = ({ linkText, hyperLink, btn = false, onClick, variant, dro
                         fontWeight: "500",
                         fontSize: "16px",
                         textTransform: "none",
-                        padding: "0px",
+                        padding:"0px",
                         "&::before": {
                            transition: "width 200ms ease",
                            content: `" "`,
@@ -62,7 +64,6 @@ const SingleNavLink = ({ linkText, hyperLink, btn = false, onClick, variant, dro
                            bgcolor: "white",
                            color: "#2298BC",
                            fontWeight: "600",
-
                            "&::before": {
                               width: "100%",
                            },
@@ -84,7 +85,7 @@ const SingleNavLink = ({ linkText, hyperLink, btn = false, onClick, variant, dro
                      onClick={handleClose}
                      PaperProps={{
                         elevation: 10,
-                      
+
                         sx: {
                            overflow: "visible",
                            filter: "drop-shadow(0px 1px 5px rgba(0, 10, 0, 0.2))",
@@ -105,7 +106,6 @@ const SingleNavLink = ({ linkText, hyperLink, btn = false, onClick, variant, dro
                         },
                      }}
                      sx={{
-                        
                         "& .MuiPaper-root": {
                            borderRadius: "12px",
                         },

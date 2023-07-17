@@ -8,6 +8,8 @@ import HomePage from "./components/HomePage/HomePage";
 import TopNavBar from "./components/TopNavBar/TopNavBar";
 import QuestionComp from "./components/QuestionComp/QuestionComp";
 import { Home } from "@mui/icons-material";
+import ForBuyersPage from "./components/ForBuyersPage/ForBuyersPage";
+import ForSellers from "./components/ForSellers/ForSellers";
 
 function App() {
    const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
@@ -31,13 +33,14 @@ function App() {
       <>
          <Routes>
             <Route path="/" element={<TopNavBar />}>
-               <Route index element={<QuestionComp />} />
-               <Route path="/homepage" element={<HomePage />} />
+               <Route index element={<HomePage />} />
+               <Route path="/questions" element={<QuestionComp />} />
+               <Route path="/forbuyers" element={<ForBuyersPage />} />
+               <Route path="/forsellers" element={<ForSellers />} />
             </Route>
 
-            <Route path='/signin' element={<Login />} />
-            <Route path='/signup' element={<SignUp />} />
-
+            <Route path="/signin" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
          </Routes>
       </>
    );
