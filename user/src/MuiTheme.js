@@ -78,8 +78,22 @@ const MuiTheme = createTheme({
       },
       MuiInputLabel: {
          defaultProps: {
+<<<<<<< HEAD
+            margin: "dense",
+            shrink: true,
+            disableAnimation: true,
+         },
+         styleOverrides: {
+            root: {
+               fontWeight: 500,
+               transform: "none",
+               position: "static",
+               color: "'#333333",
+            }
+=======
             
             margin: 'dense',
+>>>>>>> origin/main
          }
       },
       MuiRadio: {
@@ -96,10 +110,36 @@ const MuiTheme = createTheme({
       },
       MuiTextField: {
          defaultProps: {
+<<<<<<< HEAD
+            margin: "dense",
+            shrink: true,
+            disableAnimation: true,
+            color: "secondary",
+         },
+         styleOverrides: {
+            root: {
+               fontWeight: 500,
+               transform: "none",
+               position: "static",
+               "& .MuiInputBase-root": {
+                  border: "1px solid grey",
+                  "&:focused": {
+                     border: "1px solid #0D507D",
+                  }
+               },
+               "& .Mui-focused fieldset": {
+                  border: 'none',
+                  outline: 'none',
+               },
+            }
+         }
+
+=======
             
             margin: 'dense',
             size: 'small',
          }
+>>>>>>> origin/main
       },
       MuiList: {
          defaultProps: {

@@ -34,10 +34,11 @@ const WhatWeDo = () => {
                 <Grid container spacing={6} sx={{
                     "& .MuiGrid-root":
                     {
+                        margin: "0 auto",
                         paddingLeft: '0px'
                     }
                 }}>
-                    <Grid item xs={12} md={7}>
+                    <Grid item xs={11} md={7}>
                         {/*  3 blocks */}
                         <Stack justifyContent="space-between" alignItems="center" spacing={4} paddingRight={{ xs: "0px", md: "20px" }}>
                             {/* block 1 */}
@@ -163,16 +164,15 @@ const WhatWeDo = () => {
                         </Stack>
                     </Grid>
                     {/* image */}
-                    <Grid item xs={12} md={5} justifyContent="center" alignItems="center">
+                    <Grid item xs={11} md={5} display={"flex"} justifyContent="center" alignItems="center">
                         <Box
                             component="img"
                             sx={{
                                 display: { md: 'block', xs: 'none' },
                                 width: '100%',
-                                height: '100%',
                                 boxSizing: 'border-box',
                             }}
-                            alt="The house from the offer."
+                            alt="search home."
                             src="./assets/House_searching.png"
                         />
                     </Grid>

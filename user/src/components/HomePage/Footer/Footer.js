@@ -7,16 +7,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
     return (
-        <>
+        <Box>
             <Box
                 component="img"
                 sx={{
                     display: 'block',
-                    width: '100%',
-                    margin: '0'
+                    width: '100%'
                 }}
                 alt="building"
-                src="./assets/building.png"
+                src="./assets/building.svg"
             />
             <Box sx={{
                 padding: '60px',
@@ -172,7 +171,7 @@ const Footer = () => {
                     </Grid>
                 </Grid>
             </Box>
-        </>
+        </Box>
     )
 }
 
