@@ -95,11 +95,11 @@ const TopNavBar = (props) => {
                      }}>
                      <SingleNavLink linkText={"Home"} to={"/"} />
                      <SingleNavLink linkText={"How it Works?"} btn={true} dropdown={true}>
-                        <MenuItem sx={{ borderBottom: "1px solid #D9DEDF" }}>For Buyers</MenuItem>
-                        <MenuItem sx={{ borderBottom: "1px solid #D9DEDF" }}>For Seller</MenuItem>
-                        <MenuItem sx={{ borderBottom: "1px solid #D9DEDF" }}>For Renters</MenuItem>
-                        <MenuItem sx={{ borderBottom: "1px solid #D9DEDF" }}>For Landlords</MenuItem>
-                        <MenuItem>For Investors</MenuItem>
+                        <MenuItem component={NavLink} to={"forbuyers"} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Buyers</MenuItem>
+                        <MenuItem component={NavLink} to={"forsellers"} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Seller</MenuItem>
+                        <MenuItem component={NavLink} to={""} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Renters</MenuItem>
+                        <MenuItem component={NavLink} to={""} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Landlords</MenuItem>
+                        <MenuItem component={NavLink} to={""}>For Investors</MenuItem>
                      </SingleNavLink>
                      <SingleNavLink linkText={"Our Story"} to={"/"} />
                      <SingleNavLink linkText={"Contact"} to={"/"} />
