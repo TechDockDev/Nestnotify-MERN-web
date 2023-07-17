@@ -10,6 +10,7 @@ import QuestionComp from "./components/QuestionComp/QuestionComp";
 import { Home } from "@mui/icons-material";
 import ForBuyersPage from "./components/ForBuyersPage/ForBuyersPage";
 import ForSellers from "./components/ForSellers/ForSellers";
+import ForInvestors from "./components/ForInvestors/ForInvestors";
 
 function App() {
    const { snackbar, adminAuthData, setAdminAuthData, isLoggedIn, setIsLoggedIn } = useContext(DataContext);
@@ -37,6 +38,7 @@ function App() {
                <Route path="/questions" element={<QuestionComp />} />
                <Route path="/forbuyers" element={<ForBuyersPage />} />
                <Route path="/forsellers" element={<ForSellers />} />
+               <Route path="/forinvestors" element={<ForInvestors />} />
             </Route>
 
             <Route path="/signin" element={<Login />} />

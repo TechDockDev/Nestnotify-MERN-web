@@ -19,6 +19,7 @@ import { MenuItem, Stack } from "@mui/material";
 import { Link, NavLink, Navigate, Outlet, useNavigate } from "react-router-dom";
 import SingleNavLink from "./SingleNavLink";
 import ScreensWrapper from "../CommonComponents/ScreensWrapper";
+import Footer from "../Footer/Footer";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
@@ -99,7 +100,7 @@ const TopNavBar = (props) => {
                         <MenuItem component={NavLink} to={"forsellers"} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Seller</MenuItem>
                         <MenuItem component={NavLink} to={""} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Renters</MenuItem>
                         <MenuItem component={NavLink} to={""} sx={{ borderBottom: "1px solid #D9DEDF" }}>For Landlords</MenuItem>
-                        <MenuItem component={NavLink} to={""}>For Investors</MenuItem>
+                        <MenuItem component={NavLink} to={"forinvestors"}>For Investors</MenuItem>
                      </SingleNavLink>
                      <SingleNavLink linkText={"Our Story"} to={"/"} />
                      <SingleNavLink linkText={"Contact"} to={"/"} />
@@ -148,6 +149,7 @@ const TopNavBar = (props) => {
          <ScreensWrapper>
             <Outlet />
          </ScreensWrapper>
+         <Footer/>
       </AppWrapper>
    );
 };

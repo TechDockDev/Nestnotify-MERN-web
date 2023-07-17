@@ -6,9 +6,9 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Grid } from "@mui/material";
 
-const BuyerFAQSec = () => {
+const FAQSec = () => {
    return (
-      <Grid container px={2} my={2}>
+      <Grid container px={2} my={4}>
          <Grid item xs={12} textAlign={"left"} mb={3}>
             <Typography
                variant="h2"
@@ -28,7 +28,7 @@ const BuyerFAQSec = () => {
                elevation={0}
                sx={{
                   paddingY: "6px",
-                  "&.MuiButtonBase-root": {
+                  "& .MuiButtonBase-root": {
                      padding: "0px",
                   },
                }}>
@@ -52,7 +52,7 @@ const BuyerFAQSec = () => {
                sx={{
                 //   borderY: "1px solid #D4DBDE",
                   paddingY: "6px",
-                  "&.MuiButtonBase-root": {
+                  "& .MuiButtonBase-root": {
                      padding: "0px",
                   },
                }}>
@@ -76,7 +76,7 @@ const BuyerFAQSec = () => {
                sx={{
                 //   borderY: "1px solid #D4DBDE",
                   paddingY: "6px",
-                  "&.MuiButtonBase-root": {
+                  "& .MuiButtonBase-root": {
                      padding: "0px",
                   },
                }}>
@@ -100,7 +100,7 @@ const BuyerFAQSec = () => {
                sx={{
                 //   borderY: "1px solid #D4DBDE",
                   paddingY: "6px",
-                  "&.MuiButtonBase-root": {
+                  "& .MuiButtonBase-root": {
                      padding: "0px",
                   },
                }}>
@@ -124,7 +124,7 @@ const BuyerFAQSec = () => {
                sx={{
                 //   borderY: "1px solid #D4DBDE",
                   paddingY: "6px",
-                  "&.MuiButtonBase-root": {
+                  "& .MuiButtonBase-root": {
                      padding: "0px",
                   },
                }}>
@@ -146,4 +146,4 @@ const BuyerFAQSec = () => {
    );
 };
 
-export default BuyerFAQSec;
+export default FAQSec;

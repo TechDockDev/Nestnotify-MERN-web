@@ -17,68 +17,58 @@ const MuiTheme = createTheme({
    components: {
       MuiButton: {
          defaultProps: {
-            size: 'small',
+            size: "small",
             variant: "contained",
-            
          },
-         styleOverrides:{
+         styleOverrides: {
             root: {
-               display: 'flex',
-               justifyContent: 'center',
-               alignItems: 'center',
-               padding: '12px',
-               fontWeight:"600",
-               borderRadius: '64px'
-            }
-         }
-         
+               display: "flex",
+               justifyContent: "center",
+               alignItems: "center",
+               padding: "12px",
+               fontWeight: "600",
+               borderRadius: "64px",
+            },
+         },
       },
       MuiButtonGroup: {
          defaultProps: {
-
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiCheckbox: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiFab: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiFormControl: {
          defaultProps: {
-            
-            margin: 'dense',
-            size: 'small',
-         }
+            margin: "dense",
+            size: "small",
+         },
       },
       MuiFormHelperText: {
          defaultProps: {
-            
-            margin: 'dense',
-         }
+            margin: "dense",
+         },
       },
       MuiIconButton: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiInputBase: {
          defaultProps: {
-            
-            margin: 'dense',
-         }
+            margin: "dense",
+         },
       },
       MuiInputLabel: {
          defaultProps: {
-<<<<<<< HEAD
             margin: "dense",
             shrink: true,
             disableAnimation: true,
@@ -88,29 +78,22 @@ const MuiTheme = createTheme({
                fontWeight: 500,
                transform: "none",
                position: "static",
-               color: "'#333333",
-            }
-=======
-            
-            margin: 'dense',
->>>>>>> origin/main
-         }
+               color: "#000",
+            },
+         },
       },
       MuiRadio: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiSwitch: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiTextField: {
          defaultProps: {
-<<<<<<< HEAD
             margin: "dense",
             shrink: true,
             disableAnimation: true,
@@ -122,49 +105,40 @@ const MuiTheme = createTheme({
                transform: "none",
                position: "static",
                "& .MuiInputBase-root": {
-                  border: "1px solid grey",
-                  "&:focused": {
-                     border: "1px solid #0D507D",
-                  }
+                  outline: "none",
+                  "&:hover": {
+                     border: "1px solid #2298BC",
+                     outline: "none",
+                  },
                },
                "& .Mui-focused fieldset": {
-                  border: 'none',
-                  outline: 'none',
+                  border: "none",
+                  outline: "none",
+                 
                },
-            }
-         }
-
-=======
-            
-            margin: 'dense',
-            size: 'small',
-         }
->>>>>>> origin/main
+            },
+         },
       },
       MuiList: {
          defaultProps: {
-            
             dense: true,
-         }
+         },
       },
       MuiMenuItem: {
          defaultProps: {
-            
             dense: true,
-         }
+         },
       },
       MuiTable: {
          defaultProps: {
-            
-            size: 'small',
-         }
+            size: "small",
+         },
       },
       MuiButtonBase: {
          defaultProps: {
-            
             disableRipple: true,
-         }
+         },
       },
-   }
+   },
 });
 export default MuiTheme;

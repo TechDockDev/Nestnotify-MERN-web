@@ -1,14 +1,14 @@
 import React from 'react'
 import BuyersBannerSec from './BuyersBannerSec'
 import BuyPropertySteps from './BuyPropertySteps'
-import BuyerFAQSec from './BuyerFAQSec'
+import FAQSec from '../CommonComponents/FAQSec'
 
 const ForBuyersPage = () => {
   return (
    <>
     <BuyersBannerSec/>
     <BuyPropertySteps/>
-    <BuyerFAQSec/>
+    <FAQSec/>
    </>
   )
 }
